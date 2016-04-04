@@ -10,231 +10,288 @@ degMain = [
 	},
 	{
 		"type": "degree",
-		"values": [1,1]
+		"did":1,
+		"cdid":1
 	},
 	{
 		"type": "degree",
-		"values": [1,2]
+		"did":1,
+		"cdid":2
 	},
 	{
 		"type": "degree",
-		"values": [2,2]
+		"did":2,
+		"cdid":2
 	},
 	{
 		"type": "degree",
-		"values": [2,3]
+		"did":2,
+		"cdid":3
 	},
 	{
 		"type": "degree",
-		"values": [2,4]
+		"did":2,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [2,5]
+		"did":2,
+		"cdid":5
 	},
 	{
 		"type": "degree",
-		"values": [2,6]
+		"did":2,
+		"cdid":6
 	},
 	{
 		"type": "degree",
-		"values": [2,7]
+		"did":2,
+		"cdid":7
 	},
 	{
 		"type": "degree",
-		"values": [2,8]
+		"did":2,
+		"cdid":8
 	},
 	{
 		"type": "degree",
-		"values": [2,9]
+		"did":2,
+		"cdid":9
 	},
 	{
 		"type": "degree",
-		"values": [3,3]
+		"did":3,
+		"cdid":3
 	},
 	{
 		"type": "degree",
-		"values": [3,4]
+		"did":3,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [3,5]
+		"did":3,
+		"cdid":5
 	},
 	{
 		"type": "degree",
-		"values": [3,6]
+		"did":3,
+		"cdid":6
 	},
 	{
 		"type": "degree",
-		"values": [4,3]
+		"did":4,
+		"cdid":3
 	},
 	{
 		"type": "degree",
-		"values": [4,4]
+		"did":4,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [5,3]
+		"did":5,
+		"cdid":3
 	},
 	{
 		"type": "degree",
-		"values": [5,4]
+		"did":5,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [5,8]
+		"did":5,
+		"cdid":8
 	},
 	{
 		"type": "degree",
-		"values": [5,9]
+		"did":5,
+		"cdid":9
 	},
 	{
 		"type": "degree",
-		"values": [6,3]
+		"did":6,
+		"cdid":3
 	},
 	{
 		"type": "degree",
-		"values": [7,3]
+		"did":7,
+		"cdid":3
 	},
 	{
 		"type": "degree",
-		"values": [7,4]
+		"did":7,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [7,5]
+		"did":7,
+		"cdid":5
 	},
 	{
 		"type": "degree",
-		"values": [8,3]
+		"did":8,
+		"cdid":3
 	},
 	{
 		"type": "degree",
-		"values": [8,6]
+		"did":8,
+		"cdid":6
 	},
 	{
 		"type": "degree",
-		"values": [9,4]
+		"did":9,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [9,5]
+		"did":9,
+		"cdid":5
 	},
 	{
 		"type": "degree",
-		"values": [10,4]
+		"did":10,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [11,4]
+		"did":11,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [11,8]
+		"did":11,
+		"cdid":8
 	},
 	{
 		"type": "degree",
-		"values": [12,4]
+		"did":12,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [12,7]
+		"did":12,
+		"cdid":7
 	},
 	{
 		"type": "degree",
-		"values": [13,5]
+		"did":13,
+		"cdid":5
 	},
 	{
 		"type": "degree",
-		"values": [14,6]
+		"did":14,
+		"cdid":6
 	},
 	{
 		"type": "degree",
-		"values": [15,7]
+		"did":15,
+		"cdid":7
 	},
 	{
 		"type": "degree",
-		"values": [15,8]
+		"did":15,
+		"cdid":8
 	},
 	{
 		"type": "degree",
-		"values": [16,7]
+		"did":16,
+		"cdid":7
 	},
 	{
 		"type": "degree",
-		"values": [17,8]
+		"did":17,
+		"cdid":8
 	},
 	{
 		"type": "degree",
-		"values": [18,8]
+		"did":18,
+		"cdid":8
 	},
 	{
 		"type": "degree",
-		"values": [18,9]
+		"did":18,
+		"cdid":9
 	},
 	{
 		"type": "degree",
-		"values": [19,4]
+		"did":19,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [19,9]
+		"did":19,
+		"cdid":9
 	},
 	{
 		"type": "degree",
-		"values": [20,7]
+		"did":20,
+		"cdid":7
 	},
 	{
 		"type": "degree",
-		"values": [20,9]
+		"did":20,
+		"cdid":9
 	},
 	{
 		"type": "degree",
-		"values": [21,4]
+		"did":21,
+		"cdid":4
 	},
 	{
 		"type": "degree",
-		"values": [21,8]
+		"did":21,
+		"cdid":8
 	},
 	{
 		"type": "degree",
-		"values": [21,9]
+		"did":21,
+		"cdid":9
 	},
 	{
 		"type": "degree",
-		"values": [22,7]
+		"did":22,
+		"cdid":7
 	},
 	{
 		"type": "degree",
-		"values": [22,8]
+		"did":22,
+		"cdid":8
 	},
 	{
 		"type": "degree",
-		"values": [22,9]
+		"did":22,
+		"cdid":9
 	},
 	{
 		"type": "degree",
-		"values": [23,9]
+		"did":23,
+		"cdid":9
 	},
 	{
 		"type": "degree",
-		"values": [24,1]
+		"did":24,
+		"cdid":1
 	},
 	{
 		"type": "degree",
-		"values": [24,2]
+		"did":24,
+		"cdid":2
 	},
 	{
 		"type": "degree",
-		"values": [24,7]
+		"did":24,
+		"cdid":7
 	},
 	{
 		"type": "degree",
-		"values": [25,1]
+		"did":25,
+		"cdid":1
 	},
 	{
 		"type": "degree",
-		"values": [25,7]
+		"did":25,
+		"cdid":7
 	}
 ]
 
@@ -250,44 +307,54 @@ degDetails = [
 	},
 	{
 		"type": "degreeDetail",
-		"values": [0,"none"]
+		"cdid":0,
+		"type":"none"
 	},
 	{
 		"type": "degreeDetail",
-		"values": [1,"BSc"]
+		"cdid":1,
+		"type":"BSc"
 	},
 	{
 		"type": "degreeDetail",
-		"values": [2,"Honors"]
+		"cdid":2,
+		"type":"Honors"
 	},
 	{
 		"type": "degreeDetail",
-		"values": [3,"Computer Game Development"]
+		"cdid":3,
+		"type":"Computer Game Development"
 	},
 	{
 		"type": "degreeDetail",
-		"values": [4,"Software Engineering"]
+		"cdid":4,
+		"type":"Software Engineering"
 	},
 	{
 		"type": "degreeDetail",
-		"values": [5,"Human Computer Interactions"]
+		"cdid":5,
+		"type":"Human Computer Interactions"
 	},
 	{
 		"type": "degreeDetail",
-		"values": [6,"Computer Graphics"]
+		"cdid":6,
+		"type":"Computer Graphics"
 	},
 	{
 		"type": "degreeDetail",
-		"values": [7,"Theoretical Computer Science"]
+		"cdid":7,
+		"type":"Theoretical Computer Science"
 	
 	},
 	{
 		"type": "degreeDetail",
-		"values": [8,"Information Security"]
+		"cdid":8,
+		"type":"Information Security"
 	},
 	{
 		"type": "degreeDetail",
-		"values": [9,"Networks and Distributed Computing"]
+		"cdid":9,
+		"type":"Networks and Distributed Computing"
 	}
 
 ]
@@ -302,440 +369,2176 @@ availabilityMain = [
 		"type": "category",
 		"values": ["cid","aid"]
 	},
-	{"type": "availability", "values": [1,1]},
-	{"type": "availability", "values": [1,2]},
-	{"type": "availability", "values": [1,3]},
-	{"type": "availability", "values": [1,4]},
-	{"type": "availability", "values": [1,5]},
-	{"type": "availability", "values": [1,6]},
-	{"type": "availability", "values": [1,7]},
-	{"type": "availability", "values": [1,8]},
-	{"type": "availability", "values": [2,5]},
-	{"type": "availability", "values": [2,6]},
-	{"type": "availability", "values": [2,7]},
-	{"type": "availability", "values": [2,8]},
-	{"type": "availability", "values": [3,5]},
-	{"type": "availability", "values": [3,6]},
-	{"type": "availability", "values": [3,7]},
-	{"type": "availability", "values": [4,5]},
-	{"type": "availability", "values": [4,6]},
-	{"type": "availability", "values": [4,7]},
-	{"type": "availability", "values": [4,8]},
-	{"type": "availability", "values": [5,5]},
-	{"type": "availability", "values": [5,6]},
-	{"type": "availability", "values": [5,7]},
-	{"type": "availability", "values": [5,8]},
-	{"type": "availability", "values": [6,7]},
-	{"type": "availability", "values": [6,8]},
-	{"type": "availability", "values": [7,1]},
-	{"type": "availability", "values": [7,2]},
-	{"type": "availability", "values": [7,3]},
-	{"type": "availability", "values": [7,4]},
-	{"type": "availability", "values": [8,6]},
-	{"type": "availability", "values": [8,8]},
-	{"type": "availability", "values": [9,1]},
-	{"type": "availability", "values": [9,8]},
-	{"type": "availability", "values": [1,1]},
-	{"type": "availability", "values": [1,2]},
-	{"type": "availability", "values": [1,3]},
-	{"type": "availability", "values": [1,4]},
-	{"type": "availability", "values": [1,6]},
-	{"type": "availability", "values": [1,7]},
-	{"type": "availability", "values": [1,5]},
-	{"type": "availability", "values": [1,7]},
-	{"type": "availability", "values": [1,8]},
-	{"type": "availability", "values": [1,3]},
-	{"type": "availability", "values": [1,1]},
-	{"type": "availability", "values": [1,2]},
-	{"type": "availability", "values": [1,3]},
-	{"type": "availability", "values": [1,4]},
-	{"type": "availability", "values": [1,1]},
-	{"type": "availability", "values": [1,2]},
-	{"type": "availability", "values": [1,3]},
-	{"type": "availability", "values": [1,4]},
-	{"type": "availability", "values": [1,5]},
-	{"type": "availability", "values": [1,6]},
-	{"type": "availability", "values": [1,7]},
-	{"type": "availability", "values": [1,8]},
-	{"type": "availability", "values": [1,1]},
-	{"type": "availability", "values": [1,2]},
-	{"type": "availability", "values": [1,3]},
-	{"type": "availability", "values": [1,4]},
-	{"type": "availability", "values": [1,5]},
-	{"type": "availability", "values": [1,6]},
-	{"type": "availability", "values": [1,7]},
-	{"type": "availability", "values": [1,8]},
-	{"type": "availability", "values": [1,5]},
-	{"type": "availability", "values": [1,6]},
-	{"type": "availability", "values": [1,7]},
-	{"type": "availability", "values": [1,8]},
-	{"type": "availability", "values": [1,1]},
-	{"type": "availability", "values": [1,2]},
-	{"type": "availability", "values": [1,3]},
-	{"type": "availability", "values": [1,4]},
-	{"type": "availability", "values": [1,5]},
-	{"type": "availability", "values": [1,6]},
-	{"type": "availability", "values": [1,7]},
-	{"type": "availability", "values": [1,8]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,2]},
-	{"type": "availability", "values": [2,3]},
-	{"type": "availability", "values": [2,4]},
-	{"type": "availability", "values": [2,5]},
-	{"type": "availability", "values": [2,6]},
-	{"type": "availability", "values": [2,7]},
-	{"type": "availability", "values": [2,8]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,2]},
-	{"type": "availability", "values": [2,3]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,2]},
-	{"type": "availability", "values": [2,3]},
-	{"type": "availability", "values": [2,4]},
-	{"type": "availability", "values": [2,5]},
-	{"type": "availability", "values": [2,6]},
-	{"type": "availability", "values": [2,7]},
-	{"type": "availability", "values": [2,8]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,5]},
-	{"type": "availability", "values": [2,6]},
-	{"type": "availability", "values": [2,7]},
-	{"type": "availability", "values": [2,8]},
-	{"type": "availability", "values": [2,5]},
-	{"type": "availability", "values": [2,6]},
-	{"type": "availability", "values": [2,7]},
-	{"type": "availability", "values": [2,8]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,2]},
-	{"type": "availability", "values": [2,3]},
-	{"type": "availability", "values": [2,4]},
-	{"type": "availability", "values": [2,5]},
-	{"type": "availability", "values": [2,6]},
-	{"type": "availability", "values": [2,7]},
-	{"type": "availability", "values": [2,8]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,5]},
-	{"type": "availability", "values": [2,6]},
-	{"type": "availability", "values": [2,7]},
-	{"type": "availability", "values": [2,8]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,2]},
-	{"type": "availability", "values": [2,3]},
-	{"type": "availability", "values": [2,4]},
-	{"type": "availability", "values": [2,5]},
-	{"type": "availability", "values": [2,6]},
-	{"type": "availability", "values": [2,7]},
-	{"type": "availability", "values": [2,8]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,2]},
-	{"type": "availability", "values": [2,3]},
-	{"type": "availability", "values": [2,4]},
-	{"type": "availability", "values": [2,5]},
-	{"type": "availability", "values": [2,6]},
-	{"type": "availability", "values": [2,7]},
-	{"type": "availability", "values": [2,8]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [2,1]},
-	{"type": "availability", "values": [3,8]},
-	{"type": "availability", "values": [3,5]},
-	{"type": "availability", "values": [3,6]},
-	{"type": "availability", "values": [3,7]},
-	{"type": "availability", "values": [3,8]},
-	{"type": "availability", "values": [3,1]},
-	{"type": "availability", "values": [3,2]},
-	{"type": "availability", "values": [3,3]},
-	{"type": "availability", "values": [3,4]},
-	{"type": "availability", "values": [3,5]},
-	{"type": "availability", "values": [3,6]},
-	{"type": "availability", "values": [3,7]},
-	{"type": "availability", "values": [3,8]},
-	{"type": "availability", "values": [3,1]},
-	{"type": "availability", "values": [3,2]},
-	{"type": "availability", "values": [3,3]},
-	{"type": "availability", "values": [3,4]},
-	{"type": "availability", "values": [3,2]},
-	{"type": "availability", "values": [3,3]},
-	{"type": "availability", "values": [3,4]},
-	{"type": "availability", "values": [3,5]},
-	{"type": "availability", "values": [3,1]},
-	{"type": "availability", "values": [3,2]},
-	{"type": "availability", "values": [3,3]},
-	{"type": "availability", "values": [3,4]},
-	{"type": "availability", "values": [3,5]},
-	{"type": "availability", "values": [3,6]},
-	{"type": "availability", "values": [3,7]},
-	{"type": "availability", "values": [3,8]},
-	{"type": "availability", "values": [3,2]},
-	{"type": "availability", "values": [3,3]},
-	{"type": "availability", "values": [3,4]},
-	{"type": "availability", "values": [3,5]},
-	{"type": "availability", "values": [3,6]},
-	{"type": "availability", "values": [3,7]},
-	{"type": "availability", "values": [3,8]},
-	{"type": "availability", "values": [3,1]},
-	{"type": "availability", "values": [3,1]},
-	{"type": "availability", "values": [3,2]},
-	{"type": "availability", "values": [3,3]},
-	{"type": "availability", "values": [3,4]},
-	{"type": "availability", "values": [3,5]},
-	{"type": "availability", "values": [3,6]},
-	{"type": "availability", "values": [3,7]},
-	{"type": "availability", "values": [3,8]},
-	{"type": "availability", "values": [3,1]},
-	{"type": "availability", "values": [3,2]},
-	{"type": "availability", "values": [3,3]},
-	{"type": "availability", "values": [3,4]},
-	{"type": "availability", "values": [3,5]},
-	{"type": "availability", "values": [3,6]},
-	{"type": "availability", "values": [3,7]},
-	{"type": "availability", "values": [3,8]},
-	{"type": "availability", "values": [3,1]},
-	{"type": "availability", "values": [3,1]},
-	{"type": "availability", "values": [4,1]},
-	{"type": "availability", "values": [4,2]},
-	{"type": "availability", "values": [4,3]},
-	{"type": "availability", "values": [4,4]},
-	{"type": "availability", "values": [4,1]},
-	{"type": "availability", "values": [4,2]},
-	{"type": "availability", "values": [4,3]},
-	{"type": "availability", "values": [4,4]},
-	{"type": "availability", "values": [4,5]},
-	{"type": "availability", "values": [4,6]},
-	{"type": "availability", "values": [4,7]},
-	{"type": "availability", "values": [4,8]},
-	{"type": "availability", "values": [4,1]},
-	{"type": "availability", "values": [4,2]},
-	{"type": "availability", "values": [4,3]},
-	{"type": "availability", "values": [4,4]},
-	{"type": "availability", "values": [4,6]},
-	{"type": "availability", "values": [4,7]},
-	{"type": "availability", "values": [4,8]},
-	{"type": "availability", "values": [4,1]},
-	{"type": "availability", "values": [4,3]},
-	{"type": "availability", "values": [4,6]},
-	{"type": "availability", "values": [4,8]},
-	{"type": "availability", "values": [4,1]},
-	{"type": "availability", "values": [4,2]},
-	{"type": "availability", "values": [4,3]},
-	{"type": "availability", "values": [4,4]},
-	{"type": "availability", "values": [4,1]},
-	{"type": "availability", "values": [4,2]},
-	{"type": "availability", "values": [4,3]},
-	{"type": "availability", "values": [4,4]},
-	{"type": "availability", "values": [4,5]},
-	{"type": "availability", "values": [4,6]},
-	{"type": "availability", "values": [4,7]},
-	{"type": "availability", "values": [4,8]},
-	{"type": "availability", "values": [4,1]},
-	{"type": "availability", "values": [4,2]},
-	{"type": "availability", "values": [4,3]},
-	{"type": "availability", "values": [4,4]},
-	{"type": "availability", "values": [4,5]},
-	{"type": "availability", "values": [4,6]},
-	{"type": "availability", "values": [4,7]},
-	{"type": "availability", "values": [4,8]},
-	{"type": "availability", "values": [4,1]},
-	{"type": "availability", "values": [4,3]},
-	{"type": "availability", "values": [4,4]},
-	{"type": "availability", "values": [4,6]},
-	{"type": "availability", "values": [4,7]},
-	{"type": "availability", "values": [4,8]},
-	{"type": "availability", "values": [5,5]},
-	{"type": "availability", "values": [5,7]},
-	{"type": "availability", "values": [5,2]},
-	{"type": "availability", "values": [5,7]},
-	{"type": "availability", "values": [5,3]},
-	{"type": "availability", "values": [5,3]},
-	{"type": "availability", "values": [5,5]},
-	{"type": "availability", "values": [5,3]},
-	{"type": "availability", "values": [5,5]},
-	{"type": "availability", "values": [5,8]},
-	{"type": "availability", "values": [5,4]},
-	{"type": "availability", "values": [5,5]},
-	{"type": "availability", "values": [5,6]},
-	{"type": "availability", "values": [5,7]},
-	{"type": "availability", "values": [5,2]},
-	{"type": "availability", "values": [5,4]},
-	{"type": "availability", "values": [5,1]},
-	{"type": "availability", "values": [5,3]},
-	{"type": "availability", "values": [5,1]},
-	{"type": "availability", "values": [5,2]},
-	{"type": "availability", "values": [5,4]},
-	{"type": "availability", "values": [6,4]},
-	{"type": "availability", "values": [6,6]},
-	{"type": "availability", "values": [6,1]},
-	{"type": "availability", "values": [6,2]},
-	{"type": "availability", "values": [6,3]},
-	{"type": "availability", "values": [6,4]},
-	{"type": "availability", "values": [6,2]},
-	{"type": "availability", "values": [6,6]},
-	{"type": "availability", "values": [6,8]},
-	{"type": "availability", "values": [6,2]},
-	{"type": "availability", "values": [6,4]},
-	{"type": "availability", "values": [6,6]},
-	{"type": "availability", "values": [6,8]},
-	{"type": "availability", "values": [6,5]},
-	{"type": "availability", "values": [6,6]},
-	{"type": "availability", "values": [6,7]},
-	{"type": "availability", "values": [6,1]},
-	{"type": "availability", "values": [6,6]},
-	{"type": "availability", "values": [6,7]},
-	{"type": "availability", "values": [6,8]},
-	{"type": "availability", "values": [6,2]},
-	{"type": "availability", "values": [6,8]},
-	{"type": "availability", "values": [6,3]},
-	{"type": "availability", "values": [6,8]},
-	{"type": "availability", "values": [7,1]},
-	{"type": "availability", "values": [7,2]},
-	{"type": "availability", "values": [7,4]},
-	{"type": "availability", "values": [7,7]},
-	{"type": "availability", "values": [7,6]},
-	{"type": "availability", "values": [7,8]},
-	{"type": "availability", "values": [7,5]},
-	{"type": "availability", "values": [7,6]},
-	{"type": "availability", "values": [7,8]},
-	{"type": "availability", "values": [7,5]},
-	{"type": "availability", "values": [7,6]},
-	{"type": "availability", "values": [7,7]},
-	{"type": "availability", "values": [7,8]},
-	{"type": "availability", "values": [7,3]},
-	{"type": "availability", "values": [7,4]},
-	{"type": "availability", "values": [7,1]},
-	{"type": "availability", "values": [7,2]},
-	{"type": "availability", "values": [7,7]},
-	{"type": "availability", "values": [7,8]},
-	{"type": "availability", "values": [7,4]},
-	{"type": "availability", "values": [7,6]},
-	{"type": "availability", "values": [7,7]},
-	{"type": "availability", "values": [7,1]},
-	{"type": "availability", "values": [7,2]},
-	{"type": "availability", "values": [7,3]},
-	{"type": "availability", "values": [7,4]},
-	{"type": "availability", "values": [7,5]},
-	{"type": "availability", "values": [7,6]},
-	{"type": "availability", "values": [7,7]},
-	{"type": "availability", "values": [7,8]},
-	{"type": "availability", "values": [7,7]},
-	{"type": "availability", "values": [7,1]},
-	{"type": "availability", "values": [7,2]},
-	{"type": "availability", "values": [7,4]},
-	{"type": "availability", "values": [7,6]},
-	{"type": "availability", "values": [7,8]},
-	{"type": "availability", "values": [7,1]},
-	{"type": "availability", "values": [7,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,2]},
-	{"type": "availability", "values": [8,3]},
-	{"type": "availability", "values": [8,4]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,2]},
-	{"type": "availability", "values": [8,3]},
-	{"type": "availability", "values": [8,4]},
-	{"type": "availability", "values": [8,5]},
-	{"type": "availability", "values": [8,6]},
-	{"type": "availability", "values": [8,7]},
-	{"type": "availability", "values": [8,8]},
-	{"type": "availability", "values": [8,9]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,2]},
-	{"type": "availability", "values": [8,3]},
-	{"type": "availability", "values": [8,4]},
-	{"type": "availability", "values": [8,9]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,2]},
-	{"type": "availability", "values": [8,3]},
-	{"type": "availability", "values": [8,4]},
-	{"type": "availability", "values": [8,5]},
-	{"type": "availability", "values": [8,6]},
-	{"type": "availability", "values": [8,7]},
-	{"type": "availability", "values": [8,8]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,2]},
-	{"type": "availability", "values": [8,3]},
-	{"type": "availability", "values": [8,4]},
-	{"type": "availability", "values": [8,5]},
-	{"type": "availability", "values": [8,6]},
-	{"type": "availability", "values": [8,7]},
-	{"type": "availability", "values": [8,8]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,2]},
-	{"type": "availability", "values": [8,3]},
-	{"type": "availability", "values": [8,4]},
-	{"type": "availability", "values": [8,5]},
-	{"type": "availability", "values": [8,6]},
-	{"type": "availability", "values": [8,7]},
-	{"type": "availability", "values": [8,8]},
-	{"type": "availability", "values": [8,9]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,2]},
-	{"type": "availability", "values": [8,3]},
-	{"type": "availability", "values": [8,4]},
-	{"type": "availability", "values": [8,5]},
-	{"type": "availability", "values": [8,6]},
-	{"type": "availability", "values": [8,7]},
-	{"type": "availability", "values": [8,8]},
-	{"type": "availability", "values": [8,9]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,2]},
-	{"type": "availability", "values": [8,3]},
-	{"type": "availability", "values": [8,4]},
-	{"type": "availability", "values": [8,5]},
-	{"type": "availability", "values": [8,6]},
-	{"type": "availability", "values": [8,7]},
-	{"type": "availability", "values": [8,8]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,2]},
-	{"type": "availability", "values": [8,3]},
-	{"type": "availability", "values": [8,4]},
-	{"type": "availability", "values": [8,5]},
-	{"type": "availability", "values": [8,6]},
-	{"type": "availability", "values": [8,7]},
-	{"type": "availability", "values": [8,8]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,2]},
-	{"type": "availability", "values": [8,3]},
-	{"type": "availability", "values": [8,4]},
-	{"type": "availability", "values": [8,5]},
-	{"type": "availability", "values": [8,6]},
-	{"type": "availability", "values": [8,7]},
-	{"type": "availability", "values": [8,8]},
-	{"type": "availability", "values": [8,9]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [8,1]},
-	{"type": "availability", "values": [9,5]},
-	{"type": "availability", "values": [9,6]},
-	{"type": "availability", "values": [9,7]},
-	{"type": "availability", "values": [9,8]},
-	{"type": "availability", "values": [9,9]},
-	{"type": "availability", "values": [9,1]},
-	{"type": "availability", "values": [9,1]},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":9,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":9,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":1,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":2,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":3,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":4,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":5,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":6,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":7,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":9
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":9
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":9
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":9
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":2
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":3
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":4
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":9
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":8,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":9,
+		"aid":5
+	},
+	{
+		"type": "availability",
+		"cid":9,
+		"aid":6
+	},
+	{
+		"type": "availability",
+		"cid":9,
+		"aid":7
+	},
+	{
+		"type": "availability",
+		"cid":9,
+		"aid":8
+	},
+	{
+		"type": "availability",
+		"cid":9,
+		"aid":9
+	},
+	{
+		"type": "availability",
+		"cid":9,
+		"aid":1
+	},
+	{
+		"type": "availability",
+		"cid":9,
+		"aid":1
+	},
 	{"type": "availability", "values": [9,1]}
 ]
 
@@ -751,66 +2554,82 @@ availabilityDetails = [
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [1,"F12"]
+		"aid":1,
+		"semester":"F12"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [2,"F13"]
+		"aid":2,
+		"semester":"F13"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [3,"F14"]
+		"aid":3,
+		"semester":"F14"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [4,"F15"]
+		"aid":4,
+		"semester":"F15"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [5,"W13"]
+		"aid":5,
+		"semester":"W13"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [6,"W14"]
+		"aid":6,
+		"semester":"W14"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [7,"W15"]
+		"aid":7,
+		"semester":"W15"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [8,"W16"]
+		"aid":8,
+		"semester":"W16"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [9,"P13"]
+		"aid":9,
+		"semester":"P13"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [10,"P14"]
+		"aid":10,
+		"semester":"P14"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [11,"P15"]
+		"aid":11,
+		"semester":"P15"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [12,"P16"]
+		"aid":12,
+		"semester":"P16"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [13,"S13"]
+		"aid":13,
+		"semester":"S13"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [14,"S14"]
+		"aid":14,
+		"semester":"S14"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [15,"S15"]
+		"aid":15,
+		"semester":"S15"
 	},
 	{
 		"type": "availabilityDetail",
-		"values": [16,"S16"]
+		"aid":16,
+		"semester":"S16"
 	}
 ]
