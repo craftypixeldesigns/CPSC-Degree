@@ -2,19 +2,19 @@
 // PREREQ
 // 
 // "type": "category", "type": "prereq",
-// "values": ["cidsource","isopt","cidtarget"]
+// "values": ["cidsource","cidtarget","isopt"]
 prereq = [
 	{
 		"type": "category",
-		"values": ["cidsource","isopt","cidtarget"]
+		"values": ["cidsource","cidtarget", "isopt"]
 	},
 	{
 		"type": "prereq",
-		"values": [1,1,24]
+		"values": [1,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [1,1,26]
+		"values": [1,26,1]
 	},
 	{
 		"type": "prereq",
@@ -22,11 +22,11 @@ prereq = [
 	},
 	{
 		"type": "prereq",
-		"values": [2,1,22]
+		"values": [2,22,1]
 	},
 	{
 		"type": "prereq",
-		"values": [3,0,1]
+		"values": [3,1,0]
 	},
 	{
 		"type": "prereq",
@@ -34,7 +34,7 @@ prereq = [
 	},
 	{
 		"type": "prereq",
-		"values": [4,1,22]
+		"values": [4,22,1]
 	},
 	{
 		"type": "prereq",
@@ -42,15 +42,15 @@ prereq = [
 	},
 	{
 		"type": "prereq",
-		"values": [5,1,22]
+		"values": [5,22,1]
 	},
 	{
 		"type": "prereq",
-		"values": [7,1,3]
+		"values": [7,3,1]
 	},
 	{
 		"type": "prereq",
-		"values": [7,1,22]
+		"values": [7,22,1]
 	},
 	{
 		"type": "prereq",
@@ -58,27 +58,27 @@ prereq = [
 	},
 	{
 		"type": "prereq",
-		"values": [8,1,22]
+		"values": [8,22,1]
 	},
 	{
 		"type": "prereq",
-		"values": [9,1,2]
+		"values": [9,2,1]
 	},
 	{
 		"type": "prereq",
-		"values": [9,1,3]
+		"values": [9,3,1]
 	},
 	{
 		"type": "prereq",
-		"values": [10,0,4]
+		"values": [10,4,0]
 	},
 	{
 		"type": "prereq",
-		"values": [11,1,3]
+		"values": [11,3,1]
 	},
 	{
 		"type": "prereq",
-		"values": [11,1,22]
+		"values": [11,22,1]
 	},
 	{
 		"type": "prereq",
@@ -86,11 +86,11 @@ prereq = [
 	},
 	{
 		"type": "prereq",
-		"values": [12,1,22]
+		"values": [12,22,1]
 	},
 	{
 		"type": "prereq",
-		"values": [12,0,39]
+		"values": [12,39,0]
 	},
 	{
 		"type": "prereq",
@@ -98,271 +98,271 @@ prereq = [
 	},
 	{
 		"type": "prereq",
-		"values": [13,1,22]
+		"values": [13,22,1]
 	},
 	{
 		"type": "prereq",
-		"values": [15,1,18]
+		"values": [15,18,1]
 	},
 	{
 		"type": "prereq",
-		"values": [15,1,21]
+		"values": [15,21,1]
 	},
 	{
 		"type": "prereq",
-		"values": [15,1,20]
+		"values": [15,20,1]
 	},
 	{
 		"type": "prereq",
-		"values": [16,0,23]
+		"values": [16,23,0]
 	},
 	{
 		"type": "prereq",
-		"values": [16,0,24]
+		"values": [16,24,0]
 	},
 	{
 		"type": "prereq",
-		"values": [18,0,17]
+		"values": [18,17,0]
 	},
 	{
 		"type": "prereq",
-		"values": [20,0,19]
+		"values": [20,19,0]
 	},
 	{
 		"type": "prereq",
-		"values": [22,1,24]
+		"values": [22,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [22,1,26]
+		"values": [22,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [23,0,87]
+		"values": [23,87,0]
 	},
 	{
 		"type": "prereq",
-		"values": [23,0,83]
+		"values": [23,83,0]
 	},
 	{
 		"type": "prereq",
-		"values": [23,1,18]
+		"values": [23,18,1]
 	},
 	{
 		"type": "prereq",
-		"values": [23,1,20]
+		"values": [23,20,1]
 	},
 	{
 		"type": "prereq",
-		"values": [23,1,21]
+		"values": [23,21,1]
 	},
 	{
 		"type": "prereq",
-		"values": [24,1,18]
+		"values": [24,18,1]
 	},
 	{
 		"type": "prereq",
-		"values": [24,1,20]
+		"values": [24,20,1]
 	},
 	{
 		"type": "prereq",
-		"values": [24,1,21]
+		"values": [24,21,1]
 	},
 	{
 		"type": "prereq",
-		"values": [25,1,17]
+		"values": [25,17,1]
 	},
 	{
 		"type": "prereq",
-		"values": [25,1,20]
+		"values": [25,20,1]
 	},
 	{
 		"type": "prereq",
-		"values": [25,1,21]
+		"values": [25,21,1]
 	},
 	{
 		"type": "prereq",
-		"values": [26,1,18]
+		"values": [26,18,1]
 	},
 	{
 		"type": "prereq",
-		"values": [26,1,20]
+		"values": [26,20,1]
 	},
 	{
 		"type": "prereq",
-		"values": [26,1,21]
+		"values": [26,21,1]
 	},
 	{
 		"type": "prereq",
-		"values": [26,0,87]
+		"values": [26,87,0]
 	},
 	{
 		"type": "prereq",
-		"values": [27,1,24]
+		"values": [27,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [27,1,26]
+		"values": [27,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [28,1,18]
+		"values": [28,18,1]
 	},
 	{
 		"type": "prereq",
-		"values": [28,1,20]
+		"values": [28,20,1]
 	},
 	{
 		"type": "prereq",
-		"values": [28,1,21]
+		"values": [28,21,1]
 	},
 	{
 		"type": "prereq",
-		"values": [29,0,28]
+		"values": [29,28,0]
 	},
 	{
 		"type": "prereq",
-		"values": [29,0,83]
+		"values": [29,83,0]
 	},
 	{
 		"type": "prereq",
-		"values": [30,0,29]
+		"values": [30,29,0]
 	},
 	{
 		"type": "prereq",
-		"values": [31,1,17]
+		"values": [31,17,1]
 	},
 	{
 		"type": "prereq",
-		"values": [31,1,19]
+		"values": [31,19,1]
 	},
 	{
 		"type": "prereq",
-		"values": [31,1,21]
+		"values": [31,21,1]
 	},
 	{
 		"type": "prereq",
-		"values": [32,1,24]
+		"values": [32,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [32,1,26]
+		"values": [32,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [33,1,26]
+		"values": [33,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [33,1,24]
+		"values": [33,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [33,1,16]
+		"values": [33,16,1]
 	},
 	{
 		"type": "prereq",
-		"values": [33,1,23]
+		"values": [33,23,1]
 	},
 	{
 		"type": "prereq",
-		"values": [33,0,85]
+		"values": [33,85,0]
 	},
 	{
 		"type": "prereq",
-		"values": [33,0,86]
+		"values": [33,86,0]
 	},
 	{
 		"type": "prereq",
-		"values": [34,1,24]
+		"values": [34,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [34,1,26]
+		"values": [34,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [34,1,16]
+		"values": [34,16,1]
 	},
 	{
 		"type": "prereq",
-		"values": [34,0,87]
+		"values": [34,87,0]
 	},
 	{
 		"type": "prereq",
-		"values": [35,0,23]
+		"values": [35,23,0]
 	},
 	{
 		"type": "prereq",
-		"values": [36,1,26]
+		"values": [36,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [36,1,24]
+		"values": [36,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [36,0,29]
+		"values": [36,29,0]
 	},
 	{
 		"type": "prereq",
-		"values": [37,1,24]
+		"values": [37,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [37,1,26]
+		"values": [37,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [37,0,83]
+		"values": [37,83,0]
 	},
 	{
 		"type": "prereq",
-		"values": [38,1,24]
+		"values": [38,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [38,1,26]
+		"values": [38,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [38,0,85]
+		"values": [38,85,0]
 	},
 	{
 		"type": "prereq",
-		"values": [38,0,29]
+		"values": [38,29,0]
 	},
 	{
 		"type": "prereq",
-		"values": [39,1,24]
+		"values": [39,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [39,1,26]
+		"values": [39,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [39,0,29]
+		"values": [39,29,0]
 	},
 	{
 		"type": "prereq",
-		"values": [40,1,24]
+		"values": [40,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [40,1,26]
+		"values": [40,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [40,0,28]
+		"values": [40,28,0]
 	},
 	{
 		"type": "prereq",
-		"values": [41,1,24]
+		"values": [41,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [41,1,26]
+		"values": [41,26,1]
 	},
 	{
 		"type": "prereq",
@@ -370,247 +370,247 @@ prereq = [
 	},
 	{
 		"type": "prereq",
-		"values": [42,1,22]
+		"values": [42,22,1]
 	},
 	{
 		"type": "prereq",
-		"values": [43,1,24]
+		"values": [43,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [43,1,26]
+		"values": [43,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [43,0,85]
+		"values": [43,85,0]
 	},
 	{
 		"type": "prereq",
-		"values": [43,0,86]
+		"values": [43,86,0]
 	},
 	{
 		"type": "prereq",
-		"values": [44,0,37]
+		"values": [44,37,0]
 	},
 	{
 		"type": "prereq",
-		"values": [47,0,23]
+		"values": [47,23,0]
 	},
 	{
 		"type": "prereq",
-		"values": [47,0,28]
+		"values": [47,28,0]
 	},
 	{
 		"type": "prereq",
-		"values": [47,0,32]
+		"values": [47,32,0]
 	},
 	{
 		"type": "prereq",
-		"values": [48,0,33]
+		"values": [48,33,0]
 	},
 	{
 		"type": "prereq",
-		"values": [49,0,23]
+		"values": [49,23,0]
 	},
 	{
 		"type": "prereq",
-		"values": [50,0,33]
+		"values": [50,33,0]
 	},
 	{
 		"type": "prereq",
-		"values": [51,0,33]
+		"values": [51,33,0]
 	},
 	{
 		"type": "prereq",
-		"values": [51,0,85]
+		"values": [51,85,0]
 	},
 	{
 		"type": "prereq",
-		"values": [52,0,33]
+		"values": [52,33,0]
 	},
 	{
 		"type": "prereq",
-		"values": [52,0,89]
+		"values": [52,89,0]
 	},
 	{
 		"type": "prereq",
-		"values": [53,0,23]
+		"values": [53,23,0]
 	},
 	{
 		"type": "prereq",
-		"values": [53,0,37]
+		"values": [53,37,0]
 	},
 	{
 		"type": "prereq",
-		"values": [54,0,33]
+		"values": [54,33,0]
 	},
 	{
 		"type": "prereq",
-		"values": [55,0,39]
+		"values": [55,39,0]
 	},
 	{
 		"type": "prereq",
-		"values": [55,0,87]
+		"values": [55,87,0]
 	},
 	{
 		"type": "prereq",
-		"values": [56,0,36]
+		"values": [56,36,0]
 	},
 	{
 		"type": "prereq",
-		"values": [57,0,26]
+		"values": [57,26,0]
 	},
 	{
 		"type": "prereq",
-		"values": [57,0,39]
+		"values": [57,39,0]
 	},
 	{
 		"type": "prereq",
-		"values": [58,0,23]
+		"values": [58,23,0]
 	},
 	{
 		"type": "prereq",
-		"values": [58,0,39]
+		"values": [58,39,0]
 	},
 	{
 		"type": "prereq",
-		"values": [59,1,18]
+		"values": [59,18,1]
 	},
 	{
 		"type": "prereq",
-		"values": [59,1,20]
+		"values": [59,20,1]
 	},
 	{
 		"type": "prereq",
-		"values": [59,1,21]
+		"values": [59,21,1]
 	},
 	{
 		"type": "prereq",
-		"values": [59,0,87]
+		"values": [59,87,0]
 	},
 	{
 		"type": "prereq",
-		"values": [59,0,82]
+		"values": [59,82,0]
 	},
 	{
 		"type": "prereq",
-		"values": [60,0,39]
+		"values": [60,39,0]
 	},
 	{
 		"type": "prereq",
-		"values": [60,1,82]
+		"values": [60,82,1]
 	},
 	{
 		"type": "prereq",
-		"values": [60,1,81]
+		"values": [60,81,1]
 	},
 	{
 		"type": "prereq",
-		"values": [61,1,89]
+		"values": [61,89,1]
 	},
 	{
 		"type": "prereq",
-		"values": [61,1,90]
+		"values": [61,90,1]
 	},
 	{
 		"type": "prereq",
-		"values": [62,0,39]
+		"values": [62,39,0]
 	},
 	{
 		"type": "prereq",
-		"values": [63,0,39]
+		"values": [63,39,0]
 	},
 	{
 		"type": "prereq",
-		"values": [64,0,33]
+		"values": [64,33,0]
 	},
 	{
 		"type": "prereq",
-		"values": [65,0,35]
+		"values": [65,35,0]
 	},
 	{
 		"type": "prereq",
-		"values": [66,0,39]
+		"values": [66,39,0]
 	},
 	{
 		"type": "prereq",
-		"values": [66,0,35]
+		"values": [66,35,0]
 	},
 	{
 		"type": "prereq",
-		"values": [67,0,35]
+		"values": [67,35,0]
 	},
 	{
 		"type": "prereq",
-		"values": [68,0,40]
+		"values": [68,40,0]
 	},
 	{
 		"type": "prereq",
-		"values": [68,0,41]
+		"values": [68,41,0]
 	},
 	{
 		"type": "prereq",
-		"values": [69,0,68]
+		"values": [69,68,0]
 	},
 	{
 		"type": "prereq",
-		"values": [70,0,42]
+		"values": [70,42,0]
 	},
 	{
 		"type": "prereq",
-		"values": [71,1,24]
+		"values": [71,24,1]
 	},
 	{
 		"type": "prereq",
-		"values": [71,1,26]
+		"values": [71,26,1]
 	},
 	{
 		"type": "prereq",
-		"values": [72,0,42]
+		"values": [72,42,0]
 	},
 	{
 		"type": "prereq",
-		"values": [73,0,38]
+		"values": [73,38,0]
 	},
 	{
 		"type": "prereq",
-		"values": [74,0,38]
+		"values": [74,38,0]
 	},
 	{
 		"type": "prereq",
-		"values": [75,0,38]
+		"values": [75,38,0]
 	},
 	{
 		"type": "prereq",
-		"values": [76,0,38]
+		"values": [76,38,0]
 	},
 	{
 		"type": "prereq",
-		"values": [80,0,87]
+		"values": [80,87,0]
 	},
 	{
 		"type": "prereq",
-		"values": [82,0,88]
+		"values": [82,88,0]
 	},
 	{
 		"type": "prereq",
-		"values": [84,0,83]
+		"values": [84,83,0]
 	},
 	{
 		"type": "prereq",
-		"values": [88,0,86]
+		"values": [88,86,0]
 	},
 	{
 		"type": "prereq",
-		"values": [89,0,85]
+		"values": [89,85,0]
 	},
 	{
 		"type": "prereq",
-		"values": [90,0,85]
+		"values": [90,85,0]
 	},
 	{
 		"type": "prereq",
-		"values": [90,0,88]
+		"values": [90,88,0]
 	}
 
 ]
@@ -618,56 +618,56 @@ prereq = [
 // 
 // ANTIREQ
 // "type": "category", "type": "antireq",
-// "values": ["cidsource","isopt","cidtarget"]
+// "values": ["cidsource","cidtarget","isopt"]
 
 antireq = [
 	{
 		"type": "category",
-		"values": ["cidsource","isopt","cidtarget"]
+		"values": ["cidsource","cidtarget","isopt"]
 	},
 	{
 		"type": "antireq",
-		"values": [1,0,22]
+		"values": [1,22,0]
 	},
 	{
 		"type": "antireq",
-		"values": [3,0,22]
+		"values": [3,22,0]
 	},
 	{
 		"type": "antireq",
-		"values": [17,1,19]
+		"values": [17,19,1]
 	},
 	{
 		"type": "antireq",
-		"values": [17,1,21]
+		"values": [17,21,1]
 	},
 	{
 		"type": "antireq",
-		"values": [18,1,20]
+		"values": [18,20,1]
 	},
 	{
 		"type": "antireq",
-		"values": [18,1,21]
+		"values": [18,21,1]
 	},
 	{
 		"type": "antireq",
-		"values": [19,0,17]
+		"values": [19,17,0]
 	},
 	{
 		"type": "antireq",
-		"values": [20,1,18]
+		"values": [20,18,1]
 	},
 	{
 		"type": "antireq",
-		"values": [20,1,21]
+		"values": [20,21,1]
 	},
 	{
 		"type": "antireq",
-		"values": [21,1,17]
+		"values": [21,17,1]
 	},
 	{
 		"type": "antireq",
-		"values": [21,1,18]
+		"values": [21,18,1]
 	},
 	{
 		"type": "antireq",
@@ -675,130 +675,130 @@ antireq = [
 	},
 	{
 		"type": "antireq",
-		"values": [22,1,3]
+		"values": [22,3,1]
 	},
 	{
 		"type": "antireq",
-		"values": [24,0,26]
+		"values": [24,26,0]
 	},
 	{
 		"type": "antireq",
-		"values": [26,0,24]
+		"values": [26,24,0]
 	},
 	{
 		"type": "antireq",
-		"values": [34,0,80]
+		"values": [34,80,0]
 	},
 	{
 		"type": "antireq",
-		"values": [45,0,46]
+		"values": [45,46,0]
 	},
 	{
 		"type": "antireq",
-		"values": [46,0,45]
+		"values": [46,45,0]
 	},
 	{
 		"type": "antireq",
-		"values": [80,0,34]
+		"values": [80,34,0]
 	}
 ]
 
 // 
 // RECOMMENDED
 // "type": "category", "type": "recommended",
-// "values": ["cidsource","isopt","cidtarget"]
+// "values": ["cidsource","cidtarget","isopt"]
 
 recommended = [
 	{
 		"type": "category",
-		"values": ["cidsource","isopt","cidtarget"]
+		"values": ["cidsource","cidtarget","isopt"]
 	},
 	{
 		"type": "recommended",
-		"values": [17,0,14]
+		"values": [17,14,0]
 	},
 	{
 		"type": "recommended",
-		"values": [19,0,14]
+		"values": [19,14,0]
 	},
 	{
 		"type": "recommended",
-		"values": [23,1,24]
+		"values": [23,24,1]
 	},
 	{
 		"type": "recommended",
-		"values": [23,1,26]
+		"values": [23,26,1]
 	},
 	{
 		"type": "recommended",
-		"values": [25,1,85]
+		"values": [25,85,1]
 	},
 	{
 		"type": "recommended",
-		"values": [25,1,86]
+		"values": [25,86,1]
 	},
 	{
 		"type": "recommended",
-		"values": [25,1,87]
+		"values": [25,87,1]
 	},
 	{
 		"type": "recommended",
-		"values": [32,0,23]
+		"values": [32,23,0]
 	},
 	{
 		"type": "recommended",
-		"values": [33,0,86]
+		"values": [33,86,0]
 	},
 	{
 		"type": "recommended",
-		"values": [35,0,37]
+		"values": [35,37,0]
 	},
 	{
 		"type": "recommended",
-		"values": [51,0,43]
+		"values": [51,43,0]
 	},
 	{
 		"type": "recommended",
-		"values": [54,0,82]
+		"values": [54,82,0]
 	},
 	{
 		"type": "recommended",
-		"values": [55,0,25]
+		"values": [55,25,0]
 	},
 	{
 		"type": "recommended",
-		"values": [56,0,25]
+		"values": [56,25,0]
 	},
 	{
 		"type": "recommended",
-		"values": [56,1,34]
+		"values": [56,34,1]
 	},
 	{
 		"type": "recommended",
-		"values": [56,1,80]
+		"values": [56,80,1]
 	},
 	{
 		"type": "recommended",
-		"values": [59,0,25]
+		"values": [59,25,0]
 	},
 	{
 		"type": "recommended",
-		"values": [60,0,82]
+		"values": [60,82,0]
 	},
 	{
 		"type": "recommended",
-		"values": [60,0,36]
+		"values": [60,36,0]
 	},
 	{
 		"type": "recommended",
-		"values": [71,1,38]
+		"values": [71,38,1]
 	},
 	{
 		"type": "recommended",
-		"values": [71,1,42]
+		"values": [71,42,1]
 	},
 	{
 		"type": "recommended",
-		"values": [87,0,83]
+		"values": [87,83,0]
 	}
 ]
