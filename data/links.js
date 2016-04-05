@@ -2,917 +2,762 @@
 // PREREQ
 // 
 // "type": "category", "type": "prereq",
-// "values": ["cidsource","cidtarget","isopt"]
+// "values": ["source","target","value"]
 prereq = [
 	{
-		"type": "category",
-		"values": ["cidsource","cidtarget", "isopt"]
+		"source":1,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":1,
-		"cidtarget":24,
-		"isopt":1
+		"source":1,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":1,
-		"cidtarget":26,
-		"isopt":1
+		"source":2,
+		"target":1,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":2,
-		"cidtarget":1,
-		"isopt":1
+		"source":2,
+		"target":22,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":2,
-		"cidtarget":22,
-		"isopt":1
+		"source":3,
+		"target":1,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":3,
-		"cidtarget":1,
-		"isopt":0
+		"source":4,
+		"target":1,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":4,
-		"cidtarget":1,
-		"isopt":1
+		"source":4,
+		"target":22,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":4,
-		"cidtarget":22,
-		"isopt":1
+		"source":5,
+		"target":1,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":5,
-		"cidtarget":1,
-		"isopt":1
+		"source":5,
+		"target":22,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":5,
-		"cidtarget":22,
-		"isopt":1
+		"source":7,
+		"target":3,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":7,
-		"cidtarget":3,
-		"isopt":1
+		"source":7,
+		"target":22,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":7,
-		"cidtarget":22,
-		"isopt":1
+		"source":8,
+		"target":1,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":8,
-		"cidtarget":1,
-		"isopt":1
+		"source":8,
+		"target":22,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":8,
-		"cidtarget":22,
-		"isopt":1
+		"source":9,
+		"target":2,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":9,
-		"cidtarget":2,
-		"isopt":1
+		"source":9,
+		"target":3,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":9,
-		"cidtarget":3,
-		"isopt":1
+		"source":10,
+		"target":4,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":10,
-		"cidtarget":4,
-		"isopt":0
+		"source":11,
+		"target":3,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":11,
-		"cidtarget":3,
-		"isopt":1
+		"source":11,
+		"target":22,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":11,
-		"cidtarget":22,
-		"isopt":1
+		"source":12,
+		"target":1,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":12,
-		"cidtarget":1,
-		"isopt":1
+		"source":12,
+		"target":22,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":12,
-		"cidtarget":22,
-		"isopt":1
+		"source":12,
+		"target":39,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":12,
-		"cidtarget":39,
-		"isopt":0
+		"source":13,
+		"target":1,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":13,
-		"cidtarget":1,
-		"isopt":1
+		"source":13,
+		"target":22,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":13,
-		"cidtarget":22,
-		"isopt":1
+		"source":15,
+		"target":18,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":15,
-		"cidtarget":18,
-		"isopt":1
+		"source":15,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":15,
-		"cidtarget":21,
-		"isopt":1
+		"source":15,
+		"target":20,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":15,
-		"cidtarget":20,
-		"isopt":1
+		"source":16,
+		"target":23,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":16,
-		"cidtarget":23,
-		"isopt":0
+		"source":16,
+		"target":24,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":16,
-		"cidtarget":24,
-		"isopt":0
+		"source":18,
+		"target":17,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":18,
-		"cidtarget":17,
-		"isopt":0
+		"source":20,
+		"target":19,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":20,
-		"cidtarget":19,
-		"isopt":0
+		"source":22,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":22,
-		"cidtarget":24,
-		"isopt":1
+		"source":22,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":22,
-		"cidtarget":26,
-		"isopt":1
+		"source":23,
+		"target":87,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":23,
-		"cidtarget":87,
-		"isopt":0
+		"source":23,
+		"target":83,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":23,
-		"cidtarget":83,
-		"isopt":0
+		"source":23,
+		"target":18,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":23,
-		"cidtarget":18,
-		"isopt":1
+		"source":23,
+		"target":20,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":23,
-		"cidtarget":20,
-		"isopt":1
+		"source":23,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":23,
-		"cidtarget":21,
-		"isopt":1
+		"source":24,
+		"target":18,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":24,
-		"cidtarget":18,
-		"isopt":1
+		"source":24,
+		"target":20,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":24,
-		"cidtarget":20,
-		"isopt":1
+		"source":24,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":24,
-		"cidtarget":21,
-		"isopt":1
+		"source":25,
+		"target":17,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":25,
-		"cidtarget":17,
-		"isopt":1
+		"source":25,
+		"target":20,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":25,
-		"cidtarget":20,
-		"isopt":1
+		"source":25,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":25,
-		"cidtarget":21,
-		"isopt":1
+		"source":26,
+		"target":18,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":26,
-		"cidtarget":18,
-		"isopt":1
+		"source":26,
+		"target":20,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":26,
-		"cidtarget":20,
-		"isopt":1
+		"source":26,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":26,
-		"cidtarget":21,
-		"isopt":1
+		"source":26,
+		"target":87,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":26,
-		"cidtarget":87,
-		"isopt":0
+		"source":27,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":27,
-		"cidtarget":24,
-		"isopt":1
+		"source":27,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":27,
-		"cidtarget":26,
-		"isopt":1
+		"source":28,
+		"target":18,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":28,
-		"cidtarget":18,
-		"isopt":1
+		"source":28,
+		"target":20,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":28,
-		"cidtarget":20,
-		"isopt":1
+		"source":28,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":28,
-		"cidtarget":21,
-		"isopt":1
+		"source":29,
+		"target":28,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":29,
-		"cidtarget":28,
-		"isopt":0
+		"source":29,
+		"target":83,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":29,
-		"cidtarget":83,
-		"isopt":0
+		"source":30,
+		"target":29,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":30,
-		"cidtarget":29,
-		"isopt":0
+		"source":31,
+		"target":17,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":31,
-		"cidtarget":17,
-		"isopt":1
+		"source":31,
+		"target":19,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":31,
-		"cidtarget":19,
-		"isopt":1
+		"source":31,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":31,
-		"cidtarget":21,
-		"isopt":1
+		"source":32,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":32,
-		"cidtarget":24,
-		"isopt":1
+		"source":32,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":32,
-		"cidtarget":26,
-		"isopt":1
+		"source":33,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":33,
-		"cidtarget":26,
-		"isopt":1
+		"source":33,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":33,
-		"cidtarget":24,
-		"isopt":1
+		"source":33,
+		"target":16,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":33,
-		"cidtarget":16,
-		"isopt":1
+		"source":33,
+		"target":23,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":33,
-		"cidtarget":23,
-		"isopt":1
+		"source":33,
+		"target":85,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":33,
-		"cidtarget":85,
-		"isopt":0
+		"source":33,
+		"target":86,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":33,
-		"cidtarget":86,
-		"isopt":0
+		"source":34,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":34,
-		"cidtarget":24,
-		"isopt":1
+		"source":34,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":34,
-		"cidtarget":26,
-		"isopt":1
+		"source":34,
+		"target":16,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":34,
-		"cidtarget":16,
-		"isopt":1
+		"source":34,
+		"target":87,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":34,
-		"cidtarget":87,
-		"isopt":0
+		"source":35,
+		"target":23,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":35,
-		"cidtarget":23,
-		"isopt":0
+		"source":36,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":36,
-		"cidtarget":26,
-		"isopt":1
+		"source":36,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":36,
-		"cidtarget":24,
-		"isopt":1
+		"source":36,
+		"target":29,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":36,
-		"cidtarget":29,
-		"isopt":0
+		"source":37,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":37,
-		"cidtarget":24,
-		"isopt":1
+		"source":37,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":37,
-		"cidtarget":26,
-		"isopt":1
+		"source":37,
+		"target":83,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":37,
-		"cidtarget":83,
-		"isopt":0
+		"source":38,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":38,
-		"cidtarget":24,
-		"isopt":1
+		"source":38,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":38,
-		"cidtarget":26,
-		"isopt":1
+		"source":38,
+		"target":85,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":38,
-		"cidtarget":85,
-		"isopt":0
+		"source":38,
+		"target":29,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":38,
-		"cidtarget":29,
-		"isopt":0
+		"source":39,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":39,
-		"cidtarget":24,
-		"isopt":1
+		"source":39,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":39,
-		"cidtarget":26,
-		"isopt":1
+		"source":39,
+		"target":29,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":39,
-		"cidtarget":29,
-		"isopt":0
+		"source":40,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":40,
-		"cidtarget":24,
-		"isopt":1
+		"source":40,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":40,
-		"cidtarget":26,
-		"isopt":1
+		"source":40,
+		"target":28,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":40,
-		"cidtarget":28,
-		"isopt":0
+		"source":41,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":41,
-		"cidtarget":24,
-		"isopt":1
+		"source":41,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":41,
-		"cidtarget":26,
-		"isopt":1
+		"source":42,
+		"target":1,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":42,
-		"cidtarget":1,
-		"isopt":1
+		"source":42,
+		"target":22,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":42,
-		"cidtarget":22,
-		"isopt":1
+		"source":43,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":43,
-		"cidtarget":24,
-		"isopt":1
+		"source":43,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":43,
-		"cidtarget":26,
-		"isopt":1
+		"source":43,
+		"target":85,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":43,
-		"cidtarget":85,
-		"isopt":0
+		"source":43,
+		"target":86,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":43,
-		"cidtarget":86,
-		"isopt":0
+		"source":44,
+		"target":37,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":44,
-		"cidtarget":37,
-		"isopt":0
+		"source":47,
+		"target":23,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":47,
-		"cidtarget":23,
-		"isopt":0
+		"source":47,
+		"target":28,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":47,
-		"cidtarget":28,
-		"isopt":0
+		"source":47,
+		"target":32,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":47,
-		"cidtarget":32,
-		"isopt":0
+		"source":48,
+		"target":33,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":48,
-		"cidtarget":33,
-		"isopt":0
+		"source":49,
+		"target":23,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":49,
-		"cidtarget":23,
-		"isopt":0
+		"source":50,
+		"target":33,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":50,
-		"cidtarget":33,
-		"isopt":0
+		"source":51,
+		"target":33,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":51,
-		"cidtarget":33,
-		"isopt":0
+		"source":51,
+		"target":85,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":51,
-		"cidtarget":85,
-		"isopt":0
+		"source":52,
+		"target":33,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":52,
-		"cidtarget":33,
-		"isopt":0
+		"source":52,
+		"target":89,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":52,
-		"cidtarget":89,
-		"isopt":0
+		"source":53,
+		"target":23,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":53,
-		"cidtarget":23,
-		"isopt":0
+		"source":53,
+		"target":37,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":53,
-		"cidtarget":37,
-		"isopt":0
+		"source":54,
+		"target":33,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":54,
-		"cidtarget":33,
-		"isopt":0
+		"source":55,
+		"target":39,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":55,
-		"cidtarget":39,
-		"isopt":0
+		"source":55,
+		"target":87,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":55,
-		"cidtarget":87,
-		"isopt":0
+		"source":56,
+		"target":36,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":56,
-		"cidtarget":36,
-		"isopt":0
+		"source":57,
+		"target":26,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":57,
-		"cidtarget":26,
-		"isopt":0
+		"source":57,
+		"target":39,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":57,
-		"cidtarget":39,
-		"isopt":0
+		"source":58,
+		"target":23,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":58,
-		"cidtarget":23,
-		"isopt":0
+		"source":58,
+		"target":39,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":58,
-		"cidtarget":39,
-		"isopt":0
+		"source":59,
+		"target":18,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":59,
-		"cidtarget":18,
-		"isopt":1
+		"source":59,
+		"target":20,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":59,
-		"cidtarget":20,
-		"isopt":1
+		"source":59,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":59,
-		"cidtarget":21,
-		"isopt":1
+		"source":59,
+		"target":87,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":59,
-		"cidtarget":87,
-		"isopt":0
+		"source":59,
+		"target":82,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":59,
-		"cidtarget":82,
-		"isopt":0
+		"source":60,
+		"target":39,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":60,
-		"cidtarget":39,
-		"isopt":0
+		"source":60,
+		"target":82,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":60,
-		"cidtarget":82,
-		"isopt":1
+		"source":60,
+		"target":81,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":60,
-		"cidtarget":81,
-		"isopt":1
+		"source":61,
+		"target":89,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":61,
-		"cidtarget":89,
-		"isopt":1
+		"source":61,
+		"target":90,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":61,
-		"cidtarget":90,
-		"isopt":1
+		"source":62,
+		"target":39,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":62,
-		"cidtarget":39,
-		"isopt":0
+		"source":63,
+		"target":39,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":63,
-		"cidtarget":39,
-		"isopt":0
+		"source":64,
+		"target":33,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":64,
-		"cidtarget":33,
-		"isopt":0
+		"source":65,
+		"target":35,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":65,
-		"cidtarget":35,
-		"isopt":0
+		"source":66,
+		"target":39,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":66,
-		"cidtarget":39,
-		"isopt":0
+		"source":66,
+		"target":35,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":66,
-		"cidtarget":35,
-		"isopt":0
+		"source":67,
+		"target":35,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":67,
-		"cidtarget":35,
-		"isopt":0
+		"source":68,
+		"target":40,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":68,
-		"cidtarget":40,
-		"isopt":0
+		"source":68,
+		"target":41,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":68,
-		"cidtarget":41,
-		"isopt":0
+		"source":69,
+		"target":68,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":69,
-		"cidtarget":68,
-		"isopt":0
+		"source":70,
+		"target":42,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":70,
-		"cidtarget":42,
-		"isopt":0
+		"source":71,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":71,
-		"cidtarget":24,
-		"isopt":1
+		"source":71,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "prereq",
-		"cidsource":71,
-		"cidtarget":26,
-		"isopt":1
+		"source":72,
+		"target":42,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":72,
-		"cidtarget":42,
-		"isopt":0
+		"source":73,
+		"target":38,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":73,
-		"cidtarget":38,
-		"isopt":0
+		"source":74,
+		"target":38,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":74,
-		"cidtarget":38,
-		"isopt":0
+		"source":75,
+		"target":38,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":75,
-		"cidtarget":38,
-		"isopt":0
+		"source":76,
+		"target":38,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":76,
-		"cidtarget":38,
-		"isopt":0
+		"source":80,
+		"target":87,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":80,
-		"cidtarget":87,
-		"isopt":0
+		"source":82,
+		"target":88,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":82,
-		"cidtarget":88,
-		"isopt":0
+		"source":84,
+		"target":83,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":84,
-		"cidtarget":83,
-		"isopt":0
+		"source":88,
+		"target":86,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":88,
-		"cidtarget":86,
-		"isopt":0
+		"source":89,
+		"target":85,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":89,
-		"cidtarget":85,
-		"isopt":0
+		"source":90,
+		"target":85,
+		"value":0
 	},
 	{
-		"type": "prereq",
-		"cidsource":90,
-		"cidtarget":85,
-		"isopt":0
-	},
-	{
-		"type": "prereq",
-		"cidsource":90,
-		"cidtarget":88,
-		"isopt":0
+		"source":90,
+		"target":88,
+		"value":0
 	}
 
 ]
@@ -920,269 +765,220 @@ prereq = [
 // 
 // ANTIREQ
 // "type": "category", "type": "antireq",
-// "values": ["cidsource","cidtarget","isopt"]
+// "values": ["source","target","value"]
 
 antireq = [
 	{
-		"type": "category",
-		"values": ["cidsource","cidtarget","isopt"]
+		"source":1,
+		"target":22,
+		"value":0
 	},
 	{
-		"type": "antireq",
-		"cidsource":1,
-		"cidtarget":22,
-		"isopt":0
+		"source":3,
+		"target":22,
+		"value":0
 	},
 	{
-		"type": "antireq",
-		"cidsource":3,
-		"cidtarget":22,
-		"isopt":0
+		"source":17,
+		"target":19,
+		"value":1
 	},
 	{
-		"type": "antireq",
-		"cidsource":17,
-		"cidtarget":19,
-		"isopt":1
+		"source":17,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "antireq",
-		"cidsource":17,
-		"cidtarget":21,
-		"isopt":1
+		"source":18,
+		"target":20,
+		"value":1
 	},
 	{
-		"type": "antireq",
-		"cidsource":18,
-		"cidtarget":20,
-		"isopt":1
+		"source":18,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "antireq",
-		"cidsource":18,
-		"cidtarget":21,
-		"isopt":1
+		"source":19,
+		"target":17,
+		"value":0
 	},
 	{
-		"type": "antireq",
-		"cidsource":19,
-		"cidtarget":17,
-		"isopt":0
+		"source":20,
+		"target":18,
+		"value":1
 	},
 	{
-		"type": "antireq",
-		"cidsource":20,
-		"cidtarget":18,
-		"isopt":1
+		"source":20,
+		"target":21,
+		"value":1
 	},
 	{
-		"type": "antireq",
-		"cidsource":20,
-		"cidtarget":21,
-		"isopt":1
+		"source":21,
+		"target":17,
+		"value":1
 	},
 	{
-		"type": "antireq",
-		"cidsource":21,
-		"cidtarget":17,
-		"isopt":1
+		"source":21,
+		"target":18,
+		"value":1
 	},
 	{
-		"type": "antireq",
-		"cidsource":21,
-		"cidtarget":18,
-		"isopt":1
+		"source":22,
+		"target":1,
+		"value":1
 	},
 	{
-		"type": "antireq",
-		"cidsource":22,
-		"cidtarget":1,
-		"isopt":1
+		"source":22,
+		"target":3,
+		"value":1
 	},
 	{
-		"type": "antireq",
-		"cidsource":22,
-		"cidtarget":3,
-		"isopt":1
+		"source":24,
+		"target":26,
+		"value":0
 	},
 	{
-		"type": "antireq",
-		"cidsource":24,
-		"cidtarget":26,
-		"isopt":0
+		"source":26,
+		"target":24,
+		"value":0
 	},
 	{
-		"type": "antireq",
-		"cidsource":26,
-		"cidtarget":24,
-		"isopt":0
+		"source":34,
+		"target":80,
+		"value":0
 	},
 	{
-		"type": "antireq",
-		"cidsource":34,
-		"cidtarget":80,
-		"isopt":0
+		"source":45,
+		"target":46,
+		"value":0
 	},
 	{
-		"type": "antireq",
-		"cidsource":45,
-		"cidtarget":46,
-		"isopt":0
+		"source":46,
+		"target":45,
+		"value":0
 	},
 	{
-		"type": "antireq",
-		"cidsource":46,
-		"cidtarget":45,
-		"isopt":0
-	},
-	{
-		"type": "antireq",
-		"cidsource":80,
-		"cidtarget":34,
-		"isopt":0
+		"source":80,
+		"target":34,
+		"value":0
 	}
 ]
 
 // 
 // RECOMMENDED
 // "type": "category", "type": "recommended",
-// "values": ["cidsource","cidtarget","isopt"]
+// "values": ["source","target","value"]
 
 recommended = [
 	{
-		"type": "category",
-		"values": ["cidsource","cidtarget","isopt"]
+		"source":17,
+		"target":14,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":17,
-		"cidtarget":14,
-		"isopt":0
+		"source":19,
+		"target":14,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":19,
-		"cidtarget":14,
-		"isopt":0
+		"source":23,
+		"target":24,
+		"value":1
 	},
 	{
-		"type": "recommended",
-		"cidsource":23,
-		"cidtarget":24,
-		"isopt":1
+		"source":23,
+		"target":26,
+		"value":1
 	},
 	{
-		"type": "recommended",
-		"cidsource":23,
-		"cidtarget":26,
-		"isopt":1
+		"source":25,
+		"target":85,
+		"value":1
 	},
 	{
-		"type": "recommended",
-		"cidsource":25,
-		"cidtarget":85,
-		"isopt":1
+		"source":25,
+		"target":86,
+		"value":1
 	},
 	{
-		"type": "recommended",
-		"cidsource":25,
-		"cidtarget":86,
-		"isopt":1
+		"source":25,
+		"target":87,
+		"value":1
 	},
 	{
-		"type": "recommended",
-		"cidsource":25,
-		"cidtarget":87,
-		"isopt":1
+		"source":32,
+		"target":23,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":32,
-		"cidtarget":23,
-		"isopt":0
+		"source":33,
+		"target":86,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":33,
-		"cidtarget":86,
-		"isopt":0
+		"source":35,
+		"target":37,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":35,
-		"cidtarget":37,
-		"isopt":0
+		"source":51,
+		"target":43,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":51,
-		"cidtarget":43,
-		"isopt":0
+		"source":54,
+		"target":82,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":54,
-		"cidtarget":82,
-		"isopt":0
+		"source":55,
+		"target":25,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":55,
-		"cidtarget":25,
-		"isopt":0
+		"source":56,
+		"target":25,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":56,
-		"cidtarget":25,
-		"isopt":0
+		"source":56,
+		"target":34,
+		"value":1
 	},
 	{
-		"type": "recommended",
-		"cidsource":56,
-		"cidtarget":34,
-		"isopt":1
+		"source":56,
+		"target":80,
+		"value":1
 	},
 	{
-		"type": "recommended",
-		"cidsource":56,
-		"cidtarget":80,
-		"isopt":1
+		"source":59,
+		"target":25,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":59,
-		"cidtarget":25,
-		"isopt":0
+		"source":60,
+		"target":82,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":60,
-		"cidtarget":82,
-		"isopt":0
+		"source":60,
+		"target":36,
+		"value":0
 	},
 	{
-		"type": "recommended",
-		"cidsource":60,
-		"cidtarget":36,
-		"isopt":0
+		"source":71,
+		"target":38,
+		"value":1
 	},
 	{
-		"type": "recommended",
-		"cidsource":71,
-		"cidtarget":38,
-		"isopt":1
+		"source":71,
+		"target":42,
+		"value":1
 	},
 	{
-		"type": "recommended",
-		"cidsource":71,
-		"cidtarget":42,
-		"isopt":1
-	},
-	{
-		"type": "recommended",
-		"cidsource":87,
-		"cidtarget":83,
-		"isopt":0
+		"source":87,
+		"target":83,
+		"value":0
 	}
 ]

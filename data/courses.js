@@ -6,7 +6,6 @@
 
 courses = [
 	{
-		"type": "course",
 		"cid":1,
 		"faculty":"SENG",
 		"num":301,
@@ -20,7 +19,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":2,
 		"faculty":"SENG",
 		"num":401,
@@ -34,7 +32,6 @@ courses = [
 		"did":10
 	},
 	{
-		"type": "course",
 		"cid":3,
 		"faculty":"SENG",
 		"num":403,
@@ -48,7 +45,6 @@ courses = [
 		"did":9
 	},
 	{
-		"type": "course",
 		"cid":4,
 		"faculty":"SENG",
 		"num":437,
@@ -63,7 +59,6 @@ courses = [
 	},
 	{
 
-		"type": "course",
 		"cid":5,
 		"faculty":"SENG",
 		"num":471,
@@ -77,7 +72,6 @@ courses = [
 		"did":9
 	},
 	{
-		"type": "course",
 		"cid":6,
 		"faculty":"SENG",
 		"num":501,
@@ -91,7 +85,6 @@ courses = [
 		"did":10
 	},
 	{
-		"type": "course",
 		"cid":7,
 		"faculty":"SENG",
 		"num":511,
@@ -105,7 +98,6 @@ courses = [
 		"did":10
 	},
 	{
-		"type": "course",
 		"cid":8,
 		"faculty":"SENG",
 		"num":513,
@@ -119,7 +111,6 @@ courses = [
 		"did":19
 	},
 	{
-		"type": "course",
 		"cid":9,
 		"faculty":"SENG",
 		"num":515,
@@ -133,7 +124,6 @@ courses = [
 		"did":9
 	},
 	{
-		"type": "course",
 		"cid":10,
 		"faculty":"SENG",
 		"num":521,
@@ -147,7 +137,6 @@ courses = [
 		"did":11
 	},
 	{
-		"type": "course",
 		"cid":11,
 		"faculty":"SENG",
 		"num":523,
@@ -161,7 +150,6 @@ courses = [
 		"did":10
 	},
 	{
-		"type": "course",
 		"cid":12,
 		"faculty":"SENG",
 		"num":533,
@@ -175,7 +163,6 @@ courses = [
 		"did":10
 	},
 	{
-		"type": "course",
 		"cid":13,
 		"faculty":"SENG",
 		"num":541,
@@ -189,7 +176,6 @@ courses = [
 		"did":10
 	},
 	{
-		"type": "course",
 		"cid":14,
 		"faculty":"CPSC",
 		"num":101,
@@ -203,7 +189,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":15,
 		"faculty":"CPSC",
 		"num":102,
@@ -217,7 +202,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":16,
 		"faculty":"CPSC",
 		"num":105,
@@ -231,7 +215,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":17,
 		"faculty":"CPSC",
 		"num":217,
@@ -245,7 +228,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":18,
 		"faculty":"CPSC",
 		"num":219,
@@ -259,7 +241,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":19,
 		"faculty":"CPSC",
 		"num":231,
@@ -273,7 +254,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":20,
 		"faculty":"CPSC",
 		"num":233,
@@ -287,7 +267,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":21,
 		"faculty":"CPSC",
 		"num":235,
@@ -301,7 +280,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":22,
 		"faculty":"CPSC",
 		"num":301,
@@ -315,7 +293,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":23,
 		"faculty":"CPSC",
 		"num":313,
@@ -329,7 +306,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":24,
 		"faculty":"CPSC",
 		"num":319,
@@ -343,7 +319,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":25,
 		"faculty":"CPSC",
 		"num":329,
@@ -357,7 +332,6 @@ courses = [
 		"did":18
 	},
 	{
-		"type": "course",
 		"cid":26,
 		"faculty":"CPSC",
 		"num":331,
@@ -371,7 +345,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":27,
 		"faculty":"CPSC",
 		"num":335,
@@ -385,7 +358,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":28,
 		"faculty":"CPSC",
 		"num":355,
@@ -399,7 +371,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":29,
 		"faculty":"CPSC",
 		"num":359,
@@ -413,7 +384,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":30,
 		"faculty":"CPSC",
 		"num":401,
@@ -427,7 +397,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":31,
 		"faculty":"CPSC",
 		"num":409,
@@ -441,7 +410,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":32,
 		"faculty":"CPSC",
 		"num":411,
@@ -455,7 +423,6 @@ courses = [
 		"did":12
 	},
 	{
-		"type": "course",
 		"cid":33,
 		"faculty":"CPSC",
 		"num":413,
@@ -469,7 +436,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":34,
 		"faculty":"CPSC",
 		"num":418,
@@ -483,7 +449,6 @@ courses = [
 		"did":15
 	},
 	{
-		"type": "course",
 		"cid":35,
 		"faculty":"CPSC",
 		"num":433,
@@ -497,7 +462,6 @@ courses = [
 		"did":6
 	},
 	{
-		"type": "course",
 		"cid":36,
 		"faculty":"CPSC",
 		"num":441,
@@ -511,7 +475,6 @@ courses = [
 		"did":5
 	},
 	{
-		"type": "course",
 		"cid":37,
 		"faculty":"CPSC",
 		"num":449,
@@ -525,7 +488,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":38,
 		"faculty":"CPSC",
 		"num":541,
@@ -539,7 +501,6 @@ courses = [
 		"did":3
 	},
 	{
-		"type": "course",
 		"cid":39,
 		"faculty":"CPSC",
 		"num":457,
@@ -553,7 +514,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":40,
 		"faculty":"CPSC",
 		"num":461,
@@ -567,7 +527,6 @@ courses = [
 		"did":6
 	},
 	{
-		"type": "course",
 		"cid":41,
 		"faculty":"CPSC",
 		"num":471,
@@ -581,7 +540,6 @@ courses = [
 		"did":10
 	},
 	{
-		"type": "course",
 		"cid":42,
 		"faculty":"CPSC",
 		"num":481,
@@ -595,7 +553,6 @@ courses = [
 		"did":7
 	},
 	{
-		"type": "course",
 		"cid":43,
 		"faculty":"CPSC",
 		"num":491,
@@ -609,7 +566,6 @@ courses = [
 		"did":16
 	},
 	{
-		"type": "course",
 		"cid":44,
 		"faculty":"CPSC",
 		"num":501,
@@ -623,7 +579,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":45,
 		"faculty":"CPSC",
 		"num":502,
@@ -637,7 +592,6 @@ courses = [
 		"did":2
 	},
 	{
-		"type": "course",
 		"cid":46,
 		"faculty":"CPSC",
 		"num":503,
@@ -651,7 +605,6 @@ courses = [
 		"did":2
 	},
 	{
-		"type": "course",
 		"cid":47,
 		"faculty":"CPSC",
 		"num":510,
@@ -665,7 +618,6 @@ courses = [
 		"did":10
 	},
 	{
-		"type": "course",
 		"cid":48,
 		"faculty":"CPSC",
 		"num":511,
@@ -679,7 +631,6 @@ courses = [
 		"did":16
 	},
 	{
-		"type": "course",
 		"cid":49,
 		"faculty":"CPSC",
 		"num":513,
@@ -693,7 +644,6 @@ courses = [
 		"did":16
 	},
 	{
-		"type": "course",
 		"cid":50,
 		"faculty":"CPSC",
 		"num":517,
@@ -707,7 +657,6 @@ courses = [
 		"did":16
 	},
 	{
-		"type": "course",
 		"cid":51,
 		"faculty":"CPSC",
 		"num":518,
@@ -721,7 +670,6 @@ courses = [
 		"did":16
 	},
 	{
-		"type": "course",
 		"cid":52,
 		"faculty":"CPSC",
 		"num":519,
@@ -735,7 +683,6 @@ courses = [
 		"did":16
 	},
 	{
-		"type": "course",
 		"cid":53,
 		"faculty":"CPSC",
 		"num":521,
@@ -749,7 +696,6 @@ courses = [
 		"did":16
 	},
 	{
-		"type": "course",
 		"cid":54,
 		"faculty":"CPSC",
 		"num":522,
@@ -763,7 +709,6 @@ courses = [
 		"did":16
 	},
 	{
-		"type": "course",
 		"cid":55,
 		"faculty":"CPSC",
 		"num":525,
@@ -777,7 +722,6 @@ courses = [
 		"did":18
 	},
 	{
-		"type": "course",
 		"cid":56,
 		"faculty":"CPSC",
 		"num":526,
@@ -791,7 +735,6 @@ courses = [
 		"did":18
 	},
 	{
-		"type": "course",
 		"cid":57,
 		"faculty":"CPSC",
 		"num":527,
@@ -805,7 +748,6 @@ courses = [
 		"did":11
 	},
 	{
-		"type": "course",
 		"cid":58,
 		"faculty":"CPSC",
 		"num":528,
@@ -819,7 +761,6 @@ courses = [
 		"did":21
 	},
 	{
-		"type": "course",
 		"cid":59,
 		"faculty":"CPSC",
 		"num":530,
@@ -833,7 +774,6 @@ courses = [
 		"did":22
 	},
 	{
-		"type": "course",
 		"cid":60,
 		"faculty":"CPSC",
 		"num":531,
@@ -847,7 +787,6 @@ courses = [
 		"did":6
 	},
 	{
-		"type": "course",
 		"cid":61,
 		"faculty":"CPSC",
 		"num":535,
@@ -861,7 +800,6 @@ courses = [
 		"did":6
 	},
 	{
-		"type": "course",
 		"cid":62,
 		"faculty":"CPSC",
 		"num":550,
@@ -875,7 +813,6 @@ courses = [
 		"did":23
 	},
 	{
-		"type": "course",
 		"cid":63,
 		"faculty":"CPSC",
 		"num":559,
@@ -889,7 +826,6 @@ courses = [
 		"did":19
 	},
 	{
-		"type": "course",
 		"cid":64,
 		"faculty":"CPSC",
 		"num":561,
@@ -903,7 +839,6 @@ courses = [
 		"did":20
 	},
 	{
-		"type": "course",
 		"cid":65,
 		"faculty":"CPSC",
 		"num":565,
@@ -917,7 +852,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":66,
 		"faculty":"CPSC",
 		"num":567,
@@ -931,7 +865,6 @@ courses = [
 		"did":19
 	},
 	{
-		"type": "course",
 		"cid":67,
 		"faculty":"CPSC",
 		"num":568,
@@ -945,7 +878,6 @@ courses = [
 		"did":23
 	},
 	{
-		"type": "course",
 		"cid":68,
 		"faculty":"CPSC",
 		"num":571,
@@ -959,7 +891,6 @@ courses = [
 		"did":19
 	},
 	{
-		"type": "course",
 		"cid":69,
 		"faculty":"CPSC",
 		"num":572,
@@ -973,7 +904,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":70,
 		"faculty":"CPSC",
 		"num":581,
@@ -987,7 +917,6 @@ courses = [
 		"did":13
 	},
 	{
-		"type": "course",
 		"cid":71,
 		"faculty":"CPSC",
 		"num":583,
@@ -1001,7 +930,6 @@ courses = [
 		"did":13
 	},
 	{
-		"type": "course",
 		"cid":72,
 		"faculty":"CPSC",
 		"num":584,
@@ -1015,7 +943,6 @@ courses = [
 		"did":13
 	},
 	{
-		"type": "course",
 		"cid":73,
 		"faculty":"CPSC",
 		"num":585,
@@ -1029,7 +956,6 @@ courses = [
 		"did":4
 	},
 	{
-		"type": "course",
 		"cid":74,
 		"faculty":"CPSC",
 		"num":587,
@@ -1043,7 +969,6 @@ courses = [
 		"did":8
 	},
 	{
-		"type": "course",
 		"cid":75,
 		"faculty":"CPSC",
 		"num":589,
@@ -1057,7 +982,6 @@ courses = [
 		"did":8
 	},
 	{
-		"type": "course",
 		"cid":76,
 		"faculty":"CPSC",
 		"num":591,
@@ -1071,7 +995,6 @@ courses = [
 		"did":8
 	},
 	{
-		"type": "course",
 		"cid":77,
 		"faculty":"CPSC",
 		"num":594,
@@ -1085,7 +1008,6 @@ courses = [
 		"did":10
 	},
 	{
-		"type": "course",
 		"cid":78,
 		"faculty":"CPSC",
 		"num":598,
@@ -1099,7 +1021,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":79,
 		"faculty":"CPSC",
 		"num":599,
@@ -1113,7 +1034,6 @@ courses = [
 		"did":0
 	},
 	{
-		"type": "course",
 		"cid":80,
 		"faculty":"PMAT",
 		"num":418,
@@ -1127,7 +1047,6 @@ courses = [
 		"did":17
 	},
 	{
-		"type": "course",
 		"cid":81,
 		"faculty":"STAT",
 		"num":213,
@@ -1141,7 +1060,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":82,
 		"faculty":"STAT",
 		"num":321,
@@ -1155,7 +1073,6 @@ courses = [
 		"did":24
 	},
 	{
-		"type": "course",
 		"cid":83,
 		"faculty":"PHIL",
 		"num":279,
@@ -1169,7 +1086,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":84,
 		"faculty":"PHIL",
 		"num":379,
@@ -1183,7 +1099,6 @@ courses = [
 		"did":25
 	},
 	{
-		"type": "course",
 		"cid":85,
 		"faculty":"MATH",
 		"num":211,
@@ -1197,7 +1112,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":86,
 		"faculty":"MATH",
 		"num":265,
@@ -1211,7 +1125,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":87,
 		"faculty":"MATH",
 		"num":271,
@@ -1225,7 +1138,6 @@ courses = [
 		"did":1
 	},
 	{
-		"type": "course",
 		"cid":88,
 		"faculty":"MATH",
 		"num":267,
@@ -1239,7 +1151,6 @@ courses = [
 		"did":8
 	},
 	{
-		"type": "course",
 		"cid":89,
 		"faculty":"MATH",
 		"num":311,
@@ -1253,7 +1164,6 @@ courses = [
 		"did":16
 	},
 	{
-		"type": "course",
 		"cid":90,
 		"faculty":"MATH",
 		"num":331,
