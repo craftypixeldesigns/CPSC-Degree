@@ -26,6 +26,8 @@ var filter;
 
 // Call methods
 createVis();
+createFilter();
+appearInfo("type");
 
 // Format data
 // courses
@@ -94,7 +96,25 @@ function createVis() {
 	    .attr("markerHeight", 6)
 	    .attr("orient", "auto")
 	  	.append("svg:path")
-	  	.attr("d", "M 0,0 m -5,-5 L 5,0 L -5,5 Z");
+	  	.attr("d", "M 0,0 m -5,-5 L 5,0 L -5,5 Z")
+	  	.style("fill", function(d) { //TODO not working
+			// prereq/rec and
+			if (d.value == 0 || d.value == 4) { 
+				return "#377EB8";
+			} 
+			// prereq or 
+			else if (d.value == 1 || d.value == 5) { 
+				return "#4DAF4A";
+			} 
+			// antireq and
+			else if (d.value == 2) {   
+				return "#E41A1C";
+			} 
+			// antireq or 
+			else if (d.value == 3) { 
+				return "#FF7F00";
+			}  
+		});
 	    // .attr("d", "M0,-5L10,0L0,5");
 
 	// define prereq links
@@ -223,10 +243,71 @@ function createVis() {
 			// hide them until later
 		}
 	}
+}
 
-	//  ---------
-	// | FILTERS |
-	//  ---------
-	 root = d3.select("#options")
-		.attr("height", height);
+
+// Select interaction makes different info appear
+function appearInfo(type) {
+	var div = d3.select("div.infoBox");
+	var html;
+	var toggleInfo = false;
+
+	var courseIndex, degIndex;
+
+	// Inspired from http://codepen.io/smlo/pen/JdMOej
+	d3.selectAll(".node").on("click", function(d) {
+		
+		if (!toggleInfo) {
+			div.style("visibility", "visible")
+				.transition()
+				.duration(200)
+				.style("opacity", 1);
+			toggleInfo = true;
+		} else {
+			div.style("visibility", "hidden")
+				.transition()
+				.duration(200)
+				.style("opacity", 0);
+			toggleInfo = false;
+		}
+
+		html = "<h3>" + d.cnum + ":</h3>" + "<h4>" + d.cname + "</h4>";
+
+		if(type == "stream") {
+			if (d.did != 0) {
+				html += "Course Streams:<ul>";
+
+				for(i=0; i<degMain.length; i++) {
+					if (d.did == degMain[i].did) {
+						courseIndex = d.cid;
+						degIndex = degMain[i].cdid;
+						html += "<li>" + degDetails[degIndex].type + "</li>";
+					}
+				}
+
+				html += "</ul>"
+			}
+
+		} else if (type == "consent") {
+			if (d.consent != "") {
+				html += "Consent required by " + d.consent;
+			}
+		} else if (type == "type") {
+			html += d.ctype.toUpperCase() + " level course";
+		}
+		
+		div.html(html)
+			.attr("height", "auto")
+			.style("left", (d.x + 15) + "px")
+			.style("top", (d.y - 30) + "px");
+	});
+}
+
+// Hover/select interaction makes nodes highlighted
+// TODO: make associated links highlighted
+function highlightNodes() {
+	d3.select("#graphics").on("mouseover", function(d) {
+		g.style("fill","green");
+	});
+
 }
