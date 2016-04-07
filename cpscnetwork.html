@@ -2,86 +2,103 @@
 
 -->
 <html>
+
 <head>
-<title>CPSC Degrees</title>
+	<title>CPSC Degrees</title>
 
-<style>
-#chart {
-	width: 100%;
-}
-
-svg {
-	border: 1px solid black;
-	background: #f8f8f8;
-}
-
-.node {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
-
-.link {
-  stroke: #999;
-  stroke-opacity: .6;
-}
-
-.button {
-	margin: 10px;
-	border: 1px dashed lightgray;
-}
-
-.button:hover {
-	background: lightgray;
-	cursor: pointer;
-}
-
-body {
-	margin: 0;
-}
-
-h1 {
-	font-family: "Arial", sans-serif;
-	font-size: 60px;
-}
-
-#graphics, #options {
-	display: inline;
-	border: 0;
-	background: lightgray;
-}
-
-#graphics {
-	float: left;
-	width: 80%;
-}
-
-#options {
-	float: right;
-	width: 19.5%;
-}
-
-foreignObject {
-	
-}
-
-</style>
-
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div id="chart">
-		<!-- <h1>Understanding the Computer Science Degree</h1> -->
-		<svg id="graphics">
-			
-		</svg>
-	</div>
+	<section id="visualization">
+		<div id="chart">
+			<!-- <h1>Understanding the Computer Science Degree</h1> -->
+			<svg id="graphics">
+				
+			</svg>
 
-	<div id="filter">
-		<svg id="options">
-		</svg>
-	</div>
+			<div class="infoBox"></div>
+		</div>
+
+		<div id="filter">
+			<div id="streamFilter">
+				<h2>Course Stream</h2>
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="63px" height="86px" viewBox="0 0 63 86" enable-background="new 0 0 63 86" xml:space="preserve"><g transform="translate(0.5,0.5)"><ellipse pointer-events="none" transform="matrix(0.1736 -0.9848 0.9848 0.1736 13.5492 42.3209)" fill="#CCCCCC" stroke="#000000" cx="31.992" cy="13.087" rx="10" ry="10.5"/><ellipse pointer-events="none" fill="#FFFFFF" stroke="#000000" cx="32" cy="48" rx="10" ry="10"/><path pointer-events="none" fill="none" stroke="#377EB8" stroke-miterlimit="10" d="M30,23h2v8.63"/><path pointer-events="none" fill="#377EB8" stroke="#377EB8" stroke-miterlimit="10" d="M32,36.88l-3.5-7l3.5,1.75l3.5-1.75   L32,36.88z"/><ellipse pointer-events="none" fill="#CCCCCC" stroke="#000000" cx="11" cy="74" rx="10" ry="10"/><ellipse pointer-events="none" fill="#FFFFFF" stroke="#000000" cx="51" cy="74" rx="10" ry="10"/><path pointer-events="none" fill="none" stroke="#4DAF4A" stroke-miterlimit="10" d="M42,48h9v9.63"/><path pointer-events="none" fill="#4DAF4A" stroke="#4DAF4A" stroke-miterlimit="10" d="M51,62.88l-3.5-7l3.5,1.75l3.5-1.75   L51,62.88z"/><path pointer-events="none" fill="none" stroke="#4DAF4A" stroke-miterlimit="10" d="M22,48H11v9.63"/><path pointer-events="none" fill="#4DAF4A" stroke="#4DAF4A" stroke-miterlimit="10" d="M11,62.88l-3.5-7l3.5,1.75l3.5-1.75   L11,62.88z"/></g></svg>
+				<div class="streamBtnContainer btnGroup">
+					<button class="button" id="stream1">Bsc</button>
+					<button class="button" id="stream2">Honors</button>
+					<button class="button" id="stream3">SENG</button>
+					<button class="button" id="stream4">Graphics</button>
+					<button class="button" id="stream5">Games</button>
+					<button class="button" id="stream6">HCI</button>
+					<button class="button" id="stream7">Info Sec</button>
+					<button class="button" id="stream8">CTAG</button>
+				</div>
+			</div>
+			<div id="availFilter">
+				<h2>Availability</h2>
+				<img src="http://placehold.it/50x50">
+				<div class="btnGroup">
+					<button class="button" id="scatter">Scatter</button>
+				</div>
+			</div>
+			<div id="antiFilter">
+				<h2>Anti-requisites</h2>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63px" height="86px" version="1.1"∂><defs/><g transform="translate(0.5,0.5)"><ellipse cx="32" cy="13" rx="10.5" ry="10" fill="#ffffff" stroke="#000000" transform="rotate(10,31.5,13)" pointer-events="none"/><path d="M 15.63 48 L 11 48 L 11 57.63" fill="none" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/><path d="M 20.88 48 L 13.88 51.5 L 15.63 48 L 13.88 44.5 Z" fill="#ff7f00" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/><path d="M 11 62.88 L 7.5 55.88 L 11 57.63 L 14.5 55.88 Z" fill="#ff7f00" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="32" cy="48" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 23.63 23 L 11 23 L 11 38 L 25.63 38" fill="none" stroke="#e41a1c" stroke-miterlimit="10" pointer-events="none"/><path d="M 28.88 23 L 21.88 26.5 L 23.63 23 L 21.88 19.5 Z" fill="#e41a1c" stroke="#e41a1c" stroke-miterlimit="10" pointer-events="none"/><path d="M 30.88 38 L 23.88 41.5 L 25.63 38 L 23.88 34.5 Z" fill="#e41a1c" stroke="#e41a1c" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="11" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><ellipse cx="51" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 48.37 48 L 51 48 L 51 57.63" fill="none" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/><path d="M 43.12 48 L 50.12 44.5 L 48.37 48 L 50.12 51.5 Z" fill="#ff7f00" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/><path d="M 51 62.88 L 47.5 55.88 L 51 57.63 L 54.5 55.88 Z" fill="#ff7f00" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/></g></svg>
+				<div class="btnGroup">
+					<button class="button" id="anti">Display</button>
+				</div>
+			</div><div id="recFilter">
+				<h2>Recommendations</h2>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72px" height="86px" version="1.1"><defs/><g transform="translate(0.5,0.5)"><ellipse cx="32" cy="13" rx="10.5" ry="10" fill="#ffffff" stroke="#000000" transform="rotate(10,31.5,13)" pointer-events="none"/><path d="M 22 49 L 11 49 L 11 55.76" fill="none" stroke="#4daf4a" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><path d="M 11 61.76 L 7 53.76 L 11 55.76 L 15 53.76 Z" fill="#4daf4a" stroke="#4daf4a" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="32" cy="53" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 30 23 L 32 23 L 32 34.76" fill="none" stroke="#377eb8" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><path d="M 32 40.76 L 28 32.76 L 32 34.76 L 36 32.76 Z" fill="#377eb8" stroke="#377eb8" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="11" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><ellipse cx="51" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 42 53 L 42 49 L 51 49 L 51 55.76" fill="none" stroke="#4daf4a" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><path d="M 51 61.76 L 47 53.76 L 51 55.76 L 55 53.76 Z" fill="#4daf4a" stroke="#4daf4a" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/></g></svg>
+				<div class="btnGroup">
+					<button class="button" id="rec">Display</button>
+				</div>
+			</div>
+			<div id="consentFilter">
+				<h2>Consent Required</h2>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="61px" version="1.1"><defs/><g transform="translate(18,0.5)"><ellipse cx="15" cy="14" rx="10.5" ry="10" fill="#ffffff" stroke="#000000" stroke-width="3" transform="rotate(10,14.5,14)" pointer-events="none"/><ellipse cx="15" cy="49" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 13 24 L 15 24 L 15 32.63" fill="none" stroke="#377eb8" stroke-miterlimit="10" pointer-events="none"/><path d="M 15 37.88 L 11.5 30.88 L 15 32.63 L 18.5 30.88 Z" fill="#377eb8" stroke="#377eb8" stroke-miterlimit="10" pointer-events="none"/></g></svg>
+				<div class="btnGroup">
+					<button class="button" id="consent">Display</button>
+				</div>
+			</div>
+			<div id="credFilter">
+				<h2>Credits</h2>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="29px" version="1.1"><defs/><g transform="translate(18,0.5)"><ellipse cx="15" cy="14" rx="10.5" ry="10" fill="#ffffff" stroke="#b85450" stroke-width="3" transform="rotate(10,14.5,14)" pointer-events="none"/></g></svg>
+				<div class="btnGroup">
+					<button class="button" id="cred1">0.75</button>
+					<button class="button" id="cred2">1.5</button>
+					<button class="button" id="cred3">3</button>
+					<button class="button" id="cred4">6</button>
+				</div>
+			</div>
+			<div id="lecFilter">
+				<h2>Lecture Hours</h2>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="29px" version="1.1"><defs/><g transform="translate(18,0.5)"><ellipse cx="15" cy="14" rx="10.5" ry="10" fill="#ffffff" stroke="#54278f" stroke-width="3" transform="rotate(10,14.5,14)" pointer-events="none"/></g></svg>
+				<div class="btnGroup">
+					<button class="button" id="lec1">1</button>
+					<button class="button" id="lec2">2</button>
+					<button class="button" id="lec3">3</button>
+					<button class="button" id="lec4">6</button>
+					<button class="button" id="lec5">12</button>
+				</div>
+			</div>
+			<div id="labFilter">
+				<h2>Lab Hours</h2>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="29px" version="1.1"><defs/><g transform="translate(18,0.5)"><ellipse cx="15" cy="14" rx="10.5" ry="10" fill="#ffffff" stroke="#7a0177" stroke-width="3" transform="rotate(10,14.5,14)" pointer-events="none"/></g></svg>
+				<div class="btnGroup">
+					<button class="button" id="lab1">0</button>
+					<button class="button" id="lab2">1</button>
+					<button class="button" id="lab3">2</button>
+					<button class="button" id="lab4">3</button>
+					<button class="button" id="lab5">5</button>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<script src="./js/d3.v3.min.js" type="text/javascript"></script>
+	<script src="./js/jquery-1.12.3.js" type="text/javascript"></script>
 	<script src="./js/underscore-min.js" type="text/javascript"></script>
 	<script src="./data/details.js" type="text/javascript"></script>
 	<script src="./data/links.js" type="text/javascript"></script>

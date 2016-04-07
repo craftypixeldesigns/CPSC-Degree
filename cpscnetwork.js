@@ -245,6 +245,13 @@ function createVis() {
 	}
 }
 
+// Create filter
+function createFilter() {
+ 	root = d3.select("#filter")
+			.attr("height", height);
+
+
+}
 
 // Select interaction makes different info appear
 function appearInfo(type) {
