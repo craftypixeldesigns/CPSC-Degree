@@ -1,0 +1,185 @@
+/*
+ * MAIN SECTIONS
+ */
+
+#chart {
+	width: 100%;
+}
+
+#graphics, #filter {
+	display: inline;
+	border: 0;
+	background: lightgray;
+}
+
+#graphics {
+	float: left;
+	width: 80%;
+}
+
+#filter {
+	float: right;
+	width: 20%;
+}
+
+/*
+ * TYPOGRAPHY
+ */
+
+body {
+	font-family: "Arial", sans-serif;
+	margin: 0;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+
+h3 {
+	margin: 0;
+	font-size: 18px;
+}
+
+h4 {
+	margin: 0;
+	font-size: 16px;
+}
+
+/*
+ * VISUALIZATION
+ */
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+div.infoBox {   
+	font-family: "Arial", sans-serif;
+ 	font-size: 15px;        
+  	background: #8fb3de;
+	border: 0px;      
+	border-radius: 5px;     
+	position: absolute; 
+	opacity: 0;
+	visibility: hidden;                 
+	padding: 15px;
+	max-width: 10%;          
+	pointer-events: none;         
+}
+
+ul {
+	margin: 0;
+	padding-left: 15px;
+}
+
+/*
+ * FILTER
+ */
+#filter {
+	overflow: scroll;
+}
+
+.button {
+	font-family: "Arial", sans-serif;
+	text-align: center;
+	font-size: 12px;
+	border: 2px solid black;
+	background: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.button:hover {
+	background: lightgray;
+	cursor: pointer;
+}
+
+#filter svg {
+	vertical-align: middle;
+	width: 25%;
+}
+
+.centersvg {
+}
+
+#filter .btnGroup {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#streamFilter svg {
+	display: inline-block;
+}
+
+.streamBtnContainer {
+	width: 70%;
+}
+
+.streamBtnContainer button {
+	margin-bottom: 5px;
+}
+
+#credFilter button {
+	width: 45px;
+}
+#cred1 {
+	border-color: #FEE5D9;
+}
+#cred2 {
+	border-color: #FCAE91;
+}
+#cred3 {
+	border-color: #FB6A4A;
+}
+#cred4 {
+	border-color: #B85450;
+}
+
+#lecFilter button,
+#labfilter button {
+	width: 35px;
+}
+
+#lec1 {
+	border-color: #F2F0F7;
+}
+#lec2 {
+	border-color: #CBC9E2;
+}
+#lec3 {
+	border-color: #9E9AC8;
+}
+#lec4 {
+	border-color: #756BB1;
+}
+#lec5 {
+	border-color: #54278F;
+}
+
+#lab1 {
+	border-color: #FEEBE2;
+}
+#lab2 {
+	border-color: #FBB4B9;
+}
+#lab3 {
+	border-color: #F768A1;
+}
+#lab4 {
+	border-color: #C51B8A;
+}
+#lab5 {
+	border-color: #7A0177;
+}
