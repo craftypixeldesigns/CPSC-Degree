@@ -68,12 +68,12 @@ function createVis() {
 
 	// set parameters for graph
 	force = d3.layout.force()
-		.charge(-200)
+		.charge(-400)
 		.linkDistance(function (d) {
-			return 50;
+			return 400;
 		}) 
-		.gravity(0.1) // larger number, more pull to center
-		.friction(0.5) // how mobile does it move - force pulling nodes
+		.gravity(0.2) // larger number, more pull to center
+		.friction(0) // how mobile does it move - force pulling nodes
 		.size([width/2, height]);
 
 	// setup force-directed layout
@@ -82,15 +82,31 @@ function createVis() {
 		.links(cpscgraph.links)
 		.start();
 
+	// draw link arrows
+	root.append("svg:defs").selectAll("marker")
+	    .data(cpscgraph.links)      // Different link/path types can be defined here
+	  	.enter().append("svg:marker")    // This section adds in the arrows
+	    .attr("id", "end")
+	    .attr("viewBox", "-5 -5 10 10")
+	    .attr("refX", 15)
+	    .attr("refY", -1.5)
+	    .attr("markerWidth", 6)
+	    .attr("markerHeight", 6)
+	    .attr("orient", "auto")
+	  	.append("svg:path")
+	  	.attr("d", "M 0,0 m -5,-5 L 5,0 L -5,5 Z");
+	    // .attr("d", "M0,-5L10,0L0,5");
+
 	// define prereq links
   	var link = root.selectAll(".link")
 		.data(cpscgraph.links)
 		.enter().append("line")
 		.attr("class", "link")
+		.attr("marker-end", "url(#end)")
 		.style("stroke-width", function (d) {
 			// recommendations 
 			if (d.value == 4 || d.value == 5) {
-				return 5;
+				return 3;
 			} else {
 				return 2;
 			}
@@ -146,16 +162,15 @@ function createVis() {
   	force.on("tick", function() {
   		// if we are in hierarchical mode, use fociHierarchy
   		// if we are scatterplot mode, use fociScatter
-
   		// Combine links to node in correct position
-	    link.attr("x1", function(d) { return d.source.x; })
+	    link
+	    	.attr("x1", function(d) { return d.source.x; })
 	        .attr("y1", function(d) { return d.source.y; })
 	        .attr("x2", function(d) { return d.target.x; })
 	        .attr("y2", function(d) { return d.target.y; });
 
-   //      node.attr("cx", function(d) { return d.x; })
-			// .attr("cy", function(d) { return d.y; });
        node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
   	});
 
 	// draw credits
