@@ -1,8 +1,10 @@
 // Main variables
 var width = window.innerWidth,
-    height = 1500;
+    height = window.innerHeight;
 var filterWidth = width / 6,
 	filterHeight = height;
+
+var radius = 20;
 
 var color = d3.scale.category20();
 
@@ -18,10 +20,11 @@ var root; // hold svg element
 
 var foci = [];
 
+var filter;
+
+// remove links or low link strength
+
 // Call methods
-formatData();
-
-
 createVis();
 
 // Format data
@@ -47,20 +50,33 @@ function createVis() {
 
 	// set width and height
 	root = d3.select("#graphics")
-		.attr("width", width)
 		.attr("height", height);
 
+	// root.append("title")
+	// 	.attr("class", "title")
+	// 	.attr("x", 0)
+	// 	.attr("y", 0)
+	// 	.style("stroke", "none")
+	// 	.style("fill", "black")
+	// 	.text("Understanding the Computer Science Degree");
+
+	// 
+	//  ---------------
+	// | NETWORK GRAPH |
+	//  ---------------
+	// 
+
+	// set parameters for graph
 	force = d3.layout.force()
-		.charge(-900) // repel
+		.charge(-200)
 		.linkDistance(function (d) {
-			return 100;
+			return 50;
 		}) 
 		.gravity(0.1) // larger number, more pull to center
 		.friction(0.5) // how mobile does it move - force pulling nodes
-		.size([width, height]);
+		.size([width/2, height]);
 
-	//cpscgraph.courses[0].style.display = 'none';
-
+	// setup force-directed layout
 	force
 		.nodes(cpscgraph.courses)
 		.links(cpscgraph.links)
@@ -72,6 +88,7 @@ function createVis() {
 		.enter().append("line")
 		.attr("class", "link")
 		.style("stroke-width", function (d) {
+			// recommendations 
 			if (d.value == 4 || d.value == 5) {
 				return 5;
 			} else {
@@ -79,33 +96,68 @@ function createVis() {
 			}
 		})
 		.style("stroke", function(d) {
-			if (d.value == 0 || d.value == 4) { // prereq/rec and
+			// prereq/rec and
+			if (d.value == 0 || d.value == 4) { 
 				return "#377EB8";
-			} else if (d.value == 1 || d.value == 5) { // prereq or 
+			} 
+			// prereq or 
+			else if (d.value == 1 || d.value == 5) { 
 				return "#4DAF4A";
-			} else if (d.value == 2) { // antireq and  
+			} 
+			// antireq and
+			else if (d.value == 2) {   
 				return "#E41A1C";
-			} else if (d.value == 3) { // antireq or 
+			} 
+			// antireq or 
+			else if (d.value == 3) { 
 				return "#FF7F00";
 			}  
 		});
 
-	// define nodes
-  	var node = root.selectAll(".node")
-		.data(cpscgraph.courses)
-		.enter().append("circle")
-		.attr("class", "node")
-		.attr("r", 10)
-		.style("fill", "gray")
-		.style("stroke", "transparent")
-		.call(force.drag);
+	// define node group
+	var node = root.selectAll(".node")
+				.data(cpscgraph.courses)
+				.enter().append("g")
+				.attr("class", "node")
+				.call(force.drag);
+
+	// create circles
+	node.append("circle")
+		.attr("r", radius)
+		.attr("x", 0)
+		.attr("y", 0)
+		.style("fill", "white")
+		.style("stroke", "black");
 
 	// draw node text
-	// node.append("text")
-	// 	.attr("x", 50)
- // 	 	.attr("dy", 100)
-	// 	.text(function(d) { return d.cname; })
-	
+	node.append("foreignObject")
+		.attr("x", -radius/1.5)
+ 	 	.attr("y", -radius/2)
+ 	 	.style("font-family", "Arial")
+ 	 	.style("font-size", 10)
+ 	 	.style("stroke", "none")
+ 	 	.style("fill", "black")
+		.html(function(d) { return d.faculty + "<br/>" + d.num ; });
+
+	// Hide the first node in courses since it is a NIL placeholder
+	d3.select(".node").style("visibility", "hidden"); 
+
+	// Reposition nodes and attributes based on position
+  	force.on("tick", function() {
+  		// if we are in hierarchical mode, use fociHierarchy
+  		// if we are scatterplot mode, use fociScatter
+
+  		// Combine links to node in correct position
+	    link.attr("x1", function(d) { return d.source.x; })
+	        .attr("y1", function(d) { return d.source.y; })
+	        .attr("x2", function(d) { return d.target.x; })
+	        .attr("y2", function(d) { return d.target.y; });
+
+   //      node.attr("cx", function(d) { return d.x; })
+			// .attr("cy", function(d) { return d.y; });
+       node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  	});
+
 	// draw credits
  	for(i=0; i<cpscgraph.courses.length; i++) {
 		if (cpscgraph.courses[i].credit == 0.75) {
@@ -157,15 +209,9 @@ function createVis() {
 		}
 	}
 
-
-  	force.on("tick", function() {
-
-    link.attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
-
-    node.attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; });
-  });
+	//  ---------
+	// | FILTERS |
+	//  ---------
+	 root = d3.select("#options")
+		.attr("height", height);
 }
