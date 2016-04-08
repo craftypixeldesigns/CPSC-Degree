@@ -9,7 +9,7 @@
 #graphics, #filter {
 	display: inline;
 	border: 0;
-	background-color: #D4F1FE;
+	
 }
 
 #graphics {
@@ -28,16 +28,23 @@
 
 body {
 	font-family: "Arial", sans-serif;
+	background-color: #D4F1FE;
 	margin: 0;
+}
+
+.title {
+	font-family: "Arial", sans-serif;
+	font-size: 40px;
 }
 
 h1 {
 	font-size: 60px;
+	font-weight: 600;
 }
 
 h2 {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	font-size: 18px;
 }
 
@@ -92,7 +99,7 @@ ul {
  * FILTER
  */
 #filter {
-	overflow: scroll;
+	
 }
 
 .button {

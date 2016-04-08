@@ -4,7 +4,7 @@ var width = window.innerWidth,
 var filterWidth = width / 6,
 	filterHeight = height;
 
-var radius = 20;
+var radius = 21.5;
 
 var color = d3.scale.category20();
 
@@ -29,24 +29,6 @@ createVis();
 createFilter();
 appearInfo("type");
 
-// Format data
-// courses
-// degMain
-// degDet
-// availMain
-// availDet
-// prereq
-// antireq
-// rec
-function formatData() {
-	// prereq[i].source = courses[i].cid
-	// prereq[i].target = courses[i].id
-
-	// antireq
-
-	// recommended
-}
-
 // Create visualization
 function createVis() {
 
@@ -54,6 +36,7 @@ function createVis() {
 	root = d3.select("#graphics")
 		.attr("height", height);
 
+	// title
 	root.append("text")
 		.attr("class", "title")
 		.attr("x", "20px")
@@ -185,13 +168,9 @@ function createVis() {
 	// draw node text
 	node.append("foreignObject")
 		.attr("class", "text")
-		.attr("x", -radius/1.5)
- 	 	.attr("y", -radius/2)
- 	 	.style("font-family", "Arial")
- 	 	.style("font-size", 10)
- 	 	.style("stroke", "none")
- 	 	.style("fill", "black")
-		.html(function(d) { return d.faculty + "<br/>" + d.num ; });
+		.attr("x", -radius/1.4)
+ 	 	.attr("y", -radius/1.5)
+		.html(function(d) { return "<p class=\"name\">" + d.faculty + "<br/>" + d.num + "</p>"; });
 
 	// Hide the first node in courses since it is a NIL placeholder
 	d3.select(".node").style("visibility", "hidden"); 
