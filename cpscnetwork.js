@@ -121,8 +121,18 @@ function createVis() {
   	var link = root.selectAll(".link")
 		.data(cpscgraph.links)
 		.enter().append("line")
-		.attr("class", "link")
 		.attr("marker-end", "url(#end)")
+		.attr("class", function (d) {
+			if (d.value == 0 || d.value == 1) { 
+				return "link link-prereq";
+			} 
+			else if (d.value == 2 || d.value == 3) {   
+				return "link link-anti";
+			} 
+			else if (d.value == 4 || d.value == 5) { 
+				return "link link-rec";
+			} 
+		})
 		.style("stroke-width", function (d) {
 			// recommendations 
 			if (d.value == 4 || d.value == 5) {
@@ -154,11 +164,18 @@ function createVis() {
 	var node = root.selectAll(".node")
 				.data(cpscgraph.courses)
 				.enter().append("g")
-				.attr("class", "node")
+				.attr("class", function(d) {
+					if (d.consent != "") {
+						return "node node-consent"
+					} else {
+						return "node";
+					}
+				})
 				.call(force.drag);
 
 	// create circles
 	node.append("circle")
+		.attr("class", "circle")
 		.attr("r", radius)
 		.attr("x", 0)
 		.attr("y", 0)
@@ -167,6 +184,7 @@ function createVis() {
 
 	// draw node text
 	node.append("foreignObject")
+		.attr("class", "text")
 		.attr("x", -radius/1.5)
  	 	.attr("y", -radius/2)
  	 	.style("font-family", "Arial")
@@ -193,128 +211,6 @@ function createVis() {
 
   	});
 
-	// draw credits
- 	for(i=0; i<cpscgraph.courses.length; i++) {
-		if (cpscgraph.courses[i].credit == 0.75) {
-			// change to #FEE5D9
-		} else if (cpscgraph.courses[i].credit == 1.5) {
-			// change to #FCAE91
-		} else if (cpscgraph.courses[i].credit == 3) {
-			// change to #FB6A4A
-		} else if (cpscgraph.courses[i].credit == 6) {
-			// change to #B85450
-		}
-	}
-
-	// draw lecture
-	 for(i=0; i<cpscgraph.courses.length; i++) {
-		if (cpscgraph.courses[i].lecture == 1) {
-			// change to #F2F0F7
-		} else if (cpscgraph.courses[i].lecture == 2) {
-			// change to #CBC9E2
-		} else if (cpscgraph.courses[i].lecture == 3) {
-			// change to #9E9AC8
-		} else if (cpscgraph.courses[i].lecture == 6) {
-			// change to #756BB1
-		} else if (cpscgraph.courses[i].lecture == 12) {
-			// change to #54278F
-		}
-	}
-
-	// draw lab
-	for(i=0; i<cpscgraph.courses.length; i++) {
-		if (cpscgraph.courses[i].lab == 0) {
-			// change to #FEEBE2
-		} else if (cpscgraph.courses[i].lab == 1) {
-			// change to #FBB4B9
-		} else if (cpscgraph.courses[i].lab == 2) {
-			// change to #F768A1
-		} else if (cpscgraph.courses[i].lab == 3) {
-			// change to #C51B8A
-		} else if (cpscgraph.courses[i].lab == 5) {
-			// change to #7A0177
-		}
-	}
-	
-	// draw consent required
-	for(i=0; i<cpscgraph.courses.length; i++) {
-		if (cpscgraph.courses[i].consent != "") {
-			// apply thicker border class around those courses
-			// hide them until later
-		}
-	}
-}
-
-// Create filter
-function createFilter() {
- 	root = d3.select("#filter")
-			.attr("height", height);
-
 
 }
 
-// Select interaction makes different info appear
-function appearInfo(type) {
-	var div = d3.select("div.infoBox");
-	var html;
-	var toggleInfo = false;
-
-	var courseIndex, degIndex;
-
-	// Inspired from http://codepen.io/smlo/pen/JdMOej
-	d3.selectAll(".node").on("click", function(d) {
-		
-		if (!toggleInfo) {
-			div.style("visibility", "visible")
-				.transition()
-				.duration(200)
-				.style("opacity", 1);
-			toggleInfo = true;
-		} else {
-			div.style("visibility", "hidden")
-				.transition()
-				.duration(200)
-				.style("opacity", 0);
-			toggleInfo = false;
-		}
-
-		html = "<h3>" + d.cnum + ":</h3>" + "<h4>" + d.cname + "</h4>";
-
-		if(type == "stream") {
-			if (d.did != 0) {
-				html += "Course Streams:<ul>";
-
-				for(i=0; i<degMain.length; i++) {
-					if (d.did == degMain[i].did) {
-						courseIndex = d.cid;
-						degIndex = degMain[i].cdid;
-						html += "<li>" + degDetails[degIndex].type + "</li>";
-					}
-				}
-
-				html += "</ul>"
-			}
-
-		} else if (type == "consent") {
-			if (d.consent != "") {
-				html += "Consent required by " + d.consent;
-			}
-		} else if (type == "type") {
-			html += d.ctype.toUpperCase() + " level course";
-		}
-		
-		div.html(html)
-			.attr("height", "auto")
-			.style("left", (d.x + 15) + "px")
-			.style("top", (d.y - 30) + "px");
-	});
-}
-
-// Hover/select interaction makes nodes highlighted
-// TODO: make associated links highlighted
-function highlightNodes() {
-	d3.select("#graphics").on("mouseover", function(d) {
-		g.style("fill","green");
-	});
-
-}

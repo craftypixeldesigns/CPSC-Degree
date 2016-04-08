@@ -9,7 +9,7 @@
 #graphics, #filter {
 	display: inline;
 	border: 0;
-	background: lightgray;
+	background-color: #D4F1FE;
 }
 
 #graphics {
@@ -60,6 +60,10 @@ h4 {
   stroke-width: 1.5px;
 }
 
+.node:hover {
+	cursor: pointer;
+}
+
 .link {
   stroke: #999;
   stroke-opacity: .6;
@@ -95,15 +99,38 @@ ul {
 	font-family: "Arial", sans-serif;
 	text-align: center;
 	font-size: 12px;
-	border: 2px solid black;
-	background: white;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 5px 5px 5px 5px;
+	outline: none;
+	color: rgb(0, 0, 0);
+	background-color: rgb(255,255,255);
 	padding-top: 10px;
 	padding-bottom: 10px;
+	position: relative;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	box-shadow: 0 4px rgb(0, 0, 0);
+}
+
+.button:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .button:hover {
-	background: lightgray;
-	cursor: pointer;
+	top: 2px;
+}
+
+.button:active {
+	box-shadow: 0 0 rgb(0, 0, 0);
+	top: 5px;
 }
 
 #filter svg {
@@ -128,7 +155,7 @@ ul {
 }
 
 .streamBtnContainer button {
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 
 #credFilter button {
@@ -136,15 +163,19 @@ ul {
 }
 #cred1 {
 	border-color: #FEE5D9;
+	box-shadow: 0 4px rgb(254, 229, 217);
 }
 #cred2 {
 	border-color: #FCAE91;
+	box-shadow: 0 4px rgb(252, 174, 145);
 }
 #cred3 {
 	border-color: #FB6A4A;
+	box-shadow: 0 4px rgb(251, 106, 74);
 }
 #cred4 {
 	border-color: #B85450;
+	box-shadow: 0 4px rgb(184, 84, 80);
 }
 
 #lecFilter button,
