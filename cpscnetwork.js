@@ -54,13 +54,13 @@ function createVis() {
 	root = d3.select("#graphics")
 		.attr("height", height);
 
-	// root.append("title")
-	// 	.attr("class", "title")
-	// 	.attr("x", 0)
-	// 	.attr("y", 0)
-	// 	.style("stroke", "none")
-	// 	.style("fill", "black")
-	// 	.text("Understanding the Computer Science Degree");
+	root.append("text")
+		.attr("class", "title")
+		.attr("x", "20px")
+		.attr("y", "50px")
+		.style("stroke", "none")
+		.style("fill", "black")
+		.text("Understanding the Computer Science Degree");
 
 	// 
 	//  ---------------
