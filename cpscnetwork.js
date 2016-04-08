@@ -27,7 +27,7 @@ var filter;
 // Call methods
 createVis();
 createFilter();
-appearInfo("type");
+appearInfo("");
 
 // Create visualization
 function createVis() {
@@ -250,6 +250,8 @@ function filterAvail() {
 function filterStream() {
 	d3.select("#stream1").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("stream");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -258,6 +260,8 @@ function filterStream() {
 		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -280,6 +284,8 @@ function filterStream() {
 
 	d3.select("#stream2").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("stream");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -288,6 +294,8 @@ function filterStream() {
 		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -310,6 +318,8 @@ function filterStream() {
 
 	d3.select("#stream3").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("stream");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -318,6 +328,8 @@ function filterStream() {
 		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -340,6 +352,8 @@ function filterStream() {
 
 	d3.select("#stream4").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("stream");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -348,6 +362,8 @@ function filterStream() {
 		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -369,6 +385,8 @@ function filterStream() {
 	});
 
 	d3.select("#stream5").on("click", function(d) {
+		appearInfo("stream");
+
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
 			d3.select(this)
 							.transition()
@@ -378,6 +396,8 @@ function filterStream() {
 		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("stream");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -400,6 +420,8 @@ function filterStream() {
 
 	d3.select("#stream6").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("stream");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -408,6 +430,8 @@ function filterStream() {
 		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -430,6 +454,8 @@ function filterStream() {
 
 	d3.select("#stream7").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("stream");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -438,6 +464,8 @@ function filterStream() {
 		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -460,6 +488,8 @@ function filterStream() {
 
 	d3.select("#stream8").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("stream");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -468,6 +498,8 @@ function filterStream() {
 		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -562,6 +594,7 @@ function filterNodeLink() {
 
 	d3.select("#consent").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("consent");
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -571,6 +604,8 @@ function filterNodeLink() {
 		 					.style("top", "5px")
 		 					.text("Hide");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -599,6 +634,8 @@ function filterNodeLink() {
 function filterCredits() {
 	d3.select("#cred1").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -607,6 +644,8 @@ function filterCredits() {
 		 					.style("box-shadow", "0 0 rgb(254, 229, 217)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -625,6 +664,8 @@ function filterCredits() {
 
 	d3.select("#cred2").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -633,6 +674,8 @@ function filterCredits() {
 		 					.style("box-shadow", "0 0 rgb(252, 174, 145)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -651,6 +694,8 @@ function filterCredits() {
 
 	d3.select("#cred3").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -659,6 +704,8 @@ function filterCredits() {
 		 					.style("box-shadow", "0 0 rgb(251, 106, 74)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -677,6 +724,8 @@ function filterCredits() {
 
 	d3.select("#cred4").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -685,6 +734,8 @@ function filterCredits() {
 		 					.style("box-shadow", "0 0 rgb(184, 84, 80)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -705,6 +756,8 @@ function filterCredits() {
 // Lecture filter
 function filterLecture() {
 	d3.select("#lec1").on("click", function(d) {
+		appearInfo("type");
+
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
 			d3.select(this)
 							.transition()
@@ -714,6 +767,8 @@ function filterLecture() {
 		 					.style("box-shadow", "0 0 rgb(242, 240, 247)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -732,6 +787,8 @@ function filterLecture() {
 
 	d3.select("#lec2").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -740,6 +797,8 @@ function filterLecture() {
 		 					.style("box-shadow", "0 0 rgb(203, 201, 226)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -758,6 +817,8 @@ function filterLecture() {
 
 	d3.select("#lec3").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -766,6 +827,8 @@ function filterLecture() {
 		 					.style("box-shadow", "0 0 rgb(158, 154, 200)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -784,6 +847,8 @@ function filterLecture() {
 
 	d3.select("#lec4").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -792,6 +857,8 @@ function filterLecture() {
 		 					.style("box-shadow", "0 0 rgb(117, 107, 177)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -810,6 +877,8 @@ function filterLecture() {
 
 	d3.select("#lec5").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -818,6 +887,8 @@ function filterLecture() {
 		 					.style("box-shadow", "0 0 rgb(84, 39, 143)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -839,6 +910,8 @@ function filterLecture() {
 function filterLab() {
 	d3.select("#lab1").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -847,6 +920,8 @@ function filterLab() {
 		 					.style("box-shadow", "0 0 rgb(254, 235, 226)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -865,6 +940,8 @@ function filterLab() {
 
 	d3.select("#lab2").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -873,6 +950,8 @@ function filterLab() {
 		 					.style("box-shadow", "0 0 rgb(251, 180, 185)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -891,6 +970,8 @@ function filterLab() {
 
 	d3.select("#lab3").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -899,6 +980,8 @@ function filterLab() {
 		 					.style("box-shadow", "0 0 rgb(247, 101, 161)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -918,6 +1001,8 @@ function filterLab() {
 
 	d3.select("#lab4").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -926,6 +1011,8 @@ function filterLab() {
 		 					.style("box-shadow", "0 0 rgb(197, 27, 138)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -944,6 +1031,8 @@ function filterLab() {
 
 	d3.select("#lab5").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+			appearInfo("type");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
@@ -952,6 +1041,8 @@ function filterLab() {
 		 					.style("box-shadow", "0 0 rgb(122, 1, 119)")
 		 					.style("top", "5px");
 		} else {
+			appearInfo("");
+
 			d3.select(this)
 							.transition()
 							.duration(200)
