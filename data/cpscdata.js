@@ -1702,99 +1702,80 @@ var cpscgraph = {
         },
 
     {
-        "oldsource": 1,
-			"target": 1,
-        "source": 22,
+		"source": 1,
+		"target": 22,
         "value": 2
     }, {
-        "oldsource": 3,
-			"target": 3,
-        "source": 22,
+		"source": 3,
+		"target": 22,
         "value": 2
     }, {
-        "oldsource": 17,
-			"target": 17,
-        "source": 19,
+		"source": 17,
+		"target": 19,
         "value": 3
     }, {
-        "oldsource": 17,
-			"target": 17,
-        "source": 21,
+		"source": 17,
+		"target": 21,
         "value": 3
     }, {
-        "oldsource": 18,
-			"target": 18,
-        "source": 20,
+		"source": 18,
+		"target": 20,
         "value": 3
     }, {
-        "oldsource": 18,
-			"target": 18,
-        "source": 21,
+		"source": 18,
+		"target": 21,
         "value": 3
     }, {
-        "oldsource": 19,
-			"target": 19,
-        "source": 17,
+		"source": 19,
+		"target": 17,
         "value": 2
     }, {
-        "oldsource": 20,
-			"target": 20,
-        "source": 18,
+		"source": 20,
+		"target": 18,
         "value": 3
     }, {
-        "oldsource": 20,
-			"target": 20,
-        "source": 21,
+		"source": 20,
+		"target": 21,
         "value": 3
     }, {
-        "oldsource": 21,
-			"target": 21,
-        "source": 17,
+		"source": 21,
+		"target": 17,
         "value": 3
     }, {
-        "oldsource": 21,
-			"target": 21,
-        "source": 18,
+		"source": 21,
+		"target": 18,
         "value": 3
     }, {
-        "oldsource": 22,
-			"target": 22,
-        "source": 1,
+		"source": 22,
+		"target": 1,
         "value": 3
     }, {
-        "oldsource": 22,
-			"target": 22,
-        "source": 3,
+		"source": 22,
+		"target": 3,
         "value": 3
     }, {
-        "oldsource": 24,
-			"target": 24,
-        "source": 26,
+		"source": 24,
+		"target": 26,
         "value": 2
     }, {
-        "oldsource": 26,
-			"target": 26,
-        "source": 24,
+		"source": 26,
+		"target": 24,
         "value": 2
     }, {
-        "oldsource": 34,
-			"target": 34,
-        "source": 80,
+		"source": 34,
+		"target": 80,
         "value": 2
     }, {
-        "oldsource": 45,
-			"target": 45,
-        "source": 46,
+		"source": 45,
+		"target": 46,
         "value": 2
     }, {
-        "oldsource": 46,
-			"target": 46,
-        "source": 45,
+		"source": 46,
+		"target": 45,
         "value": 2
     }, {
-        "oldsource": 80,
-			"target": 80,
-        "source": 34,
+		"source": 80,
+		"target": 34,
         "value": 2
     },
 
