@@ -83,8 +83,9 @@ p {
 }
 
 div.infoBox {   
- 	font-size: 15px;        
-  	background: #8fb3de;
+ 	font-size: 15px;      
+ 	color: #FFFFFF;  
+  	background-color: #89B0AE;
 	border: 0px;      
 	border-radius: 5px;     
 	position: absolute; 
