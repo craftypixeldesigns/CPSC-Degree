@@ -3,6 +3,8 @@
 // 
 // "type": "category", "type": "degree",
 // "values": ["did","cdid"]
+// 
+/*
 degMain = [
 	{
 		"did":1,
@@ -233,12 +235,135 @@ degMain = [
 		"cdid":7
 	}
 ]
+*/
+
+course2stream = [
+{"cid":"1","cdid":"1"},
+{"cid":"1","cdid":"2"},
+{"cid":"2","cdid":"4"},
+{"cid":"3","cdid":"4"},
+{"cid":"3","cdid":"5"},
+{"cid":"4","cdid":"4"},
+{"cid":"5","cdid":"4"},
+{"cid":"5","cdid":"5"},
+{"cid":"6","cdid":"4"},
+{"cid":"7","cdid":"4"},
+{"cid":"8","cdid":"4"},
+{"cid":"9","cdid":"4"},
+{"cid":"9","cdid":"5"},
+{"cid":"10","cdid":"4"},
+{"cid":"10","cdid":"8"},
+{"cid":"11","cdid":"4"},
+{"cid":"12","cdid":"4"},
+{"cid":"13","cdid":"4"},
+{"cid":"17","cdid":"1"},
+{"cid":"17","cdid":"2"},
+{"cid":"18","cdid":"1"},
+{"cid":"18","cdid":"2"},
+{"cid":"19","cdid":"1"},
+{"cid":"19","cdid":"2"},
+{"cid":"20","cdid":"1"},
+{"cid":"20","cdid":"2"},
+{"cid":"21","cdid":"1"},
+{"cid":"21","cdid":"2"},
+{"cid":"22","cdid":"1"},
+{"cid":"22","cdid":"2"},
+{"cid":"23","cdid":"1"},
+{"cid":"23","cdid":"2"},
+{"cid":"24","cdid":"1"},
+{"cid":"24","cdid":"2"},
+{"cid":"25","cdid":"8"},
+{"cid":"28","cdid":"1"},
+{"cid":"28","cdid":"2"},
+{"cid":"29","cdid":"1"},
+{"cid":"29","cdid":"2"},
+{"cid":"32","cdid":"4"},
+{"cid":"32","cdid":"7"},
+{"cid":"33","cdid":"1"},
+{"cid":"33","cdid":"2"},
+{"cid":"34","cdid":"7"},
+{"cid":"34","cdid":"8"},
+{"cid":"35","cdid":"3"},
+{"cid":"36","cdid":"3"},
+{"cid":"36","cdid":"4"},
+{"cid":"36","cdid":"8"},
+{"cid":"37","cdid":"1"},
+{"cid":"37","cdid":"2"},
+{"cid":"38","cdid":"3"},
+{"cid":"38","cdid":"4"},
+{"cid":"38","cdid":"5"},
+{"cid":"38","cdid":"6"},
+{"cid":"39","cdid":"1"},
+{"cid":"39","cdid":"2"},
+{"cid":"40","cdid":"3"},
+{"cid":"41","cdid":"4"},
+{"cid":"42","cdid":"3"},
+{"cid":"42","cdid":"4"},
+{"cid":"42","cdid":"5"},
+{"cid":"43","cdid":"7"},
+{"cid":"45","cdid":"2"},
+{"cid":"45","cdid":"3"},
+{"cid":"45","cdid":"4"},
+{"cid":"45","cdid":"5"},
+{"cid":"45","cdid":"6"},
+{"cid":"45","cdid":"7"},
+{"cid":"45","cdid":"8"},
+{"cid":"47","cdid":"4"},
+{"cid":"48","cdid":"7"},
+{"cid":"49","cdid":"7"},
+{"cid":"50","cdid":"7"},
+{"cid":"51","cdid":"7"},
+{"cid":"52","cdid":"7"},
+{"cid":"53","cdid":"7"},
+{"cid":"54","cdid":"7"},
+{"cid":"55","cdid":"8"},
+{"cid":"56","cdid":"8"},
+{"cid":"57","cdid":"4"},
+{"cid":"57","cdid":"8"},
+{"cid":"58","cdid":"4"},
+{"cid":"58","cdid":"8"},
+{"cid":"59","cdid":"7"},
+{"cid":"59","cdid":"8"},
+{"cid":"60","cdid":"3"},
+{"cid":"61","cdid":"3"},
+{"cid":"63","cdid":"4"},
+{"cid":"64","cdid":"7"},
+{"cid":"66","cdid":"4"},
+{"cid":"68","cdid":"4"},
+{"cid":"70","cdid":"5"},
+{"cid":"71","cdid":"5"},
+{"cid":"72","cdid":"5"},
+{"cid":"73","cdid":"3"},
+{"cid":"73","cdid":"4"},
+{"cid":"74","cdid":"3"},
+{"cid":"74","cdid":"6"},
+{"cid":"75","cdid":"3"},
+{"cid":"75","cdid":"6"},
+{"cid":"76","cdid":"3"},
+{"cid":"76","cdid":"6"},
+{"cid":"77","cdid":"4"},
+{"cid":"80","cdid":"8"},
+{"cid":"82","cdid":"7"},
+{"cid":"84","cdid":"7"},
+{"cid":"88","cdid":"6"},
+{"cid":"89","cdid":"7"}
+]
 
 // 
 // DEGREE DETAILS
 // 
 // "type": "category", "type": "degreeDetail",
 // "values": ["cdid","type"]
+// TYPE
+// 0: none
+// 1: BSc
+// 2: Hnors
+// 3: Computer Game Development
+// 4: Software Engineering
+// 5: HCI
+// 6: Computer Graphics
+// 7: Theoretical CPSC
+// 8: Info Sec
 degDetails = [
 	{
 		"cdid":0,
