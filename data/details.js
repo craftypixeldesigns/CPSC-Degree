@@ -364,10 +364,11 @@ course2stream = [
 // 6: Computer Graphics
 // 7: Theoretical CPSC
 // 8: Info Sec
+// // !!! ENSURE THAT cdid == natural order index
 degDetails = [
 	{
 		"cdid":0,
-		"type":"none"
+		"type":"None"
 	},
 	{
 		"cdid":1,
@@ -859,6 +860,12 @@ availabilityMain = [
 // "type": "category", "type": "availabilityDetail",
 // "values": ["aid","semester"]
 availabilityDetails = [
+	{
+		"aid":0,
+		"startstamp": 1341100800,
+		"semester":"Summer 2012"
+	},
+
 	{
 		"aid":1,
 		"startstamp": 1346457600,

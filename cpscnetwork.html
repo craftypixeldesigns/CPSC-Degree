@@ -17,7 +17,24 @@
 				
 			</svg>
 
-			<div class="infoBox"></div>
+			<div id="infoBox">
+				<h3 id="info-cnum"></h3>
+				<h4 id="info-cname"></h4>
+				<div id="info-stream">
+					<h5>Course Stream</h5>
+					<ul></ul>
+				</div>
+				<div id="info-availability">
+					<h5>Availability</h5>
+					<ul></ul>
+				</div>
+				<div id="info-consent">
+					<span></span>
+				</div>
+				<div id="info-level">
+					<span></span>
+				</div>
+			</div>
 		</div>
 
 		<div id="filter">
@@ -25,23 +42,20 @@
 				<h2>Course Stream</h2>
 				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="63px" height="86px" viewBox="0 0 63 86" enable-background="new 0 0 63 86" xml:space="preserve"><g transform="translate(0.5,0.5)"><ellipse pointer-events="none" transform="matrix(0.1736 -0.9848 0.9848 0.1736 13.5492 42.3209)" fill="#CCCCCC" stroke="#000000" cx="31.992" cy="13.087" rx="10" ry="10.5"/><ellipse pointer-events="none" fill="#FFFFFF" stroke="#000000" cx="32" cy="48" rx="10" ry="10"/><path pointer-events="none" fill="none" stroke="#377EB8" stroke-miterlimit="10" d="M30,23h2v8.63"/><path pointer-events="none" fill="#377EB8" stroke="#377EB8" stroke-miterlimit="10" d="M32,36.88l-3.5-7l3.5,1.75l3.5-1.75   L32,36.88z"/><ellipse pointer-events="none" fill="#CCCCCC" stroke="#000000" cx="11" cy="74" rx="10" ry="10"/><ellipse pointer-events="none" fill="#FFFFFF" stroke="#000000" cx="51" cy="74" rx="10" ry="10"/><path pointer-events="none" fill="none" stroke="#4DAF4A" stroke-miterlimit="10" d="M42,48h9v9.63"/><path pointer-events="none" fill="#4DAF4A" stroke="#4DAF4A" stroke-miterlimit="10" d="M51,62.88l-3.5-7l3.5,1.75l3.5-1.75   L51,62.88z"/><path pointer-events="none" fill="none" stroke="#4DAF4A" stroke-miterlimit="10" d="M22,48H11v9.63"/><path pointer-events="none" fill="#4DAF4A" stroke="#4DAF4A" stroke-miterlimit="10" d="M11,62.88l-3.5-7l3.5,1.75l3.5-1.75   L11,62.88z"/></g></svg>
 				<div class="streamBtnContainer btnGroup">
-					<button class="button" id="stream1">Bsc</button>
-					<button class="button" id="stream2">Honors</button>
-					<button class="button" id="stream3">SENG</button>
-					<button class="button" id="stream4">Graphics</button>
-					<button class="button" id="stream5">Games</button>
-					<button class="button" id="stream6">HCI</button>
-					<button class="button" id="stream7">Info Sec</button>
-					<button class="button" id="stream8">CTAG</button>
+					<button class="button stream-button" id="stream1">Bsc</button>
+					<button class="button stream-button" id="stream2">Honors</button>
+					<button class="button stream-button" id="stream3">SENG</button>
+					<button class="button stream-button" id="stream4">Graphics</button>
+					<button class="button stream-button" id="stream5">Games</button>
+					<button class="button stream-button" id="stream6">HCI</button>
+					<button class="button stream-button" id="stream7">Info Sec</button>
+					<button class="button stream-button" id="stream8">CTAG</button>
 				</div>
 			</div>
 			<div id="availFilter">
 				<h2>Availability</h2>
-				<img class="scatter" src="http://placehold.it/50x50">
-				<div class="btnGroup">
-					<button class="button" id="scatter">Visible</button>
-					<!-- <input type="range" id="startRange" min="1" max="16" step="1"> -->
-					
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="87px" version="1.1"><defs/><g transform="translate(0.5,0.5)"><ellipse cx="33" cy="13" rx="10.5" ry="10" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-dasharray="6 6" transform="rotate(10,32.5,13)" pointer-events="none"/><ellipse cx="33" cy="48" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 31 23 L 33 23 L 33 31.63" fill="none" stroke="#377eb8" stroke-miterlimit="10" pointer-events="none"/><path d="M 33 36.88 L 29.5 29.88 L 33 31.63 L 36.5 29.88 Z" fill="#377eb8" stroke="#377eb8" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="12" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-dasharray="6 6" pointer-events="none"/><ellipse cx="52" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 43 48 L 52 48 L 52 57.63" fill="none" stroke="#4daf4a" stroke-miterlimit="10" pointer-events="none"/><path d="M 52 62.88 L 48.5 55.88 L 52 57.63 L 55.5 55.88 Z" fill="#4daf4a" stroke="#4daf4a" stroke-miterlimit="10" pointer-events="none"/><path d="M 23 48 L 12 48 L 12 57.63" fill="none" stroke="#4daf4a" stroke-miterlimit="10" pointer-events="none"/><path d="M 12 62.88 L 8.5 55.88 L 12 57.63 L 15.5 55.88 Z" fill="#4daf4a" stroke="#4daf4a" stroke-miterlimit="10" pointer-events="none"/></g></svg>
+				<div class="availBtnContainer btnGroup">			
 					<select id="startDate">
 					  <option value="1346457600">Fall 2012</option>
 					  <option value="1356998400">Winter 2013</option>
@@ -79,6 +93,8 @@
 					  <option value="1462060800">Spring 2016</option>
 					  <option value="1467331200">Summer 2016</option>
 					</select>
+					
+					<button class="button avail-button" id="avail">Visible</button>
 
 				</div>
 			</div>
@@ -99,7 +115,7 @@
 				<h2>Consent Required</h2>
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="61px" version="1.1"><defs/><g transform="translate(18,0.5)"><ellipse cx="15" cy="14" rx="10.5" ry="10" fill="#ffffff" stroke="#000000" stroke-width="3" transform="rotate(10,14.5,14)" pointer-events="none"/><ellipse cx="15" cy="49" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 13 24 L 15 24 L 15 32.63" fill="none" stroke="#377eb8" stroke-miterlimit="10" pointer-events="none"/><path d="M 15 37.88 L 11.5 30.88 L 15 32.63 L 18.5 30.88 Z" fill="#377eb8" stroke="#377eb8" stroke-miterlimit="10" pointer-events="none"/></g></svg>
 				<div class="btnGroup">
-					<button class="button" id="consent">Display</button>
+					<button class="button consent-button" id="consent">Display</button>
 				</div>
 			</div>
 			<div id="credFilter">

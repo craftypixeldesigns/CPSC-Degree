@@ -15,16 +15,24 @@ var filter;
 
 // Call methods
 createVis();
-createFilter();
-appearInfo("");
-highlightNodes();
-// var numOfPrereqs = countPrereqs();
-// console.log(numOfPrereqs.length);
+// register event handlers
+registerStreamButtonHandlers();
+registerRequirementButtonHandlers();
+registrerCreditButtonHandlers();
+registrerLectureButtonHandlers();
+registerLabButtonHandlers();
+registerAvailabiltyButtonHandlers();
+registerNodeHandlers();
+
 
 // Create visualization
 function createVis() {
 
-	// set width and height
+	// set the dimensions of the filter pane
+	d3.select("#filter")
+			.attr("height", height);
+
+	// set the dimensions of the graphics pane
 	root = d3.select("#graphics")
 		.attr("height", height);
 
@@ -138,12 +146,15 @@ function createVis() {
 				return "link link-rec";
 			} 
 		})
+		.attr("id", function (d) {
+			return d.source.cid +  "" + d.target.cid;
+		})
 		.style("stroke-width", function (d) {
 			// recommendations 
 			if (d.value == 4 || d.value == 5) {
-				return 3;
+				return "3px";
 			} else {
-				return 2;
+				return "2px";
 			}
 		})
 		.style("stroke", function(d) {
@@ -163,10 +174,11 @@ function createVis() {
 			else if (d.value == 3) { 
 				return "#FF7F00";
 			}  
-		});
+		})
+		.attr("data-toggle", 0);
 
 	// hide anti-req and recommendations links
-	toggleButtonAppearance(document.getElementById("scatter"), 0);
+	toggleButtonAppearance(document.getElementById("avail"), 0);
 	toggleButtonAppearance(document.getElementById("anti"), 0);
 	toggleButtonAppearance(document.getElementById("rec"), 0);
 	toggleButtonAppearance(document.getElementById("consent"), 0);
@@ -190,6 +202,23 @@ function createVis() {
 				})
 				.call(force.drag);
 
+
+	// set button toggle state
+	d3.selectAll(".button").attr("data-toggle", 0);
+
+
+
+	// setting infobox default visibilty
+	var infoBoxDiv = document.getElementById("infoBox");
+	infoBoxDiv.querySelector("#info-stream").style.display = "none";
+	infoBoxDiv.querySelector("#info-availability").style.display = "none";
+	infoBoxDiv.querySelector("#info-consent").style.display = "none";
+	infoBoxDiv.querySelector("#info-level").style.display = "none";
+
+
+
+
+
 	// create circles
 	node.append("circle")
 		.attr("class", "circle")
@@ -197,6 +226,7 @@ function createVis() {
 		.attr("x", 0)
 		.attr("y", 0)
 		.style("fill", "white")
+		.style("stroke-width", "2px")
 		.style("stroke", "black")
 		.attr("data-streamState", 0)
 		.attr("data-toggle", 0)
@@ -212,6 +242,37 @@ function createVis() {
 
 	// Hide the first node in courses since it is a NIL placeholder
 	d3.select(".node").style("visibility", "hidden"); 
+
+	// add onclick handlers for Availability 
+	// to ensure non-overlapping ranges
+	document.getElementById("startDate").addEventListener("click", function(d) {
+		this.setAttribute("data-prevIndex", this.selectedIndex);
+	});
+
+	document.getElementById("startDate").addEventListener("change", function(d) {
+		if (this.value > document.getElementById("endDate").value) {
+			this.selectedIndex = this.getAttribute("data-prevIndex");
+			return false;
+		} else {
+			updateAvailability(parseInt(document.getElementById("avail").getAttribute("data-toggle")) ? 1 : 0);
+			return true;
+		}
+	});
+
+	document.getElementById("endDate").addEventListener("click", function(d) {
+		this.setAttribute("data-prevIndex", this.selectedIndex);
+	});
+
+	document.getElementById("endDate").addEventListener("change", function(d) {
+		if (this.value < document.getElementById("startDate").value) {
+			this.selectedIndex = this.getAttribute("data-prevIndex");
+			return false;
+		} else {
+			updateAvailability(parseInt(document.getElementById("avail").getAttribute("data-toggle")) ? 1 : 0);
+			return true;
+		}
+	});
+
 
 	var focusHierarchyY = 
 		[
@@ -231,7 +292,7 @@ function createVis() {
 			(width/5)*3,
 			width
 		]; 
-	var focusScatter = [];
+	// FUTURE ITERATION: var focusScatter = [];
 
 	var forceDamper = 0.5;
 	var linksEnabled = true;
@@ -242,8 +303,7 @@ function createVis() {
 	// Reposition nodes and attributes based on position
   	force.on("tick", function(e) {
 
-  		if (true) {
-  			console.log(height);
+  		//if (true) {
   			_.each(cpscgraph.courses, function(d, i) {
 				if (d.num > 0 && d.num < 200) {
 					d.y = d.y + (focusHierarchyY[0] - d.y) * forceDamper * e.alpha;
@@ -278,8 +338,7 @@ function createVis() {
 				}
 				//*/
 			});
-  		}
-
+  		//}
 
   		// if we are in hierarchical mode, use fociHierarchy
   		// if we are scatterplot mode, use fociScatter
@@ -344,19 +403,6 @@ function countPrereqs() {
 	return keys;
 }
 
-// Create filter
-function createFilter() {
-
- 	root = d3.select("#filter")
-			.attr("height", height);
-
-	filterStream();
-	filterNodeLink();
-	filterCredits();
-	filterLecture();
-	filterLab();
-	filterAvail();
-}
 
 function toggleButtonAppearance(obj, state) {
 
@@ -387,50 +433,12 @@ function toggleButtonAppearance(obj, state) {
 	return state;
 }
 
-// Availability filter
-function filterAvail() {
-	d3.select("#scatter").on("click", function(d) {
-		var availState = toggleButtonAppearance(this, -1);
-		if (availState) {
-			appearInfo("avail");
-		}
-		else {
-			appearInfo("");
-		}
-		
-		var startTime = document.getElementById("startDate").value;
-		var endTime = document.getElementById("endDate").value;
-		console.log(startTime + " ::: " + endTime);
-		d3.selectAll("circle").style("stroke-dasharray", function(d) {
-				for(i=0; i < availabilityMain.length; i++) {
-					if (d.cid == availabilityMain[i].cid) {
-						for (var k = 0; k < availabilityDetails.length; k++) {
-							if (availabilityMain[i].aid == availabilityDetails[k].aid && 
-								availabilityDetails[k].startstamp >= startTime && 
-								availabilityDetails[k].startstamp <= endTime) {
-									return availState ? "5,5" : "0,0";
-							}
-						}
-					}	
-				}
-				return "0,0"; // TODO return normal
-
-				//return "rgb(255, 255, 255)";
-			});
-
-
-	});
-}
-
 //
 // Retrieves node style and returns an rgb color based off
 // course stream and toggle state
 function getNodeStyle(obj) {
 	var streamState = parseInt(obj.getAttribute("data-streamState"));
 	var isHighlighted = parseInt(obj.getAttribute("data-toggle"));
-
-
-	//console.log(streamState);
 
 	if (isHighlighted) {
 		return "rgb(249, 222, 99)";
@@ -480,15 +488,14 @@ function changeCourseFilters() {
 		console.log("ASSERT: Illegal stream id (" + this.id + ")");
 		return;
 	}
-	//streamID = this.id == "stream1" ? 1 : (this.id == "stream2" ? 2 : (this.id == "stream3" ? 3 : (this.id == "stream4" ? 4 : (this.id == "stream5" ? 5 : (this.id == "stream6" ? 6 : 7)))));
 
-	var buttonState = 0;
+	var buttonState = parseInt(this.getAttribute("data-toggle"));
+	var modifier = 0;
 
 	// determine button state
-	if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-		buttonState = 1;
-		appearInfo("stream");
-
+	if(!buttonState) {
+		modifier = 1;
+		this.setAttribute("data-toggle", 1);
 		d3.select(this)
 						.transition()
 						.duration(200)
@@ -498,9 +505,8 @@ function changeCourseFilters() {
 	 					.style("top", "5px");
 
 	 } else {
-	 	buttonState = -1;
-		appearInfo("");
-
+	 	modifier = -1;
+	 	this.setAttribute("data-toggle", 0);
 		d3.select(this)
 						.transition()
 						.duration(200)
@@ -510,12 +516,10 @@ function changeCourseFilters() {
 	 					.style("top", "0");
 
 	}
-	console.log("\n===============\n");
  	d3.selectAll("circle").style("fill", function(d) {
 		for(i=0; i < course2stream.length; i++) {
 			if (d.cid == course2stream[i].cid && course2stream[i].cdid == streamID) {
-					this.setAttribute("data-streamState", parseInt(this.getAttribute("data-streamState")) + parseInt(buttonState));
-					//console.log("TESt: " + d.cid + " " + this.getAttribute("data-streamState"));
+					this.setAttribute("data-streamState", parseInt(this.getAttribute("data-streamState")) + modifier);
 					return getNodeStyle(this);
 			}	
 		}
@@ -527,7 +531,7 @@ function changeCourseFilters() {
 }
 
 // Course Stream filter
-function filterStream() {
+function registerStreamButtonHandlers() {
 	d3.select("#stream1").on("click", changeCourseFilters);
 	d3.select("#stream2").on("click", changeCourseFilters);
 	d3.select("#stream3").on("click", changeCourseFilters);
@@ -539,60 +543,73 @@ function filterStream() {
 }
 
 // Anti-req, recommendations and consent filter
-function filterNodeLink() {
+function registerRequirementButtonHandlers() {
 	d3.select("#anti").on("click", function(d) {
-		toggleButtonAppearance(this, -1);
+		var state = toggleButtonAppearance(this, -1) ? 1 : 0;
 
 		// change visibility of .link-anti
 		d3.selectAll(".link-anti")
 							.transition()
 							.duration(200)
 							.style("opacity", function(d) {
-								if (d3.select(this).style("opacity") == 1) {
-									return 0;
-								} else {
-									return 1;
-								}
+								return state;
 							})
 
 	});
 
 	d3.select("#rec").on("click", function(d) {
-		toggleButtonAppearance(this, -1);
+		var state = toggleButtonAppearance(this, -1) ? 1 : 0;
 
 		// change visibility of .link-rec
 		d3.selectAll(".link-rec")
 							.transition()
 							.duration(200)
 							.style("opacity", function(d) {
-								if (d3.select(this).style("opacity") == 1) {
-									return 0;
-								} else {
-									return 1;
-								}
+								return state;
 							})
 	});
 
 	d3.select("#consent").on("click", function(d) {
-		if(toggleButtonAppearance(this, -1)) {
-			appearInfo("consent");
-		} else {
-			appearInfo("");
-		}
-
-		// change border visibility of nodes where d.consent != ""
-		// draw consent required
-		// 
+		var strokeWidth = toggleButtonAppearance(this, -1) ? "5px" : "2px";
 		d3.selectAll(".node-consent > circle")
-								.style("stroke-width", "5px");
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].consent != "") {
-				// apply thicker border class around those courses
-				// hide them until later
-			}
-		}
+								.style("stroke-width", strokeWidth);
 	});
 }
+
+function updateAvailability(state) {
+	var startTime = document.getElementById("startDate").value;
+	var endTime = document.getElementById("endDate").value;
+
+	d3.selectAll("circle").style("stroke-dasharray", function(d) {
+	if (state) {
+		for(i=0; i < availabilityMain.length; i++) {
+			if (d.cid == availabilityMain[i].cid) {
+				for (var k = 0; k < availabilityDetails.length; k++) {
+					if (availabilityMain[i].aid == availabilityDetails[k].aid && 
+						availabilityDetails[k].startstamp >= startTime && 
+						availabilityDetails[k].startstamp <= endTime) {
+							return "0,0";
+					}
+				}
+			}	
+		}
+		return "5,5";
+	} else {
+		return "0,0";
+	}
+});
+}
+
+// Availability filter
+function registerAvailabiltyButtonHandlers() {
+	d3.select("#avail").on("click", function(d) {
+		var state = toggleButtonAppearance(this, -1) ? 1 : 0;
+	
+		updateAvailability(state);
+
+	});
+}
+
 
 // svg has no z-index
 // what's drawn first is on top
@@ -602,7 +619,7 @@ function filterNodeLink() {
 // 	outmost black, outside all of them
 
 // Credits filter
-function filterCredits() {
+function registrerCreditButtonHandlers() {
 	d3.select("#cred1").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
 			appearInfo("type");
@@ -725,7 +742,7 @@ function filterCredits() {
 }
 
 // Lecture filter
-function filterLecture() {
+function registrerLectureButtonHandlers() {
 	d3.select("#lec1").on("click", function(d) {
 		appearInfo("type");
 
@@ -878,7 +895,7 @@ function filterLecture() {
 }
 
 // Lab filter
-function filterLab() {
+function registerLabButtonHandlers() {
 	d3.select("#lab1").on("click", function(d) {
 		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
 			appearInfo("type");
@@ -1031,6 +1048,105 @@ function filterLab() {
 	});
 }
 
+
+
+function toggleInfoPane(obj, data, state) {
+	var infoBoxD3 = d3.select("#infoBox");
+	var infoBoxDiv = document.getElementById("infoBox");
+	
+	// CNUM
+	infoBoxDiv.querySelector("#info-cnum").innerText = data.cnum;
+	
+	// CNAME
+	infoBoxDiv.querySelector("#info-cname").innerText = data.cname;
+
+	// COURSE STREAM
+	var tmp = d3.selectAll(".stream-button")[0];
+	infoBoxDiv.querySelector("#info-stream").style.display = "none";
+	for (var i = 0; i < tmp.length; i++) {
+		if (parseInt(tmp[i].getAttribute("data-toggle"))) {
+			infoBoxDiv.querySelector("#info-stream").style.display = "block";
+			break;
+		}
+	}
+
+	var infoBoxStream = infoBoxDiv.querySelector("#info-stream").children[1];
+	// clear existing stream list elements
+	while (infoBoxStream.firstChild) {
+    	infoBoxStream.removeChild(infoBoxStream.firstChild);
+	}
+	for(var i=0; i < course2stream.length; i++) {
+		if (data.cid == course2stream[i].cid) {
+			var el = document.createElement("li");
+			el.innerText = degDetails[course2stream[i].cdid].type;
+			infoBoxStream.appendChild(el);
+
+		}
+	}
+	if (!infoBoxStream.firstChild) 
+		 infoBoxStream.innerHTML = "<i>None</i>";
+
+
+	// AVAILABILITY
+	if (parseInt(document.getElementById("avail").getAttribute("data-toggle"))) {
+		infoBoxDiv.querySelector("#info-availability").style.display = "block";
+	} else {
+		infoBoxDiv.querySelector("#info-availability").style.display = "none";
+	}
+
+	var infoBoxAvailability = infoBoxDiv.querySelector("#info-availability").children[1];
+	// clear existing availability list elements
+	while (infoBoxAvailability.firstChild) {
+    	infoBoxAvailability.removeChild(infoBoxAvailability.firstChild);
+	}
+	for (var i = 0; i < availabilityMain.length; i++) {
+		if (data.cid == availabilityMain[i].cid) {
+			var el = document.createElement("li");
+			el.innerText = availabilityDetails[availabilityMain[i].aid].semester;
+			infoBoxAvailability.appendChild(el);
+		}
+ 	}
+	
+	// CONSENT
+	if (parseInt(document.getElementById("consent").getAttribute("data-toggle"))) {
+		infoBoxDiv.querySelector("#info-consent").style.display = "block";
+	} else {
+		infoBoxDiv.querySelector("#info-consent").style.display = "none";
+	}
+
+	var infoBoxConsent = infoBoxDiv.querySelector("#info-consent").children[0];
+	if (data.consent != "") {
+		infoBoxConsent.innerText = "Consent required by: " + data.consent;
+	} else {
+		infoBoxConsent.innerHTML = "Consent required by: <i>None</i>";
+	}
+
+
+	// SENIORITY
+	// TODO
+
+
+
+
+	// Show/Hide infoDiv + positioning
+	infoBoxD3.attr("height", "auto")
+		.style("left", (data.x + 15) + "px")
+		.style("top", (data.y - 30) + "px");
+	if (state) {
+			infoBoxD3.style("visibility", "visible")
+				.transition()
+				.duration(200)
+				.style("opacity", 1);
+		} else {
+			infoBoxD3.style("visibility", "hidden")
+				.transition()
+				.duration(200)
+				.style("opacity", 0);
+		}
+
+}
+
+
 // Select interaction makes different info appear
 function appearInfo(type) {
 	var div = d3.select("div.infoBox");
@@ -1039,19 +1155,12 @@ function appearInfo(type) {
 	var courseIndex, degIndex;
 
 	// Inspired from http://codepen.io/smlo/pen/JdMOej
+	
 	d3.selectAll(".node").on("click", function(d) {
-		console.log("nodeclicked ", d );
-		if (div.style("visibility") == "hidden") {
-			div.style("visibility", "visible")
-				.transition()
-				.duration(200)
-				.style("opacity", 1);
-		} else {
-			div.style("visibility", "hidden")
-				.transition()
-				.duration(200)
-				.style("opacity", 0);
-		}
+
+
+
+//*
 
 		html = "<h3>" + d.cnum + ":</h3>" + "<h4>" + d.cname + "</h4>";
 
@@ -1093,7 +1202,20 @@ function appearInfo(type) {
 			.attr("height", "auto")
 			.style("left", (d.x + 15) + "px")
 			.style("top", (d.y - 30) + "px");
+
+		if (div.style("visibility") == "hidden") {
+			div.style("visibility", "visible")
+				.transition()
+				.duration(200)
+				.style("opacity", 1);
+		} else {
+			div.style("visibility", "hidden")
+				.transition()
+				.duration(200)
+				.style("opacity", 0);
+		}
 	});
+//*/
 }
 
 function toggleNode(obj) {
@@ -1102,6 +1224,7 @@ function toggleNode(obj) {
 	} else {
 		obj.setAttribute("data-toggle", 0);
 	}
+	return obj.getAttribute("data-toggle");
 }
 
 function toggleAvail(obj) {
@@ -1110,56 +1233,83 @@ function toggleAvail(obj) {
 	} else {
 		obj.setAttribute("data-availState", 0);
 	}
+	return obj.getAttribute("data-availState");
+}
+
+
+
+// node: node being affected
+// state: end-state of node
+function toggleLinks(node, data, state) {
+	// gather links associated with node
+	// for each link associated with a node,
+	// add or minus 1 from the link-toggle state
+	// then  update appearance of link to match the 
+	// new link-toggle state (>0 highlighted)
+	for (i=0; i< cpscgraph.links.length; i++) { 
+		if (cpscgraph.links[i].source.cid == data.cid || 
+			cpscgraph.links[i].target.cid == data.cid){	
+			var id = cpscgraph.links[i].source.cid + "" + cpscgraph.links[i].target.cid;
+			var obj = document.getElementById(id);
+			obj.setAttribute("data-toggle", parseInt(obj.getAttribute("data-toggle")) + (parseInt(state) ? 1 : -1));
+
+			if(parseInt(obj.getAttribute("data-toggle")) < 0 ||
+				parseInt(obj.getAttribute("data-toggle")) > 2) {
+				
+				console.log("ASSERTION ERROR [" + obj.id + "]: link-toggle outside of range (" + parseInt(obj.getAttribute("data-toggle")) + ")");
+				return;
+			}
+
+			// update appearance
+			if (parseInt(obj.getAttribute("data-toggle")) > 0) {
+				d3.select(obj).style("stroke-width", "5px");
+			} else {
+				d3.select(obj).style("stroke-width", "2px");
+			}
+		}
+	}
 }
 	
 // Hover/select interaction makes nodes highlighted
 // TODO: make associated links highlighted
-function highlightNodes() {
+function registerNodeHandlers() {
 	// highlight circles
 	d3.selectAll("circle").on("mouseover", function(d) {
-		// d3.select(this).style("fill", "hsla(120, 100%, 50%, 1.0)");
-		// str = d3.select(this).style("fill").split(",");
-		// console.log(str);
-		// var h = str[0].split("(")[1];
-		// var s = str[1];
-		// var l = str[2];
-		// var a = str[3].split(")")[0];
-		// console.log("H:"+ h + "\n" + "L:"+ l + "\n" + "S:"+ s + "\n" + "A:"+ a + "\n");
-
 		if (this.getAttribute("data-toggle") == 0) {
-
 			d3.select(this).style("stroke", "rgb(249, 222, 99)")
 							.style("fill","rgb(249, 222, 99)");
 		}
-
+		toggleInfoPane(this, d, true);
 	});
+
 
 	// unhighlight circles
 	d3.selectAll("circle").on("mouseleave", function(d) {
 		var fillStr = getNodeStyle(this);
 
-
 		if (this.getAttribute("data-toggle") == 0) {
 			d3.select(this).style("stroke", "rgb(0, 0, 0)")
 							.style("fill",fillStr);
-							
 		}
+		toggleInfoPane(this, d, false);
 	}); 
 
 	
 	// toggle circle highlighting
 	d3.selectAll("circle").on("click", function(d) {
-		toggleNode(this);	
+		var newState = toggleNode(this);
+		toggleLinks(this, d, newState);	
 	});
 
 	d3.selectAll("foreignObject").on("click", function(d) {
-		toggleNode(this.previousSibling);
-		
+		var newState = toggleNode(this.previousSibling);
+		toggleLinks(this, d, newState);	
 	});
 
 	d3.selectAll("foreignObject").on("mouseover", function(d) {
 		d3.select(this.previousSibling).style("stroke", "rgb(249, 222, 99)")
 										.style("fill","rgb(249, 222, 99)");
+		toggleInfoPane(this.previousSibling, d, true);
 	});
 
 	d3.selectAll("foreignObject").on("mouseleave", function(d) {
@@ -1169,5 +1319,7 @@ function highlightNodes() {
 			d3.select(this.previousSibling).style("stroke", "rgb(0, 0, 0)")
 											.style("fill",fillStr);
 		}
+
+		toggleInfoPane(this.previousSibling, d, false);
 	});
 }

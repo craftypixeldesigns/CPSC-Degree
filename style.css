@@ -60,6 +60,12 @@ h4 {
 	font-size: 16px;
 }
 
+h5 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 15px;
+}
+
 p {
 	font-size: 11px;
 }
@@ -82,18 +88,18 @@ p {
   stroke-opacity: .6;
 }
 
-div.infoBox {   
+div#infoBox {   
  	font-size: 15px;      
  	color: #FFFFFF;  
   	background-color: #89B0AE;
 	border: 0px;      
 	border-radius: 5px;     
 	position: absolute; 
-	opacity: 0;
-	visibility: hidden;                 
+	opacity: 0;             
 	padding: 15px;
 	max-width: 10%;          
-	pointer-events: none;         
+	pointer-events: none;     
+	visibility: hidden;    
 }
 
 ul {
@@ -151,9 +157,6 @@ ul {
 	width: 25%;
 }
 
-.centersvg {
-}
-
 #filter .btnGroup {
 	display: inline-block;
 	vertical-align: middle;
@@ -161,6 +164,13 @@ ul {
 
 #streamFilter svg {
 	display: inline-block;
+}
+
+.availBtnContainer {
+	width: 70%;
+}
+
+.availBtnContainer button {
 }
 
 .streamBtnContainer {
