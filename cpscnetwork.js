@@ -206,6 +206,24 @@ function createVis() {
 	// set button toggle state
 	d3.selectAll(".button").attr("data-toggle", 0);
 
+	// set button toggle state for credits, lectures, lab
+	d3.selectAll(".radioButtonGroup").attr("data-toggle", 0);
+	d3.select("#cred1").style("box-shadow", "0 4px rgb(254, 229, 217)");
+	d3.select("#cred2").style("box-shadow", "0 4px rgb(252, 174, 145)");
+	d3.select("#cred3").style("box-shadow", "0 4px rgb(251, 106, 74)");
+	d3.select("#cred4").style("box-shadow", "0 4px rgb(184, 84, 80)");
+
+	d3.select("#lec1").style("box-shadow", "0 4px rgb(242, 240, 247)");
+	d3.select("#lec2").style("box-shadow", "0 4px rgb(203, 201, 226)");
+	d3.select("#lec3").style("box-shadow", "0 4px rgb(158, 154, 200)");
+	d3.select("#lec4").style("box-shadow", "0 4px rgb(117, 107, 177)");
+	d3.select("#lec5").style("box-shadow", "0 4px rgb(84, 39, 143)");
+
+	d3.select("#lab1").style("box-shadow", "0 4px rgb(254, 235, 226)");
+	d3.select("#lab2").style("box-shadow", "0 4px rgb(251, 180, 185)");
+	d3.select("#lab3").style("box-shadow", "0 4px rgb(247, 101, 161)");
+	d3.select("#lab4").style("box-shadow", "0 4px rgb(197, 27, 138)");
+	d3.select("#lab5").style("box-shadow", "0 4px rgb(122, 1, 119)");
 
 
 	// setting infobox default visibilty
@@ -214,9 +232,6 @@ function createVis() {
 	infoBoxDiv.querySelector("#info-availability").style.display = "none";
 	infoBoxDiv.querySelector("#info-consent").style.display = "none";
 	infoBoxDiv.querySelector("#info-level").style.display = "none";
-
-
-
 
 
 	// create circles
@@ -232,6 +247,42 @@ function createVis() {
 		.attr("data-toggle", 0)
 		.attr("data-availState", 0);
 		// add circles based off credits
+		// 
+	node.append("circle")
+		.attr("class", "circle-credits")
+		.attr("r", radius * 0.9)
+		.attr("x", 0)
+		.attr("y", 0)
+		.style("fill", "transparent")
+		.style("stroke-width", "2px")
+		.style("stroke", "transparent")
+		.attr("data-streamState", 0)
+		.attr("data-toggle", 0)
+		.attr("data-availState", 0);
+
+	node.append("circle")
+		.attr("class", "circle-lecture")
+		.attr("r", radius * 0.8)
+		.attr("x", 0)
+		.attr("y", 0)
+		.style("fill", "transparent")
+		.style("stroke-width", "2px")
+		.style("stroke", "transparent")
+		.attr("data-streamState", 0)
+		.attr("data-toggle", 0)
+		.attr("data-availState", 0);
+
+	node.append("circle")
+		.attr("class", "circle-lab")
+		.attr("r", radius * 0.7)
+		.attr("x", 0)
+		.attr("y", 0)
+		.style("fill", "transparent")
+		.style("stroke-width", "2px")
+		.style("stroke", "transparent")
+		.attr("data-streamState", 0)
+		.attr("data-toggle", 0)
+		.attr("data-availState", 0);
 
 	// draw node text
 	node.append("foreignObject")
@@ -516,7 +567,7 @@ function changeCourseFilters() {
 	 					.style("top", "0");
 
 	}
- 	d3.selectAll("circle").style("fill", function(d) {
+ 	d3.selectAll(".circle").style("fill", function(d) {
 		for(i=0; i < course2stream.length; i++) {
 			if (d.cid == course2stream[i].cid && course2stream[i].cdid == streamID) {
 					this.setAttribute("data-streamState", parseInt(this.getAttribute("data-streamState")) + modifier);
@@ -580,7 +631,7 @@ function updateAvailability(state) {
 	var startTime = document.getElementById("startDate").value;
 	var endTime = document.getElementById("endDate").value;
 
-	d3.selectAll("circle").style("stroke-dasharray", function(d) {
+	d3.selectAll(".circle").style("stroke-dasharray", function(d) {
 	if (state) {
 		for(i=0; i < availabilityMain.length; i++) {
 			if (d.cid == availabilityMain[i].cid) {
@@ -611,440 +662,308 @@ function registerAvailabiltyButtonHandlers() {
 }
 
 
-// svg has no z-index
-// what's drawn first is on top
-// just have lots of circles
-// node, draw circles within it 
-// 	auto hide, then make it appear
-// 	outmost black, outside all of them
+function toggleRadioButtons(obj) {
+	// find set button & unset
+	var parent = obj.parentElement;
+	for (var i = 0; i < parent.children.length; i++) {
+		if (parseInt(parent.children[i].getAttribute("data-toggle"))) {
+			//untoggle buttons
+			d3.select(parent.children[i])
+					.transition()
+					.duration(200)
+					.style("background-color","rgb(255, 255, 255)")
+					.style("top", "0");
+			parent.children[i].setAttribute("data-toggle", 0);
+		} else if (obj == parent.children[i]) {
+			//toggle selected button
+			var bgColor = obj.style.boxShadow;
+			d3.select(obj)
+					.transition()
+					.duration(200)
+					.style("background-color", bgColor)
+ 					.style("top", "5px");
+ 			obj.setAttribute("data-toggle", 1);
+		}
+	}
+}
+
+/*
+function toggleRadioButtons2() {
+	// find set button & unset
+	var parent = this.parentElement;
+	var bgColor = "transparent"
+	for (var i = 0; i < parent.children.length; i++) {
+		if (parseInt(parent.children[i].getAttribute("data-toggle"))) {
+			//untoggle buttons
+			d3.select(parent.children[i])
+					.transition()
+					.duration(200)
+					.style("background-color","rgb(255, 255, 255)")
+					.style("top", "0");
+			parent.children[i].setAttribute("data-toggle", 0);
+		} else if (this == parent.children[i]) {
+			//toggle selected button
+			bgColor= this.style.boxShadow;
+			d3.select(this)
+					.transition()
+					.duration(200)
+					.style("background-color", bgColor)
+ 					.style("top", "5px");
+ 			this.setAttribute("data-toggle", 1);
+
+		}
+	}
+}
+*/
+
+
+function DEPRECATED_NOT_WORKING(xx) {
+	console.log(xx);
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-credits").style("stroke", function (d) {
+			console.log("tetet");
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.credit != 0.75 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
+			}
+		});
+	}
+
 
 // Credits filter
 function registrerCreditButtonHandlers() {
-	d3.select("#cred1").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(254, 229, 217)")
-		 					.style("color", "rgb(1, 0, 0)")
-		 					.style("box-shadow", "0 0 rgb(254, 229, 217)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(254, 229, 217)")
-		 					.style("top", "0");
-		}
-
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].credit == 0.75) {
-				// change to #FEE5D9
+	d3.select("#cred1").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-credits").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.credit != 0.75 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});
 	});
 
-	d3.select("#cred2").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(252, 174, 145)")
-		 					.style("color", "rgb(1, 0, 0)")
-		 					.style("box-shadow", "0 0 rgb(252, 174, 145)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(252, 174, 145)")
-		 					.style("top", "0");
-		}
-
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].credit == 1.5) {
-				// change to #FCAE91
+	d3.select("#cred2").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-credits").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.credit != 1.5 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});
 	});
-
-	d3.select("#cred3").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(251, 106, 74)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(251, 106, 74)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(251, 106, 74)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].credit == 3) {
-				// change to #FB6A4A
+	d3.select("#cred3").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-credits").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.credit != 3 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});	
 	});
-
-	d3.select("#cred4").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(184, 84, 80)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(184, 84, 80)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(184, 84, 80)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].credit == 6) {
-				// change to #B85450
+	d3.select("#cred4").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-credits").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.credit != 6 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});		
 	});
 }
 
 // Lecture filter
 function registrerLectureButtonHandlers() {
-	d3.select("#lec1").on("click", function(d) {
-		appearInfo("type");
-
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(242, 240, 247)")
-		 					.style("color", "rgb(1, 0, 0)")
-		 					.style("box-shadow", "0 0 rgb(242, 240, 247)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(242, 240, 247)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].lecture == 1) {
-				// change to #F2F0F7
+	d3.select("#lec1").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-lecture").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.lecture != 1 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});	
 	});
 
-	d3.select("#lec2").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(203, 201, 226)")
-		 					.style("color", "rgb(1, 0, 0)")
-		 					.style("box-shadow", "0 0 rgb(203, 201, 226)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(203, 201, 226)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].lecture == 2) {
-				// change to #CBC9E2
+	d3.select("#lec2").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-lecture").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.lecture != 2 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});	
 	});
 
-	d3.select("#lec3").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(158, 154, 200)")
-		 					.style("color", "rgb(1, 0, 0)")
-		 					.style("box-shadow", "0 0 rgb(158, 154, 200)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(158, 154, 200)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].lecture == 3) {
-				// change to #9E9AC8
+	d3.select("#lec3").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-lecture").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.lecture != 3 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});		
 	});
 
-	d3.select("#lec4").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(117, 107, 177)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(117, 107, 177)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(117, 107, 177)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].credit .lecture == 6) {
-				// change to #756BB1
+	d3.select("#lec4").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-lecture").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.lecture != 6 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});	
+	});
+	d3.select("#lec5").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-lecture").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.lecture != 12 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
+			}
+		});		
 	});
 
-	d3.select("#lec5").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(84, 39, 143)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(84, 39, 143)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(84, 39, 143)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].lecture == 12) {
-				// change to #54278F
-			}
-		}
-	});
 }
 
 // Lab filter
 function registerLabButtonHandlers() {
-	d3.select("#lab1").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(254, 235, 226)")
-		 					.style("color", "rgb(1, 0, 0)")
-		 					.style("box-shadow", "0 0 rgb(254, 235, 226)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(254, 235, 226)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].lab == 0) {
-				// change to #FEEBE2
+	d3.select("#lab1").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-lab").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.lab != 0 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});		
 	});
 
-	d3.select("#lab2").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(251, 180, 185)")
-		 					.style("color", "rgb(1, 0, 0)")
-		 					.style("box-shadow", "0 0 rgb(251, 180, 185)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(251, 180, 185)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].lab == 1) {
-				// change to #FBB4B9
+	d3.select("#lab2").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-lab").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.lab != 1 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});			
 	});
 
-	d3.select("#lab3").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(247, 101, 161)")
-		 					.style("color", "rgb(1, 0, 0)")
-		 					.style("box-shadow", "0 0 rgb(247, 101, 161)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(247, 101, 161)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].lecture .lab == 2) {
-				// change to #F768A1
+	d3.select("#lab3").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-lab").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.lab != 2 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});				
 	});
 
-
-	d3.select("#lab4").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(197, 27, 138)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(197, 27, 138)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(197, 27, 138)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].credit .lecture .lab == 3) {
-				// change to #C51B8A
+	d3.select("#lab4").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-lab").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.lab != 3 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});			
 	});
 
-	d3.select("#lab5").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			appearInfo("type");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(122, 1, 119)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(122, 1, 119)")
-		 					.style("top", "5px");
-		} else {
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(122, 1, 119)")
-		 					.style("top", "0");
-		}
-		
-		for(i=0; i<cpscgraph.courses.length; i++) {
-			if (cpscgraph.courses[i].lab == 5) {
-				// change to #7A0177
+	d3.select("#lab5").on("click", function (d) {
+		toggleRadioButtons(this);
+		var bgColor = this.style.boxShadow.split(")")[0] + ")";
+		var state = parseInt(this.getAttribute("data-toggle"));
+		d3.selectAll(".circle-lab").style("stroke", function (d) {
+			// ignore cid=0 placeholder
+			if (d.cid != 0) { 
+				if (d.lab != 5 || !state) {
+					return "transparent";
+				} else {
+					return bgColor;
+				}
 			}
-		}
+		});				
 	});
 }
 
@@ -1147,76 +1066,6 @@ function toggleInfoPane(obj, data, state) {
 }
 
 
-// Select interaction makes different info appear
-function appearInfo(type) {
-	var div = d3.select("div.infoBox");
-	var html;
-
-	var courseIndex, degIndex;
-
-	// Inspired from http://codepen.io/smlo/pen/JdMOej
-	
-	d3.selectAll(".node").on("click", function(d) {
-
-
-
-//*
-
-		html = "<h3>" + d.cnum + ":</h3>" + "<h4>" + d.cname + "</h4>";
-
-		if(type == "stream") {
-			if (d.did != 0) {
-				html += "Course Streams:<ul>";
-
-				for(i=0; i<course2stream.length; i++) {
-					if (d.cid == course2stream[i].cid) {
-						html += "<li>" + degDetails[course2stream[i].cdid].type + "</li>";
-					}
-				}
-
-				html += "</ul>"
-			}
-		} else if (type == "avail") {
-			html += "Availability:<ul>";
-			
-			 for (var j=0; j<availabilityMain.length; j++) {
-				if (d.cid == availabilityMain[j].cid) {
-					html += "<li>" + availabilityDetails[availabilityMain[j].aid].semester + "</li>";
-				}
- 		 	}
-
- 			html += "</ul>"
-		} else if (type == "consent") {
-			if (d.consent != "") {
-				html += "Consent required by " + d.consent;
-			}
-		} else if (type == "type") {
-			if (d.ctype == "senior" || d.ctype == "junior") {
-				html += d.ctype.toUpperCase() + " level course";
-			} else {
-				html += d.ctype.toUpperCase();
-			}
-		}
-		
-		div.html(html)
-			.attr("height", "auto")
-			.style("left", (d.x + 15) + "px")
-			.style("top", (d.y - 30) + "px");
-
-		if (div.style("visibility") == "hidden") {
-			div.style("visibility", "visible")
-				.transition()
-				.duration(200)
-				.style("opacity", 1);
-		} else {
-			div.style("visibility", "hidden")
-				.transition()
-				.duration(200)
-				.style("opacity", 0);
-		}
-	});
-//*/
-}
 
 function toggleNode(obj) {
 	if(obj.getAttribute("data-toggle") == 0) {
@@ -1274,7 +1123,7 @@ function toggleLinks(node, data, state) {
 // TODO: make associated links highlighted
 function registerNodeHandlers() {
 	// highlight circles
-	d3.selectAll("circle").on("mouseover", function(d) {
+	d3.selectAll(".circle").on("mouseover", function(d) {
 		if (this.getAttribute("data-toggle") == 0) {
 			d3.select(this).style("stroke", "rgb(249, 222, 99)")
 							.style("fill","rgb(249, 222, 99)");
@@ -1284,7 +1133,7 @@ function registerNodeHandlers() {
 
 
 	// unhighlight circles
-	d3.selectAll("circle").on("mouseleave", function(d) {
+	d3.selectAll(".circle").on("mouseleave", function(d) {
 		var fillStr = getNodeStyle(this);
 
 		if (this.getAttribute("data-toggle") == 0) {
@@ -1296,30 +1145,30 @@ function registerNodeHandlers() {
 
 	
 	// toggle circle highlighting
-	d3.selectAll("circle").on("click", function(d) {
+	d3.selectAll(".circle").on("click", function(d) {
 		var newState = toggleNode(this);
 		toggleLinks(this, d, newState);	
 	});
 
 	d3.selectAll("foreignObject").on("click", function(d) {
-		var newState = toggleNode(this.previousSibling);
-		toggleLinks(this, d, newState);	
+		var newState = toggleNode(this.parentElement.firstChild);
+		toggleLinks(this.parentElement.firstChild, d, newState);	
 	});
 
 	d3.selectAll("foreignObject").on("mouseover", function(d) {
-		d3.select(this.previousSibling).style("stroke", "rgb(249, 222, 99)")
+		d3.select(this.parentElement.firstChild).style("stroke", "rgb(249, 222, 99)")
 										.style("fill","rgb(249, 222, 99)");
-		toggleInfoPane(this.previousSibling, d, true);
+		toggleInfoPane(this.parentElement.firstChild, d, true);
 	});
 
 	d3.selectAll("foreignObject").on("mouseleave", function(d) {
-		var fillStr = getNodeStyle(this.previousSibling);
+		var fillStr = getNodeStyle(this.parentElement.firstChild);
 
-		if (this.previousSibling.getAttribute("data-toggle") == 0) {
-			d3.select(this.previousSibling).style("stroke", "rgb(0, 0, 0)")
+		if (this.parentElement.firstChild.getAttribute("data-toggle") == 0) {
+			d3.select(this.parentElement.firstChild).style("stroke", "rgb(0, 0, 0)")
 											.style("fill",fillStr);
 		}
 
-		toggleInfoPane(this.previousSibling, d, false);
+		toggleInfoPane(this.parentElement.firstChild, d, false);
 	});
 }
