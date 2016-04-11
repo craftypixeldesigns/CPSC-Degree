@@ -6,7 +6,7 @@ var filterWidth = width / 6,
 
 var force;
 var node, link; // nodes and links
-var radius = 21.5;
+var radius = 30;
 var root; // hold svg element
 
 var filter;
@@ -166,21 +166,14 @@ function createVis() {
 		});
 
 	// hide anti-req and recommendations links
-	d3.select("#anti")
-				.style("background-color","rgb(0, 0, 0)")
-				.style("color", "rgb(255, 255, 255)")
-				.style("box-shadow", "0 0 rgb(0, 0, 0)")
-				.style("top", "5px")
-				.text("Hidden");
+	toggleButtonAppearance(document.getElementById("scatter"), 0);
+	toggleButtonAppearance(document.getElementById("anti"), 0);
+	toggleButtonAppearance(document.getElementById("rec"), 0);
+	toggleButtonAppearance(document.getElementById("consent"), 0);
+
 	d3.selectAll(".link-anti")
 				.style("opacity", 0);
-
-	d3.select("#rec")
-				.style("background-color","rgb(0, 0, 0)")
-				.style("color", "rgb(255, 255, 255)")
-				.style("box-shadow", "0 0 rgb(0, 0, 0)")
-				.style("top", "5px")
-				.text("Hidden");
+	
 	d3.selectAll(".link-rec")
 				.style("opacity", 0);
 
@@ -206,14 +199,15 @@ function createVis() {
 		.style("fill", "white")
 		.style("stroke", "black")
 		.attr("data-streamState", 0)
-		.attr("data-toggle", 0);
+		.attr("data-toggle", 0)
+		.attr("data-availState", 0);
 		// add circles based off credits
 
 	// draw node text
 	node.append("foreignObject")
 		.attr("class", "text")
-		.attr("x", -radius/1.4)
- 	 	.attr("y", -radius/1.5)
+		.attr("x", -radius/2)
+ 	 	.attr("y", -radius/2)
 		.html(function(d) { return "<p class=\"name\">" + d.faculty + "<br/>" + d.num + "</p>"; });
 
 	// Hide the first node in courses since it is a NIL placeholder
@@ -364,30 +358,67 @@ function createFilter() {
 	filterAvail();
 }
 
+function toggleButtonAppearance(obj, state) {
+
+	if (state < 0) {
+		state = parseInt(obj.getAttribute("data-toggle")) == 1 ? 0 : 1;
+		obj.setAttribute("data-toggle", state);
+	} 
+
+	if(!state) {
+		d3.select(obj)
+						.transition()
+						.duration(200)
+						.style("background-color","rgb(255, 255, 255)")
+	 					.style("color", "rgb(0, 0, 0)")
+	 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
+	 					.style("top", "0")
+	 					.text("Hidden");
+	} else {
+		d3.select(obj)
+						.transition()
+						.duration(200)
+						.style("background-color","rgb(0, 0, 0)")
+	 					.style("color", "rgb(255, 255, 255)")
+	 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
+						.style("top", "5px")
+	 					.text("Visible");
+	}
+	return state;
+}
+
 // Availability filter
 function filterAvail() {
 	d3.select("#scatter").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+		var availState = toggleButtonAppearance(this, -1);
+		if (availState) {
 			appearInfo("avail");
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px")
-		 					.text("Hierarchy");
-		} else {
-			appearInfo("");
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0")
-		 					.text("Scatter");
 		}
+		else {
+			appearInfo("");
+		}
+		
+		var startTime = document.getElementById("startDate").value;
+		var endTime = document.getElementById("endDate").value;
+		console.log(startTime + " ::: " + endTime);
+		d3.selectAll("circle").style("stroke-dasharray", function(d) {
+				for(i=0; i < availabilityMain.length; i++) {
+					if (d.cid == availabilityMain[i].cid) {
+						for (var k = 0; k < availabilityDetails.length; k++) {
+							if (availabilityMain[i].aid == availabilityDetails[k].aid && 
+								availabilityDetails[k].startstamp >= startTime && 
+								availabilityDetails[k].startstamp <= endTime) {
+									return availState ? "5,5" : "0,0";
+							}
+						}
+					}	
+				}
+				return "0,0"; // TODO return normal
+
+				//return "rgb(255, 255, 255)";
+			});
+
+
 	});
 }
 
@@ -396,7 +427,15 @@ function filterAvail() {
 // course stream and toggle state
 function getNodeStyle(obj) {
 	var streamState = parseInt(obj.getAttribute("data-streamState"));
-	var isHighlighted = parseInt(obj.getAttribute("data-toggleState"));
+	var isHighlighted = parseInt(obj.getAttribute("data-toggle"));
+
+
+	//console.log(streamState);
+
+	if (isHighlighted) {
+		return "rgb(249, 222, 99)";
+	}
+
 	switch (streamState) {
 		case 0:
 			return "rgb(255, 255, 255)";
@@ -416,6 +455,7 @@ function getNodeStyle(obj) {
 		default:
 			return "rgb(115, 115, 115)";
 	}
+
 }
 
 function changeCourseFilters() {
@@ -472,15 +512,16 @@ function changeCourseFilters() {
 	}
 	console.log("\n===============\n");
  	d3.selectAll("circle").style("fill", function(d) {
-
 		for(i=0; i < course2stream.length; i++) {
 			if (d.cid == course2stream[i].cid && course2stream[i].cdid == streamID) {
 					this.setAttribute("data-streamState", parseInt(this.getAttribute("data-streamState")) + parseInt(buttonState));
-					console.log("TESt: " + d.cid + " " + this.getAttribute("data-streamState"));
+					//console.log("TESt: " + d.cid + " " + this.getAttribute("data-streamState"));
 					return getNodeStyle(this);
 			}	
 		}
-		return "rgb(255, 255, 255)";
+		return getNodeStyle(this);
+
+		//return "rgb(255, 255, 255)";
 	});
 
 }
@@ -500,25 +541,7 @@ function filterStream() {
 // Anti-req, recommendations and consent filter
 function filterNodeLink() {
 	d3.select("#anti").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px")
-		 					.text("Hidden");
-		} else {
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0")
-		 					.text("Visible");
-		}
+		toggleButtonAppearance(this, -1);
 
 		// change visibility of .link-anti
 		d3.selectAll(".link-anti")
@@ -535,25 +558,7 @@ function filterNodeLink() {
 	});
 
 	d3.select("#rec").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px")
-		 					.text("Hidden");
-		} else {
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0")
-		 					.text("Visible");
-		}
+		toggleButtonAppearance(this, -1);
 
 		// change visibility of .link-rec
 		d3.selectAll(".link-rec")
@@ -569,34 +574,17 @@ function filterNodeLink() {
 	});
 
 	d3.select("#consent").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+		if(toggleButtonAppearance(this, -1)) {
 			appearInfo("consent");
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px")
-		 					.text("Hidden");
 		} else {
 			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0")
-		 					.text("Visible");
 		}
 
 		// change border visibility of nodes where d.consent != ""
 		// draw consent required
 		// 
-		d3.select(".node-consent")
-								.style("border", "5px");
+		d3.selectAll(".node-consent > circle")
+								.style("stroke-width", "5px");
 		for(i=0; i<cpscgraph.courses.length; i++) {
 			if (cpscgraph.courses[i].consent != "") {
 				// apply thicker border class around those courses
@@ -1115,22 +1103,15 @@ function toggleNode(obj) {
 		obj.setAttribute("data-toggle", 0);
 	}
 }
-	
-// DEPRECATED
-function setSat(obj, value) {
-	// get existing HSLA
-	var str = obj.style("fill");
 
-	// extract values
-	str = str.split(",");
-	var h = str[0].split("(")[1];
-	var s = str[1];
-	var l = str[2];
-	var a = str[3].split(")")[0];
-	console.log("H:"+ h + "\n" + "L:"+ l + "\n" + "S:"+ s + "\n" + "A:"+ a + "\n");
-	//obj.style("fill", str);
+function toggleAvail(obj) {
+	if(obj.getAttribute("data-availState") == 0) {
+		obj.setAttribute("data-availState", 1);
+	} else {
+		obj.setAttribute("data-availState", 0);
+	}
 }
-
+	
 // Hover/select interaction makes nodes highlighted
 // TODO: make associated links highlighted
 function highlightNodes() {
@@ -1182,7 +1163,7 @@ function highlightNodes() {
 	});
 
 	d3.selectAll("foreignObject").on("mouseleave", function(d) {
-		var fillStr = getNodeStyle(this);
+		var fillStr = getNodeStyle(this.previousSibling);
 
 		if (this.previousSibling.getAttribute("data-toggle") == 0) {
 			d3.select(this.previousSibling).style("stroke", "rgb(0, 0, 0)")
