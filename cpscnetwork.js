@@ -1,6 +1,6 @@
 // Main variables
 var width = window.innerWidth,
-    height = 1800;
+    height = 1500;
 var filterWidth = width / 6,
 	filterHeight = height;
 
@@ -54,7 +54,7 @@ function createVis() {
 	// set parameters for graph
 	force = d3.layout.force()
 		.linkStrength(.001)
-		.charge(-radius * (radius))
+		.charge(-radius * (radius * 1.5))
 		.gravity(0.1)
 		.friction(0.7)
 		.size([width/2, height]);
@@ -87,11 +87,12 @@ function createVis() {
 				return "antireq-or";
 			} 
 	    })
-	    .attr("viewBox", "-5 -5 10 10")
-	    .attr("refX", 15)
-	    .attr("refY", -1.5)
+	    .attr("refX", radius)
+	    .attr("refY", 0)
 	    .attr("markerWidth", 6)
-	    .attr("markerHeight", 6)
+	    .attr("markerHeight",6)
+	    .attr("viewBox", "-5 -5 10 10")
+	    .attr("markerUnits", "strokeWidth")
 	    .attr("orient", "auto")
 	  	.append("svg:path")
 	  	.attr("d", "M 0,0 m -5,-5 L 5,0 L -5,5 Z")
@@ -113,6 +114,7 @@ function createVis() {
 				return "#FF7F00";
 			}  
 		});
+
 
 	// define prereq links
   	var link = root.selectAll(".link")
@@ -152,7 +154,7 @@ function createVis() {
 		.style("stroke-width", function (d) {
 			// recommendations 
 			if (d.value == 4 || d.value == 5) {
-				return "3px";
+				return "5px";
 			} else {
 				return "2px";
 			}
@@ -247,10 +249,10 @@ function createVis() {
 		.attr("data-toggle", 0)
 		.attr("data-availState", 0);
 		// add circles based off credits
-		// 
+		
 	node.append("circle")
 		.attr("class", "circle-credits")
-		.attr("r", radius * 0.9)
+		.attr("r", radius * 0.95)
 		.attr("x", 0)
 		.attr("y", 0)
 		.style("fill", "transparent")
@@ -262,7 +264,7 @@ function createVis() {
 
 	node.append("circle")
 		.attr("class", "circle-lecture")
-		.attr("r", radius * 0.8)
+		.attr("r", radius * 0.85)
 		.attr("x", 0)
 		.attr("y", 0)
 		.style("fill", "transparent")
@@ -274,7 +276,7 @@ function createVis() {
 
 	node.append("circle")
 		.attr("class", "circle-lab")
-		.attr("r", radius * 0.7)
+		.attr("r", radius * 0.75)
 		.attr("x", 0)
 		.attr("y", 0)
 		.style("fill", "transparent")
@@ -287,9 +289,9 @@ function createVis() {
 	// draw node text
 	node.append("foreignObject")
 		.attr("class", "text")
-		.attr("x", -radius/2)
- 	 	.attr("y", -radius/2)
-		.html(function(d) { return "<p class=\"name\">" + d.faculty + "<br/>" + d.num + "</p>"; });
+		.attr("x", -radius * 0.5)
+ 	 	.attr("y", -radius* 0.5)
+		.html(function(d) { return "<p class=\"name\">" + d.faculty + "<br/>&nbsp;" + d.num + "</p>"; });
 
 	// Hide the first node in courses since it is a NIL placeholder
 	d3.select(".node").style("visibility", "hidden"); 
@@ -327,11 +329,11 @@ function createVis() {
 
 	var focusHierarchyY = 
 		[
-			(height/5)*0.25,
-			(height/5)*1,
-			(height/5)*1.75,
-			(height/5)*2.5,
-			(height/5)*3.25,
+			(height/5)*0.8,
+			(height/5)*1.6,
+			(height/5)*2.4,
+			(height/5)*3.2,
+			(height/5)*4,
 			height
 		]; 
 	var focusHierarchyX = 
@@ -405,7 +407,7 @@ function createVis() {
   	});
 }
 
-// Count number of times a course is used as a prereq
+// Deprecated
 function countPrereqs() {
 	var prereqCourses = [];
 	var current = null;
@@ -484,7 +486,6 @@ function toggleButtonAppearance(obj, state) {
 	return state;
 }
 
-//
 // Retrieves node style and returns an rgb color based off
 // course stream and toggle state
 function getNodeStyle(obj) {
@@ -644,7 +645,7 @@ function updateAvailability(state) {
 				}
 			}	
 		}
-		return "5,5";
+		return "5,10";
 	} else {
 		return "0,0";
 	}
@@ -687,36 +688,7 @@ function toggleRadioButtons(obj) {
 	}
 }
 
-/*
-function toggleRadioButtons2() {
-	// find set button & unset
-	var parent = this.parentElement;
-	var bgColor = "transparent"
-	for (var i = 0; i < parent.children.length; i++) {
-		if (parseInt(parent.children[i].getAttribute("data-toggle"))) {
-			//untoggle buttons
-			d3.select(parent.children[i])
-					.transition()
-					.duration(200)
-					.style("background-color","rgb(255, 255, 255)")
-					.style("top", "0");
-			parent.children[i].setAttribute("data-toggle", 0);
-		} else if (this == parent.children[i]) {
-			//toggle selected button
-			bgColor= this.style.boxShadow;
-			d3.select(this)
-					.transition()
-					.duration(200)
-					.style("background-color", bgColor)
- 					.style("top", "5px");
- 			this.setAttribute("data-toggle", 1);
-
-		}
-	}
-}
-*/
-
-
+//TODODODODODO
 function DEPRECATED_NOT_WORKING(xx) {
 	console.log(xx);
 		toggleRadioButtons(this);
@@ -968,7 +940,6 @@ function registerLabButtonHandlers() {
 }
 
 
-
 function toggleInfoPane(obj, data, state) {
 	var infoBoxD3 = d3.select("#infoBox");
 	var infoBoxDiv = document.getElementById("infoBox");
@@ -1066,7 +1037,6 @@ function toggleInfoPane(obj, data, state) {
 }
 
 
-
 function toggleNode(obj) {
 	if(obj.getAttribute("data-toggle") == 0) {
 		obj.setAttribute("data-toggle", 1);
@@ -1084,7 +1054,6 @@ function toggleAvail(obj) {
 	}
 	return obj.getAttribute("data-availState");
 }
-
 
 
 // node: node being affected
@@ -1111,9 +1080,9 @@ function toggleLinks(node, data, state) {
 
 			// update appearance
 			if (parseInt(obj.getAttribute("data-toggle")) > 0) {
-				d3.select(obj).style("stroke-width", "5px");
+				d3.select(obj).style("stroke-opacity", "1");
 			} else {
-				d3.select(obj).style("stroke-width", "2px");
+				d3.select(obj).style("stroke-opacity", "0.3");
 			}
 		}
 	}
