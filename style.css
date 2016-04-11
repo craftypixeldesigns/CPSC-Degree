@@ -177,6 +177,7 @@ ul {
 	height: 34px;
 	background: url(arrows.png) no-repeat right #fff;
 	margin-bottom: 5px;
+	margin-top: 2px;
 }
 
 .startDateBtnContainer select,

@@ -93,7 +93,9 @@ function createVis() {
 	    .attr("markerHeight",6)
 	    .attr("viewBox", "-5 -5 10 10")
 	    .attr("markerUnits", "strokeWidth")
+	    .attr("fill-opacity", 0.9)
 	    .attr("orient", "auto")
+	    .attr("data-toggle", 0)
 	  	.append("svg:path")
 	  	.attr("d", "M 0,0 m -5,-5 L 5,0 L -5,5 Z")
 	  	.style("fill", function(d) { 
@@ -154,7 +156,7 @@ function createVis() {
 		.style("stroke-width", function (d) {
 			// recommendations 
 			if (d.value == 4 || d.value == 5) {
-				return "5px";
+				return "4px";
 			} else {
 				return "2px";
 			}
@@ -1013,9 +1015,12 @@ function toggleInfoPane(obj, data, state) {
 
 
 	// SENIORITY
-	// TODO
-
-
+	var infoBoxLevel = infoBoxDiv.querySelector("#info-level").children[0];
+	if (data.ctype != "senior" || data.ctype != "junior") {
+		infoBoxLevel.innerText = "Consent required by: " + data.consent;
+	} else {
+		infoBoxLevel.innerHTML = "Consent required by: <i>None</i>";
+	}
 
 
 	// Show/Hide infoDiv + positioning
@@ -1069,6 +1074,7 @@ function toggleLinks(node, data, state) {
 			cpscgraph.links[i].target.cid == data.cid){	
 			var id = cpscgraph.links[i].source.cid + "" + cpscgraph.links[i].target.cid;
 			var obj = document.getElementById(id);
+
 			obj.setAttribute("data-toggle", parseInt(obj.getAttribute("data-toggle")) + (parseInt(state) ? 1 : -1));
 
 			if(parseInt(obj.getAttribute("data-toggle")) < 0 ||
@@ -1097,7 +1103,7 @@ function registerNodeHandlers() {
 			d3.select(this).style("stroke", "rgb(249, 222, 99)")
 							.style("fill","rgb(249, 222, 99)");
 		}
-		toggleInfoPane(this, d, true);
+		//toggleInfoPane(this, d, true);
 	});
 
 
@@ -1109,7 +1115,7 @@ function registerNodeHandlers() {
 			d3.select(this).style("stroke", "rgb(0, 0, 0)")
 							.style("fill",fillStr);
 		}
-		toggleInfoPane(this, d, false);
+		//toggleInfoPane(this, d, false);
 	}); 
 
 	
