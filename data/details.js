@@ -861,66 +861,82 @@ availabilityMain = [
 availabilityDetails = [
 	{
 		"aid":1,
+		"startstamp": 1346457600,
 		"semester":"Fall 2012"
 	},
 	{
 		"aid":2,
+		"startstamp": 1377993600,
 		"semester":"Fall 2013"
 	},
 	{
 		"aid":3,
+		"startstamp": 1409529600,
 		"semester":"Fall 2014"
 	},
 	{
 		"aid":4,
+		"startstamp": 1441065600,
 		"semester":"Fall 2015"
 	},
 	{
 		"aid":5,
+		"startstamp": 1356998400,
 		"semester":"Winter 2013"
 	},
 	{
 		"aid":6,
+		"startstamp": 1388534400,
 		"semester":"Winter 2014"
 	},
 	{
 		"aid":7,
+		"startstamp": 1420070400,
 		"semester":"Winter 2015"
 	},
 	{
 		"aid":8,
+		"startstamp": 1451606400,
 		"semester":"Winter 2016"
 	},
 	{
 		"aid":9,
+		"startstamp": 1367366400,
 		"semester":"Spring 2013"
 	},
 	{
 		"aid":10,
+		"startstamp": 1398902400,
 		"semester":"Spring 2014"
 	},
 	{
 		"aid":11,
+		"startstamp": 1430438400,
 		"semester":"Spring 2015"
 	},
 	{
 		"aid":12,
+		"startstamp": 1462060800,
 		"semester":"Spring 2016"
 	},
 	{
 		"aid":13,
+		"startstamp": 1372636800,
 		"semester":"Summer 2013"
 	},
 	{
 		"aid":14,
+		"startstamp": 1404172800,
 		"semester":"Summer 2014"
 	},
 	{
 		"aid":15,
+		"startstamp": 1435708800,
 		"semester":"Summer 2015"
 	},
 	{
 		"aid":16,
+		"startstamp": 1467331200,
 		"semester":"Summer 2016"
 	}
 ]
