@@ -204,7 +204,9 @@ function createVis() {
 		.attr("x", 0)
 		.attr("y", 0)
 		.style("fill", "white")
-		.style("stroke", "black");
+		.style("stroke", "black")
+		.attr("data-streamState", 0)
+		.attr("data-toggle", 0);
 		// add circles based off credits
 
 	// draw node text
@@ -375,14 +377,6 @@ function filterAvail() {
 		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
 		 					.style("top", "5px")
 		 					.text("Hierarchy");
-			d3.select(".scatter")
-							.transition()
-							.duration(200)
-							.style("opacity", 0);
-			d3.select(".hierarchy")
-							.transition()
-							.duration(200)
-							.style("opacity", 1);
 		} else {
 			appearInfo("");
 			d3.select(this)
@@ -393,318 +387,114 @@ function filterAvail() {
 		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
 		 					.style("top", "0")
 		 					.text("Scatter");
-			d3.select(".scatter")
-							.transition()
-							.duration(200)
-							.style("opacity", 1);
-			d3.select(".hierarchy")
-							.transition()
-							.duration(200)
-							.style("opacity", 0);
 		}
 	});
 }
 
+//
+// Retrieves node style and returns an rgb color based off
+// course stream and toggle state
+function getNodeStyle(obj) {
+	var streamState = parseInt(obj.getAttribute("data-streamState"));
+	var isHighlighted = parseInt(obj.getAttribute("data-toggleState"));
+	switch (streamState) {
+		case 0:
+			return "rgb(255, 255, 255)";
+			break;
+		case 1:
+			return "rgb(240, 240, 240)";
+			break;
+		case 2:
+			return "rgb(217, 217, 217)";
+			break;
+		case 3: 
+			return "rgb(189, 189, 189)";
+			break;
+		case 4:
+			return "rgb(150, 150, 150)";
+			break;
+		default:
+			return "rgb(115, 115, 115)";
+	}
+}
 
-var g_streamCount = 0;
+function changeCourseFilters() {
+	// extract streamID
+	if (this.id == "stream1") 
+		streamID = 1;
+	else if (this.id == "stream2") 
+		streamID = 2;
+	else if (this.id == "stream3") 
+		streamID = 3;
+	else if (this.id == "stream4") 
+		streamID = 4;
+	else if (this.id == "stream5") 
+		streamID = 5;
+	else if (this.id == "stream6") 
+		streamID = 6;
+	else if (this.id == "stream7") 
+		streamID = 7;
+	else if (this.id == "stream8") 
+		streamID = 8;
+	else {
+		console.log("ASSERT: Illegal stream id (" + this.id + ")");
+		return;
+	}
+	//streamID = this.id == "stream1" ? 1 : (this.id == "stream2" ? 2 : (this.id == "stream3" ? 3 : (this.id == "stream4" ? 4 : (this.id == "stream5" ? 5 : (this.id == "stream6" ? 6 : 7)))));
+
+	var buttonState = 0;
+
+	// determine button state
+	if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
+		buttonState = 1;
+		appearInfo("stream");
+
+		d3.select(this)
+						.transition()
+						.duration(200)
+						.style("background-color","rgb(0, 0, 0)")
+	 					.style("color", "rgb(255, 255, 255)")
+	 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
+	 					.style("top", "5px");
+
+	 } else {
+	 	buttonState = -1;
+		appearInfo("");
+
+		d3.select(this)
+						.transition()
+						.duration(200)
+						.style("background-color","rgb(255, 255, 255)")
+	 					.style("color", "rgb(0, 0, 0)")
+	 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
+	 					.style("top", "0");
+
+	}
+	console.log("\n===============\n");
+ 	d3.selectAll("circle").style("fill", function(d) {
+
+		for(i=0; i < course2stream.length; i++) {
+			if (d.cid == course2stream[i].cid && course2stream[i].cdid == streamID) {
+					this.setAttribute("data-streamState", parseInt(this.getAttribute("data-streamState")) + parseInt(buttonState));
+					console.log("TESt: " + d.cid + " " + this.getAttribute("data-streamState"));
+					return getNodeStyle(this);
+			}	
+		}
+		return "rgb(255, 255, 255)";
+	});
+
+}
 
 // Course Stream filter
 function filterStream() {
-	d3.select("#stream1").on("click", function(d) {
-		
-		var isSelected = false;
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			g_streamCount++;
-			appearInfo("stream");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px");
-		 	isSelected = true;
-		} else {
-
-			g_streamCount--;
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0")
-		 					.style("-webkit-filter","grayscale(100%)");
-			isSelected = false;
-		}
-
-		d3.selectAll("circle").style("fill", function(d) {
-			for(i=0; i < degMain.length; i++) {
-				if (d.did == degMain[i].did) {
-					if(degMain[i].cdid == 1) {
-					//	// TODO change style
-						
-						return "hsla(120, 100%, 50%, 1.0)"; //"grayscale(100%)";
-					}
-				}	
-				return "hsla(255, 100%, 50%, 1.0)"
-			}
-		});
-	});
-
-	d3.select("#stream2").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			g_streamCount++;
-			appearInfo("stream");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px");
-		} else {
-			g_streamCount--;
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0");
-		}
-
-		d3.selectAll(".node").style("fill", function(d) {
-			for(i=0; i<degMain.length; i++) {
-				if (d.did == degMain[i].did) {
-					if(degMain[i].cdid == 2) {
-						// TODO change style
-					}
-				}
-			}
-		});
-	});
-
-	d3.select("#stream3").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			g_streamCount++;
-			appearInfo("stream");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px");
-		} else {
-			g_streamCount--;
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0");
-		}
-
-		d3.selectAll(".node").style("fill", function(d) {
-			for(i=0; i<degMain.length; i++) {
-				if (d.did == degMain[i].did) {
-					if(degMain[i].cdid == 3) {
-						// TODO change style
-					}
-				}
-			}
-		});
-	});
-
-	d3.select("#stream4").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			g_streamCount++;
-			appearInfo("stream");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px");
-		} else {
-			g_streamCount--;
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0");
-		}
-
-		d3.selectAll(".node").style("fill", function(d) {
-			for(i=0; i<degMain.length; i++) {
-				if (d.did == degMain[i].did) {
-					if(degMain[i].cdid == 4) {
-						// TODO change style
-					}
-				}
-			}
-		});
-	});
-
-	d3.select("#stream5").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			g_streamCount++;
-			appearInfo("stream");
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px");
-		} else {
-			g_streamCount--;
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0");
-		}
-
-		d3.selectAll(".node").style("fill", function(d) {
-			for(i=0; i<degMain.length; i++) {
-				if (d.did == degMain[i].did) {
-					if(degMain[i].cdid == 5) {
-						// TODO change style
-					}
-				}
-			}
-		});
-	});
-
-	d3.select("#stream6").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			g_streamCount++;
-			appearInfo("stream");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px");
-		} else {
-			g_streamCount--;
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0");
-		}
-
-		d3.selectAll(".node").style("fill", function(d) {
-			for(i=0; i<degMain.length; i++) {
-				if (d.did == degMain[i].did) {
-					if(degMain[i].cdid == 6) {
-						// TODO change style
-					}
-				}
-			}
-		});
-	});
-
-	d3.select("#stream7").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			g_streamCount++;
-			appearInfo("stream");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px");
-		} else {
-			g_streamCount--;
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0");
-		}
-
-		d3.selectAll(".node").style("fill", function(d) {
-			for(i=0; i<degMain.length; i++) {
-				if (d.did == degMain[i].did) {
-					if(degMain[i].cdid == 7) {
-						// TODO change style
-					}
-				}
-			}
-		});
-	});
-
-	d3.select("#stream8").on("click", function(d) {
-		if(d3.select(this).style("color") == "rgb(0, 0, 0)") {
-			g_streamCount++;
-			appearInfo("stream");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(0, 0, 0)")
-		 					.style("color", "rgb(255, 255, 255)")
-		 					.style("box-shadow", "0 0 rgb(0, 0, 0)")
-		 					.style("top", "5px");
-		} else {
-			g_streamCount--;
-			appearInfo("");
-
-			d3.select(this)
-							.transition()
-							.duration(200)
-							.style("background-color","rgb(255, 255, 255)")
-		 					.style("color", "rgb(0, 0, 0)")
-		 					.style("box-shadow", "0 4px rgb(0, 0, 0)")
-		 					.style("top", "0");
-		}
-
-		d3.selectAll(".node").style("fill", function(d) {
-			for(i=0; i<degMain.length; i++) {
-				if (d.did == degMain[i].did) {
-					if(degMain[i].cdid == 8) {
-						// TODO change style
-					}
-				}
-			}
-		});
-	});
+	d3.select("#stream1").on("click", changeCourseFilters);
+	d3.select("#stream2").on("click", changeCourseFilters);
+	d3.select("#stream3").on("click", changeCourseFilters);
+	d3.select("#stream4").on("click", changeCourseFilters);
+	d3.select("#stream5").on("click", changeCourseFilters);
+	d3.select("#stream6").on("click", changeCourseFilters);
+	d3.select("#stream7").on("click", changeCourseFilters);
+	d3.select("#stream8").on("click", changeCourseFilters);
 }
 
 // Anti-req, recommendations and consent filter
@@ -1281,9 +1071,9 @@ function appearInfo(type) {
 			if (d.did != 0) {
 				html += "Course Streams:<ul>";
 
-				for(i=0; i<degMain.length; i++) {
-					if (d.did == degMain[i].did) {
-						html += "<li>" + degDetails[degMain[i].cdid].type + "</li>";
+				for(i=0; i<course2stream.length; i++) {
+					if (d.cid == course2stream[i].cid) {
+						html += "<li>" + degDetails[course2stream[i].cdid].type + "</li>";
 					}
 				}
 
@@ -1326,7 +1116,7 @@ function toggleNode(obj) {
 	}
 }
 	
-
+// DEPRECATED
 function setSat(obj, value) {
 	// get existing HSLA
 	var str = obj.style("fill");
@@ -1355,7 +1145,8 @@ function highlightNodes() {
 		// var a = str[3].split(")")[0];
 		// console.log("H:"+ h + "\n" + "L:"+ l + "\n" + "S:"+ s + "\n" + "A:"+ a + "\n");
 
-		if (this.getAttribute("data-toggle") != 0) {
+		if (this.getAttribute("data-toggle") == 0) {
+
 			d3.select(this).style("stroke", "rgb(249, 222, 99)")
 							.style("fill","rgb(249, 222, 99)");
 		}
@@ -1364,9 +1155,12 @@ function highlightNodes() {
 
 	// unhighlight circles
 	d3.selectAll("circle").on("mouseleave", function(d) {
-		if (this.getAttribute("data-toggle") != 0) {
+		var fillStr = getNodeStyle(this);
+
+
+		if (this.getAttribute("data-toggle") == 0) {
 			d3.select(this).style("stroke", "rgb(0, 0, 0)")
-							.style("fill","rgb(255, 255, 255)");
+							.style("fill",fillStr);
 							
 		}
 	}); 
@@ -1388,9 +1182,11 @@ function highlightNodes() {
 	});
 
 	d3.selectAll("foreignObject").on("mouseleave", function(d) {
-		if (this.previousSibling.getAttribute("data-toggle") != 0) {
+		var fillStr = getNodeStyle(this);
+
+		if (this.previousSibling.getAttribute("data-toggle") == 0) {
 			d3.select(this.previousSibling).style("stroke", "rgb(0, 0, 0)")
-											.style("fill","rgb(255, 255, 255)");
+											.style("fill",fillStr);
 		}
 	});
 }
