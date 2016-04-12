@@ -108,12 +108,47 @@ ul {
 }
 
 /*
- * FILTER
+ * TOOLTIP
  */
-#filter {
-	
+.tooltip {
+	text-decoration: none;
+	top: 50px;
+	right: 50%;
+	padding: 5px;
+	color: #89B0AE;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 4px #89B0AE;
+	font-family: "Lato", sans-serif;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 5px 5px 5px 5px;
+	outline: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
+.tooltip:hover {
+	top: 55px;
+	box-shadow: 0 0 rgb(0, 0, 0);
+	color: rgb(255,255,255);
+	background-color: #89B0AE;
+}
+
+.introjs-helperLayer {
+	opacity: 0.5;
+}
+
+/*
+ * FILTER
+ */
 .button {
 	font-family: "Lato", sans-serif;
 	text-align: center;
@@ -135,7 +170,8 @@ ul {
 	box-shadow: 0 4px rgb(0, 0, 0);
 }
 
-.button:after {
+.button:after,
+.tooltip:after {
 	content: '';
 	position: absolute;
 	z-index: -1;

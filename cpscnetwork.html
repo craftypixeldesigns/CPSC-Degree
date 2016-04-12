@@ -6,14 +6,21 @@
 <head>
 	<title>CPSC Degrees</title>
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">	
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="intro.js/introjs.css">
+	<script src="./intro.js/intro.js" type="text/javascript"></script>
 </head>
 
 <body>
 	<section id="visualization">
-		<div id="chart">
-			<svg id="graphics">
+		<div id="chart" data-intro="Each node is a course. Each link means 'Course A is a prerequisite for Course B'
+									Blue links mean required courses, green links mean optional courses.
+									If a node has several incoming green links, that means you can select one of many
+									courses to fulfill the prerequisite requirement." data-step="2">
+			<svg id="graphics" data-intro="To get more information about a course, hover to see an information box. 
+											Click on the center of a node to highlight its connected links.
+											Click and drag a node to better see the links." data-position="right" data-highlightClass="svgTooltip" data-step="3">
 				
 			</svg>
 
@@ -37,8 +44,14 @@
 			</div>
 		</div>
 
-		<div id="filter">
-			<div id="streamFilter">
+		<div id="filter" data-intro="These are filters. You can apply as many filters as you would like. 
+									Try to explore all of the aspects in the Computer Science degree!" data-position="left" data-step="4">
+			<a class="tooltip" href="javascript:void(0);" onclick="javascript:introJs().start();" 
+			data-intro="Thank you for exploring this visualization! &#10;
+						The goal is to help you better understand the Computer Science degree at the University of Calgary.
+						If you are ever confused, click on this button again." data-step="1">Instructions</a>
+			<div id="streamFilter" data-intro="See which course belongs to which course stream. If it belongs to one, it will be gray.
+												If a course belongs to multiple course streams, it will be darker gray." data-position="left" data-step="5">
 				<h2>Course Stream</h2>
 				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="63px" height="86px" viewBox="0 0 63 86" enable-background="new 0 0 63 86" xml:space="preserve"><g transform="translate(0.5,0.5)"><ellipse pointer-events="none" transform="matrix(0.1736 -0.9848 0.9848 0.1736 13.5492 42.3209)" fill="#CCCCCC" stroke="#000000" cx="31.992" cy="13.087" rx="10" ry="10.5"/><ellipse pointer-events="none" fill="#FFFFFF" stroke="#000000" cx="32" cy="48" rx="10" ry="10"/><path pointer-events="none" fill="none" stroke="#377EB8" stroke-miterlimit="10" d="M30,23h2v8.63"/><path pointer-events="none" fill="#377EB8" stroke="#377EB8" stroke-miterlimit="10" d="M32,36.88l-3.5-7l3.5,1.75l3.5-1.75   L32,36.88z"/><ellipse pointer-events="none" fill="#CCCCCC" stroke="#000000" cx="11" cy="74" rx="10" ry="10"/><ellipse pointer-events="none" fill="#FFFFFF" stroke="#000000" cx="51" cy="74" rx="10" ry="10"/><path pointer-events="none" fill="none" stroke="#4DAF4A" stroke-miterlimit="10" d="M42,48h9v9.63"/><path pointer-events="none" fill="#4DAF4A" stroke="#4DAF4A" stroke-miterlimit="10" d="M51,62.88l-3.5-7l3.5,1.75l3.5-1.75   L51,62.88z"/><path pointer-events="none" fill="none" stroke="#4DAF4A" stroke-miterlimit="10" d="M22,48H11v9.63"/><path pointer-events="none" fill="#4DAF4A" stroke="#4DAF4A" stroke-miterlimit="10" d="M11,62.88l-3.5-7l3.5,1.75l3.5-1.75   L11,62.88z"/></g></svg>
 				<div class="streamBtnContainer btnGroup">
@@ -52,7 +65,10 @@
 					<button class="button stream-button" id="stream8">CTAG</button>
 				</div>
 			</div>
-			<div id="availFilter">
+			<div id="availFilter" data-intro="See which course was offered between a range of semesters. 
+											If it was not offered between the specified time frame, it will become a dotted node.
+											If you want to see only one semester, set the Start Term and End Term to the same semester." 
+											data-position="left" data-step"6">
 				<h2>Availability</h2>
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="87px" version="1.1"><defs/><g transform="translate(0.5,0.5)"><ellipse cx="33" cy="13" rx="10.5" ry="10" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-dasharray="6 6" transform="rotate(10,32.5,13)" pointer-events="none"/><ellipse cx="33" cy="48" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 31 23 L 33 23 L 33 31.63" fill="none" stroke="#377eb8" stroke-miterlimit="10" pointer-events="none"/><path d="M 33 36.88 L 29.5 29.88 L 33 31.63 L 36.5 29.88 Z" fill="#377eb8" stroke="#377eb8" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="12" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-dasharray="6 6" pointer-events="none"/><ellipse cx="52" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 43 48 L 52 48 L 52 57.63" fill="none" stroke="#4daf4a" stroke-miterlimit="10" pointer-events="none"/><path d="M 52 62.88 L 48.5 55.88 L 52 57.63 L 55.5 55.88 Z" fill="#4daf4a" stroke="#4daf4a" stroke-miterlimit="10" pointer-events="none"/><path d="M 23 48 L 12 48 L 12 57.63" fill="none" stroke="#4daf4a" stroke-miterlimit="10" pointer-events="none"/><path d="M 12 62.88 L 8.5 55.88 L 12 57.63 L 15.5 55.88 Z" fill="#4daf4a" stroke="#4daf4a" stroke-miterlimit="10" pointer-events="none"/></g></svg>
 				<div class="availBtnContainer btnGroup">
@@ -103,27 +119,33 @@
 
 				</div>
 			</div>
-			<div id="antiFilter">
+			<div id="antiFilter" data-intro="See which courses are anti-requisites for another course.
+								Red links mean required courses, orange links mean optional courses." data-position="left" data-step"7">
 				<h2>Anti-requisites</h2>
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63px" height="86px" version="1.1"∂><defs/><g transform="translate(0.5,0.5)"><ellipse cx="32" cy="13" rx="10.5" ry="10" fill="#ffffff" stroke="#000000" transform="rotate(10,31.5,13)" pointer-events="none"/><path d="M 15.63 48 L 11 48 L 11 57.63" fill="none" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/><path d="M 20.88 48 L 13.88 51.5 L 15.63 48 L 13.88 44.5 Z" fill="#ff7f00" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/><path d="M 11 62.88 L 7.5 55.88 L 11 57.63 L 14.5 55.88 Z" fill="#ff7f00" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="32" cy="48" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 23.63 23 L 11 23 L 11 38 L 25.63 38" fill="none" stroke="#e41a1c" stroke-miterlimit="10" pointer-events="none"/><path d="M 28.88 23 L 21.88 26.5 L 23.63 23 L 21.88 19.5 Z" fill="#e41a1c" stroke="#e41a1c" stroke-miterlimit="10" pointer-events="none"/><path d="M 30.88 38 L 23.88 41.5 L 25.63 38 L 23.88 34.5 Z" fill="#e41a1c" stroke="#e41a1c" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="11" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><ellipse cx="51" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 48.37 48 L 51 48 L 51 57.63" fill="none" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/><path d="M 43.12 48 L 50.12 44.5 L 48.37 48 L 50.12 51.5 Z" fill="#ff7f00" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/><path d="M 51 62.88 L 47.5 55.88 L 51 57.63 L 54.5 55.88 Z" fill="#ff7f00" stroke="#ff7f00" stroke-miterlimit="10" pointer-events="none"/></g></svg>
 				<div class="btnGroup">
 					<button class="button" id="anti">Display</button>
 				</div>
-			</div><div id="recFilter">
+			</div><div id="recFilter" data-intro="See which courses are recommended to take for another course.
+												Blue links mean required courses, green links mean optional courses.
+												These links are thicker so you can differentiate from pre-requisite links." data-position="left" data-step"8">
 				<h2>Recommendations</h2>
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72px" height="86px" version="1.1"><defs/><g transform="translate(0.5,0.5)"><ellipse cx="32" cy="13" rx="10.5" ry="10" fill="#ffffff" stroke="#000000" transform="rotate(10,31.5,13)" pointer-events="none"/><path d="M 22 49 L 11 49 L 11 55.76" fill="none" stroke="#4daf4a" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><path d="M 11 61.76 L 7 53.76 L 11 55.76 L 15 53.76 Z" fill="#4daf4a" stroke="#4daf4a" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="32" cy="53" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 30 23 L 32 23 L 32 34.76" fill="none" stroke="#377eb8" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><path d="M 32 40.76 L 28 32.76 L 32 34.76 L 36 32.76 Z" fill="#377eb8" stroke="#377eb8" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><ellipse cx="11" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><ellipse cx="51" cy="74" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 42 53 L 42 49 L 51 49 L 51 55.76" fill="none" stroke="#4daf4a" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><path d="M 51 61.76 L 47 53.76 L 51 55.76 L 55 53.76 Z" fill="#4daf4a" stroke="#4daf4a" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/></g></svg>
 				<div class="btnGroup">
 					<button class="button" id="rec">Display</button>
 				</div>
 			</div>
-			<div id="consentFilter">
+			<div id="consentFilter" data-intro="See which courses require consent before enrolling in it.
+												If a course requires consent, it will have a thicker border." data-position="left" data-step"9">
 				<h2>Consent Required</h2>
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="61px" version="1.1"><defs/><g transform="translate(18,0.5)"><ellipse cx="15" cy="14" rx="10.5" ry="10" fill="#ffffff" stroke="#000000" stroke-width="3" transform="rotate(10,14.5,14)" pointer-events="none"/><ellipse cx="15" cy="49" rx="10" ry="10" fill="#ffffff" stroke="#000000" pointer-events="none"/><path d="M 13 24 L 15 24 L 15 32.63" fill="none" stroke="#377eb8" stroke-miterlimit="10" pointer-events="none"/><path d="M 15 37.88 L 11.5 30.88 L 15 32.63 L 18.5 30.88 Z" fill="#377eb8" stroke="#377eb8" stroke-miterlimit="10" pointer-events="none"/></g></svg>
 				<div class="btnGroup">
 					<button class="button consent-button" id="consent">Display</button>
 				</div>
 			</div>
-			<div id="credFilter">
+			<div id="credFilter" data-intro="See which courses have specific number of credits.
+											You can only select one credit number, and
+											a concentric ring will appear within the associated course node." data-position="left" data-step"10">
 				<h2>Credits</h2>
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="29px" version="1.1"><defs/><g transform="translate(18,0.5)"><ellipse cx="15" cy="14" rx="10.5" ry="10" fill="#ffffff" stroke="#b85450" stroke-width="3" transform="rotate(10,14.5,14)" pointer-events="none"/></g></svg>
 				<div class="btnGroup radio-buttonGroup" id="creditButtons">
@@ -133,7 +155,9 @@
 					<button class="button radio-button" id="cred4">6</button>
 				</div>
 			</div>
-			<div id="lecFilter">
+			<div id="lecFilter" data-intro="See which courses have specific lecture hours.
+											You can only select one lecture number, and
+											a concentric ring will appear within the associated course node." data-position="left" data-step"11">
 				<h2>Lecture Hours</h2>
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="29px" version="1.1"><defs/><g transform="translate(18,0.5)"><ellipse cx="15" cy="14" rx="10.5" ry="10" fill="#ffffff" stroke="#54278f" stroke-width="3" transform="rotate(10,14.5,14)" pointer-events="none"/></g></svg>
 				<div class="btnGroup radio-buttonGroup" id="lectureButtons">
@@ -144,7 +168,9 @@
 					<button class="button radio-button" id="lec5">12</button>
 				</div>
 			</div>
-			<div id="labFilter">
+			<div id="labFilter" data-intro="See which courses have specific lab hours.
+											You can only select one lab number, and
+											a concentric ring will appear within the associated course node." data-position="left" data-step"12">
 				<h2>Lab Hours</h2>
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="29px" version="1.1"><defs/><g transform="translate(18,0.5)"><ellipse cx="15" cy="14" rx="10.5" ry="10" fill="#ffffff" stroke="#7a0177" stroke-width="3" transform="rotate(10,14.5,14)" pointer-events="none"/></g></svg>
 				<div class="btnGroup radio-buttonGroup" id="labButtons">
@@ -157,7 +183,6 @@
 			</div>
 		</div>
 	</section>
-
 	<script src="./js/d3.v3.min.js" type="text/javascript"></script>
 	<script src="./js/underscore-min.js" type="text/javascript"></script>
 	<script src="./data/details.js" type="text/javascript"></script>
