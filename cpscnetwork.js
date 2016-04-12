@@ -157,12 +157,13 @@ function createVis() {
 		.attr("id", function (d) {
 			return d.source.cid +  "" + d.target.cid;
 		})
-		.style("stroke-width", function (d) {
+		.style("stroke-width", "2px")
+		.style("stroke-dasharray", function (d) {
 			// recommendations 
 			if (d.value == 4 || d.value == 5) {
-				return "4px";
+				return "20,10";
 			} else {
-				return "2px";
+				return "0,0";
 			}
 		})
 		.style("stroke", function(d) {
