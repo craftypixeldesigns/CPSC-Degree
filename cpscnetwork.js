@@ -1015,11 +1015,20 @@ function toggleInfoPane(obj, data, state) {
 
 
 	// SENIORITY
+	var tmp = d3.selectAll(".radio-button")[0];
+	infoBoxDiv.querySelector("#info-level").style.display = "none";
+	for (var i = 0; i < tmp.length; i++) {
+		if (parseInt(tmp[i].getAttribute("data-toggle"))) {
+			infoBoxDiv.querySelector("#info-level").style.display = "block";
+			break;
+		}
+	}
+
 	var infoBoxLevel = infoBoxDiv.querySelector("#info-level").children[0];
-	if (data.ctype != "senior" || data.ctype != "junior") {
-		infoBoxLevel.innerText = "Consent required by: " + data.consent;
+	if (data.ctype == "senior" || data.ctype == "junior") {
+		infoBoxLevel.innerText = data.ctype.toUpperCase() + " course level";
 	} else {
-		infoBoxLevel.innerHTML = "Consent required by: <i>None</i>";
+		infoBoxLevel.innerText = data.ctype.toUpperCase();
 	}
 
 
