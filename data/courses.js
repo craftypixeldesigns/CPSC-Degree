@@ -490,7 +490,7 @@ courses = [
 	{
 		"cid":38,
 		"faculty":"CPSC",
-		"num":541,
+		"num":453,
 		"cnum":"CPSC 453",
 		"cname":"Introduction to Computer Graphics",
 		"ctype":"senior",
