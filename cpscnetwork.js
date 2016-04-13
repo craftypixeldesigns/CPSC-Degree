@@ -648,19 +648,19 @@ function getNodeStyle(obj) {
 			return "rgb(255, 255, 255)";
 			break;
 		case 1:
-			return "rgb(240, 240, 240)";
+			return "rgb(230, 230, 230)";
 			break;
 		case 2:
-			return "rgb(217, 217, 217)";
+			return "rgb(190, 190, 190)";
 			break;
 		case 3: 
-			return "rgb(189, 189, 189)";
-			break;
-		case 4:
 			return "rgb(150, 150, 150)";
 			break;
+		case 4:
+			return "rgb(100, 100, 100)";
+			break;
 		default:
-			return "rgb(115, 115, 115)";
+			return "rgb(70, 70, 70)";
 	}
 
 }
