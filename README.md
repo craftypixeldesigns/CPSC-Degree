@@ -1,7 +1,9 @@
 # CPSC-Degree
-An Information Visualization project on the UofC CPSC Degree
+Helping students and staff at the University of Calgary better understand the CPSC degree.
 
-Instructions on how to run:
+Interested in the design process? Read the [case study](https://medium.com/@missCarrieMah/understanding-degrees-through-better-visualizations-fec3319b7daa)
+
+**Instructions on how to run**:
 * Downloaded: Run `cpscnetwork.html` on Google Chrome 
 * Online: Go to http://misscarriemah.github.io/CPSC-Degree/ - optimal on Google Chrome & a desktop
 
@@ -17,7 +19,7 @@ I created a data set based on relevant courses from January 2016:
 * Converted course links to [conjunctive normal form](https://en.wikipedia.org/wiki/Conjunctive_normal_form) for consistent relationships
 
 ## Understanding the data files
-Interested in using the database? Read more about it here: https://medium.com/@missCarrieMah/understanding-degrees-through-better-visualizations-fec3319b7daa
+Interested in using the database? Read more about it here: 
 
 ### [cpscdata.js](https://github.com/missCarrieMah/CPSC-Degree/blob/master/data/cpscdata.js)
 There are two main structures in the "cpscgraph" variable
