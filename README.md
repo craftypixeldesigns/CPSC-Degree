@@ -1,8 +1,9 @@
 # CPSC-Degree
 An Information Visualization project on the UofC CPSC Degree
 
-* Downloaded: Run cpscnetwork.html on Google Chrome 
-* Online: Go to http://misscarriemah.github.io/CPSC-Degree/
+Instructions on how to run:
+* Downloaded: Run `cpscnetwork.html` on Google Chrome 
+* Online: Go to http://misscarriemah.github.io/CPSC-Degree/ - optimal on Google Chrome & a desktop
 
 ## Creating the database
 I created a data set based on relevant courses from January 2016:
