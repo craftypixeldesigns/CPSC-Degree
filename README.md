@@ -1,5 +1,5 @@
 # CPSC-Degree
-Helping students and staff at the University of Calgary better understand the CPSC degree.
+An interactive visualization helping University of Calgary staff and students better understand the Computer Science degree.
 
 Interested in the design process? Read the [case study](https://medium.com/@missCarrieMah/understanding-degrees-through-better-visualizations-fec3319b7daa)
 
