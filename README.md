@@ -3,7 +3,7 @@ An interactive visualization helping University of Calgary staff and students be
 
 Interested in the design process? Read the [case study](https://medium.com/@missCarrieMah/understanding-degrees-through-better-visualizations-fec3319b7daa)
 
-**Instructions on how to run**:
+##Instructions on how to run:
 * Downloaded: Run `cpscnetwork.html` on Google Chrome 
 * Online: Go to http://misscarriemah.github.io/CPSC-Degree/ - optimal on Google Chrome & a desktop
 
