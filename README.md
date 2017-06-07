@@ -4,7 +4,18 @@ An Information Visualization project on the UofC CPSC Degree
 * Downloaded: Run cpscnetwork.html on Google Chrome 
 * Online: Go to http://misscarriemah.github.io/CPSC-Degree/
 
-## Data
+## Creating the database
+I created a data set based on relevant courses from January 2016:
+
+* [Undergraduate SENG courses](http://www.ucalgary.ca/pubs/calendar/current/software-engineering.html)
+* [Undergraduate CPSC courses](http://www.ucalgary.ca/pubs/calendar/current/computer-science.html) except for CPSC 203 as BSc students receive no credit
+* Courses in the [Computer Science degree](http://www.ucalgary.ca/pubs/calendar/current/sc-4-3-1.html) except outside the CPSC field, irrelevant Honours & MATH (e.g. PMAT 527), ENCM & EENG, and Scientific Computation (which was undergoing review)
+* Excluded graduate courses and pre-requisite high school courses
+* Selected the last 4 academic years for Fall, Winter, Spring, and Summer courses between Fall 2012 and Spring 2016 ([CPSC](http://contacts.ucalgary.ca/info/cpsc/courses), [MATH](http://contacts.ucalgary.ca/info/math/courses), [PHIL](http://contacts.ucalgary.ca/info/phil/courses))
+* Classified courses as optional if a pre-requisite is met with class A or B and required otherwise
+* Converted course links to [conjunctive normal form](https://en.wikipedia.org/wiki/Conjunctive_normal_form) for consistent relationships
+
+## Understanding the data files
 Interested in using the database? Read more about it here: https://medium.com/@missCarrieMah/understanding-degrees-through-better-visualizations-fec3319b7daa
 
 ### [cpscdata.js](https://github.com/missCarrieMah/CPSC-Degree/blob/master/data/cpscdata.js)
